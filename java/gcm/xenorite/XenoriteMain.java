@@ -155,6 +155,8 @@ public class XenoriteMain {
 	public void preInit(FMLPreInitializationEvent event) {
 
 		RenderingRegistry.addNewArmourRendererPrefix("5");
+		
+		// GameRegistry.registerWorldGenerator(new EventManager(), 1);
 
 		// Xenorite Sets
 		xenoriteOre = new XenoriteOre();
