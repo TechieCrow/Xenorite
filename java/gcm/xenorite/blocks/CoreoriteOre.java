@@ -1,12 +1,12 @@
 package gcm.xenorite.blocks;
 
-import net.minecraft.block.Block;
+import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class CoreoriteOre extends Block {
+public class CoreoriteOre extends BlockFalling {
 	public static boolean fallInstantly = false;
 
 	public CoreoriteOre() {

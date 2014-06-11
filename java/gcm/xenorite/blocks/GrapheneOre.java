@@ -1,16 +1,9 @@
 package gcm.xenorite.blocks;
 
-import gcm.xenorite.XenoriteMain;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockSand;
+import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.DamageSource;
-import net.minecraft.world.World;
 
-public class GrapheneOre extends Block {
+public class GrapheneOre extends BlockFalling {
 	public static boolean fallInstantly = false;
 	public GrapheneOre(){
 		super(Material.iron);
