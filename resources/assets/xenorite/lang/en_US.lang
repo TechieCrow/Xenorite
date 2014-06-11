@@ -1,0 +1,57 @@
+itemGroup.Xenorite Tab=Xenorite Mod
+
+tile.Xenorite Ore.name=Xenorite Ore
+tile.Xenorite Block.name=Xenorite Block
+
+tile.Coreorite Ore.name=Coreorite Ore
+tile.Block of Coreorite.name=Coreorite Block
+
+tile.Finorite Ore.name=Finorite Ore
+tile.Block of Finorite.name=Finorite Block
+
+tile.Graphene Ore.name=Graphene Ore
+tile.Block of Graphene.name=Graphene Block
+
+item.Xenorite Ingot.name=Xenorite Ingot
+item.Xenorite Sword.name=Xenorite Sword
+item.Xenorite Pickaxe.name=Xenorite Pickaxe
+item.Xenorite Shove.name=Xenorite Shovel
+item.Xenorite Axe.name=Xenorite Axe
+item.Xenorite Hoe.name=Xenorite Hoe
+item.Xenorite Helmet.name=Xenorite Helmet
+item.Xenorite Chestplate.name=Xenorite Chestplate
+item.Xenorite Leggings.name=Xenorite Leggings
+item.Xenorite Boots.name=Xenorite Boots
+
+item.Coreorite Ingot.name=Coreorite Ingot
+item.Coreorite Sword.name=Coreorite Sword
+item.Coreorite Pickaxe.name=Coreorite Pickaxe
+item.Coreorite Shove.name=Coreorite Shovel
+item.Coreorite Axe.name=Coreorite Axe
+item.Coreorite Hoe.name=Coreorite Hoe
+item.coreorite Helmet.name=Coreorite Helmet
+item.coreorite Chestplate.name=Coreorite Chestplate
+item.coreorite Leggings.name=Coreorite Leggings
+item.coreorite Boots.name=Coreorite Boots
+
+item.Finorite Ingot.name=Finorite Ingot
+item.Finorite Sword.name=Finorite Sword
+item.Finorite Pickaxe.name=Finorite Pickaxe
+item.Finorite Shove.name=Finorite Shovel
+item.Finorite Axe.name=Finorite Axe
+item.Finorite Hoe.name=Finorite Hoe
+item.finorite Helmet.name=Finorite Helmet
+item.finorite Chestplate.name=Finorite Chestplate
+item.finorite Leggings.name=Finorite Leggings
+item.finorite Boots.name=Finorite Boots
+
+item.Graphene Ingot.name=Graphene Ingot
+item.Graphene Sword.name=Graphene Sword
+item.Graphene Pickaxe.name=Graphene Pickaxe
+item.Graphene Shovel.name=Graphene Shovel
+item.Graphene Axe.name=Graphene Axe
+item.Graphenes Hoe.name=Graphene Hoe
+item.graphene Helmet.name=Graphene Helmet
+item.graphene Chestplate.name=Graphene Chestplate
+item.graphene Leggings.name=Graphene Leggings
+item.graphene Boots.name=Graphene Boots
