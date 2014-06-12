@@ -161,7 +161,7 @@ public class XenoriteMain {
 	// public static Item grapheneLeggings;
 	// public static Item grapheneBoots;
 
-	public static Item placeHolderIngot;
+	//public static Item placeHolderIngot;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -399,10 +399,10 @@ public class XenoriteMain {
 		// 3).setUnlocalizedName("graphene Boots");
 		// GameRegistry.registerItem(grapheneBoots, "grapheneBoots");
 
-		placeHolderIngot = new PlaceHolderIngot();
-		GameRegistry.registerItem(placeHolderIngot, "placeHolderIngot");
-		OreDictionary.registerOre("ingotPlaceHolder", new ItemStack(
-				placeHolderIngot));
+		//placeHolderIngot = new PlaceHolderIngot();
+		//GameRegistry.registerItem(placeHolderIngot, "placeHolderIngot");
+		//OreDictionary.registerOre("ingotPlaceHolder", new ItemStack(
+		//		placeHolderIngot));
 
 	}
 
@@ -704,11 +704,11 @@ public class XenoriteMain {
 		 */
 
 		// PlaceHolder Ingot
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.placeHolderIngot),
-				"XXX",
-				"CCC",
-				"FFF",
-				'X', XenoriteMain.meltedXenoriteIngot, 'C', XenoriteMain.meltedCoreoriteIngot, 'F', XenoriteMain.meltedFinoriteIngot);
+		//GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.placeHolderIngot),
+		//		"XXX",
+		//		"CCC",
+		//		"FFF",
+		//		'X', XenoriteMain.meltedXenoriteIngot, 'C', XenoriteMain.meltedCoreoriteIngot, 'F', XenoriteMain.meltedFinoriteIngot);
 	}
 
 	@Mod.EventHandler
