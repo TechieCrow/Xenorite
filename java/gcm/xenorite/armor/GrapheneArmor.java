@@ -16,6 +16,7 @@ public class GrapheneArmor extends ItemArmor {
 		super(armorMaterial, renderIndex, armourType);
 		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
 		this.setMaxStackSize(1);
+		RenderingRegistry.addNewArmourRendererPrefix("graphene");
 	}
 		
 		

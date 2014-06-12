@@ -5,29 +5,31 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class CoreoriteArmor extends ItemArmor {
 
-	private String [] armourTypes = new String [] {"helmetcoreorite", "chestplatecoreorite", "leggingscoreorite", "bootscoreorite"};
+	private String[] armourTypes = new String[] { "helmetcoreorite",
+			"chestplatecoreorite", "leggingscoreorite", "bootscoreorite" };
 
-	public CoreoriteArmor(ArmorMaterial armorMaterial, int renderIndex, int armourType) {
+	public CoreoriteArmor(ArmorMaterial armorMaterial, int renderIndex,
+			int armourType) {
 		super(armorMaterial, renderIndex, armourType);
 		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
 		this.setMaxStackSize(1);
+		RenderingRegistry.addNewArmourRendererPrefix("coreorite");
 	}
-		
-		
-		@Override
-	public void registerIcons(IIconRegister reg){
-	if(this == XenoriteMain.coreoriteHelmet)
-		this.itemIcon = reg.registerIcon("xenorite:helmetcoreorite");
-	if(this == XenoriteMain.coreoriteChestplate)
-		this.itemIcon = reg.registerIcon("xenorite:chestplatecoreorite");
-	if(this == XenoriteMain.coreoriteLeggings)
-		this.itemIcon = reg.registerIcon("xenorite:leggingscoreorite");
-	if(this == XenoriteMain.coreoriteBoots)
-		this.itemIcon = reg.registerIcon("xenorite:bootscoreorite");
+
+	@Override
+	public void registerIcons(IIconRegister reg) {
+		if (this == XenoriteMain.coreoriteHelmet)
+			this.itemIcon = reg.registerIcon("xenorite:helmetcoreorite");
+		if (this == XenoriteMain.coreoriteChestplate)
+			this.itemIcon = reg.registerIcon("xenorite:chestplatecoreorite");
+		if (this == XenoriteMain.coreoriteLeggings)
+			this.itemIcon = reg.registerIcon("xenorite:leggingscoreorite");
+		if (this == XenoriteMain.coreoriteBoots)
+			this.itemIcon = reg.registerIcon("xenorite:bootscoreorite");
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,

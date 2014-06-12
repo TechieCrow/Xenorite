@@ -1,5 +1,6 @@
 package gcm.xenorite.armor;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import gcm.xenorite.XenoriteMain;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
@@ -14,8 +15,8 @@ public class XenoriteArmor extends ItemArmor {
 		super(armorMaterial, renderIndex, armourType);
 		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
 		this.setMaxStackSize(1);
+		RenderingRegistry.addNewArmourRendererPrefix("xenorite");
 	}
-		
 		
 		@Override
 	public void registerIcons(IIconRegister reg){
