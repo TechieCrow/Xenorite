@@ -150,13 +150,11 @@ public class XenoriteMain {
 	// public static Item grapheneChestplate;
 	// public static Item grapheneLeggings;
 	// public static Item grapheneBoots;
-	
+
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 
-		RenderingRegistry.addNewArmourRendererPrefix("5");
-		
-		// GameRegistry.registerWorldGenerator(new EventManager(), 1);
+		GameRegistry.registerWorldGenerator(new EventManager(), 1);
 
 		// Xenorite Sets
 		xenoriteOre = new XenoriteOre();
@@ -336,6 +334,7 @@ public class XenoriteMain {
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
+
 		GameRegistry.addSmelting(xenoriteOre, new ItemStack(xenoriteIngot),
 				0.1F);
 
