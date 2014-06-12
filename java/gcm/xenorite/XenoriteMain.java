@@ -197,6 +197,7 @@ public class XenoriteMain {
 		xenoriteHelmet = new XenoriteArmor(XenoriteArmorMaterials, 5, 0)
 				.setUnlocalizedName("Xenorite Helmet");
 		GameRegistry.registerItem(xenoriteHelmet, "xenoriteHelmet");
+		proxy.addArmor("xenorite");
 		OreDictionary.registerOre("helmetXenorite", new ItemStack(
 				xenoriteHelmet));
 
