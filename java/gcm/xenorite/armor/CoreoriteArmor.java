@@ -5,7 +5,6 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class CoreoriteArmor extends ItemArmor {
 
@@ -18,17 +17,17 @@ public class CoreoriteArmor extends ItemArmor {
 		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
 		this.setMaxStackSize(1);
 	}
-	
+
 	@Override
 	public void registerIcons(IIconRegister reg) {
 		if (this == XenoriteMain.coreoriteHelmet)
-			this.itemIcon = reg.registerIcon("xenorite:helmetcoreorite");
+			this.itemIcon = reg.registerIcon("xenorite:helmetCoreorite");
 		if (this == XenoriteMain.coreoriteChestplate)
-			this.itemIcon = reg.registerIcon("xenorite:chestplatecoreorite");
+			this.itemIcon = reg.registerIcon("xenorite:chestplateCoreorite");
 		if (this == XenoriteMain.coreoriteLeggings)
-			this.itemIcon = reg.registerIcon("xenorite:leggingscoreorite");
+			this.itemIcon = reg.registerIcon("xenorite:leggingsCoreorite");
 		if (this == XenoriteMain.coreoriteBoots)
-			this.itemIcon = reg.registerIcon("xenorite:bootscoreorite");
+			this.itemIcon = reg.registerIcon("xenorite:bootsCoreorite");
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,

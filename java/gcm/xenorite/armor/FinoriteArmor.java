@@ -22,13 +22,13 @@ public class FinoriteArmor extends ItemArmor {
 	@Override
 	public void registerIcons(IIconRegister reg) {
 		if (this == XenoriteMain.finoriteHelmet)
-			this.itemIcon = reg.registerIcon("xenorite:helmetfinorite");
+			this.itemIcon = reg.registerIcon("xenorite:helmetFinorite");
 		if (this == XenoriteMain.finoriteChestplate)
-			this.itemIcon = reg.registerIcon("xenorite:chestplatefinorite");
+			this.itemIcon = reg.registerIcon("xenorite:chestplateFinorite");
 		if (this == XenoriteMain.finoriteLeggings)
-			this.itemIcon = reg.registerIcon("xenorite:leggingsfinorite");
+			this.itemIcon = reg.registerIcon("xenorite:leggingsFinorite");
 		if (this == XenoriteMain.finoriteBoots)
-			this.itemIcon = reg.registerIcon("xenorite:bootsfinorite");
+			this.itemIcon = reg.registerIcon("xenorite:bootsFinorite");
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,

@@ -22,13 +22,13 @@ public class GrapheneArmor extends ItemArmor {
 		@Override
 	public void registerIcons(IIconRegister reg){
 	if(this == XenoriteMain.grapheneHelmet)
-		this.itemIcon = reg.registerIcon("xenorite:helmetgraphene");
+		this.itemIcon = reg.registerIcon("xenorite:helmetGraphene");
 	if(this == XenoriteMain.grapheneChestplate)
-		this.itemIcon = reg.registerIcon("xenorite:chestplategraphene");
+		this.itemIcon = reg.registerIcon("xenorite:chestplateGraphene");
 	if(this == XenoriteMain.grapheneLeggings)
-		this.itemIcon = reg.registerIcon("xenorite:leggingsgraphene");
+		this.itemIcon = reg.registerIcon("xenorite:leggingsGraphene");
 	if(this == XenoriteMain.grapheneBoots)
-		this.itemIcon = reg.registerIcon("xenorite:bootsgraphene");
+		this.itemIcon = reg.registerIcon("xenorite:bootsGraphene");
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
