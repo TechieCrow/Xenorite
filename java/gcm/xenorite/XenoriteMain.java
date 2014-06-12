@@ -14,6 +14,7 @@ import gcm.xenorite.items.FinoriteIngot;
 import gcm.xenorite.items.MeltedCoreoriteIngot;
 import gcm.xenorite.items.MeltedFinoriteIngot;
 import gcm.xenorite.items.MeltedXenoriteIngot;
+import gcm.xenorite.items.PlaceHolderIngot;
 import gcm.xenorite.items.XenoriteIngot;
 import gcm.xenorite.proxy.XenoriteCommonProxy;
 import gcm.xenorite.tools.CoreoriteAxe;
@@ -159,6 +160,8 @@ public class XenoriteMain {
 	// public static Item grapheneChestplate;
 	// public static Item grapheneLeggings;
 	// public static Item grapheneBoots;
+
+	public static Item placeHolderIngot;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
@@ -396,6 +399,11 @@ public class XenoriteMain {
 		// 3).setUnlocalizedName("graphene Boots");
 		// GameRegistry.registerItem(grapheneBoots, "grapheneBoots");
 
+		placeHolderIngot = new PlaceHolderIngot();
+		GameRegistry.registerItem(placeHolderIngot, "placeHolderIngot");
+		OreDictionary.registerOre("ingotPlaceHolder", new ItemStack(
+				placeHolderIngot));
+
 	}
 
 	@Mod.EventHandler
@@ -479,10 +487,10 @@ public class XenoriteMain {
 
 		// ////////*********Coreorite Recipes**********//////////
 
-		//Coreorite Ingot
+		// Coreorite Ingot
 		GameRegistry.addSmelting(XenoriteMain.coreoriteOre, new ItemStack(
 				XenoriteMain.coreoriteIngot), 0.1F);
-		
+
 		// Coreorite Melted Ingot
 		GameRegistry.addSmelting(coreoriteIngot, new ItemStack(
 				meltedCoreoriteIngot), 0.1F);
@@ -558,11 +566,11 @@ public class XenoriteMain {
 				'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
 
 		// ////////**********finorite Recipes**********//////////
-		
-		//Finorite Ingot
+
+		// Finorite Ingot
 		GameRegistry.addSmelting(XenoriteMain.finoriteOre, new ItemStack(
 				XenoriteMain.finoriteIngot), 0.1F);
-		
+
 		// Finorite Melted Ingot
 		GameRegistry.addSmelting(finoriteIngot, new ItemStack(
 				meltedFinoriteIngot), 0.1F);
@@ -694,6 +702,13 @@ public class XenoriteMain {
 		 * 
 		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
 		 */
+
+		// PlaceHolder Ingot
+		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.placeHolderIngot),
+				"XXX",
+				"CCC",
+				"FFF",
+				'X', XenoriteMain.meltedXenoriteIngot, 'C', XenoriteMain.meltedCoreoriteIngot, 'F', XenoriteMain.meltedFinoriteIngot);
 	}
 
 	@Mod.EventHandler
