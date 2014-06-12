@@ -1,5 +1,7 @@
 package gcm.xenorite.blocks;
 
+import java.util.Random;
+
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -32,5 +34,24 @@ public class CoreoriteOre extends BlockFalling {
 		entity.attackEntityFrom(DamageSource.generic, 2);
 
 	}
+	
+	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
+    {
+
+        for (int l = 0; l < 2; ++l)
+        {
+            double d0 = (double)((float)par2 + par5Random.nextFloat());
+            double d1 = (double)((float)par3 + par5Random.nextFloat());
+            double d2 = (double)((float)par4 + par5Random.nextFloat());
+            double d3 = 0.0D;
+            double d4 = 0.0D;
+            double d5 = 0.0D;
+            int i1 = par5Random.nextInt(2) * 2 - 1;
+            d3 = ((double)par5Random.nextFloat() - 0.5D) * 0.5D;
+            d4 = ((double)par5Random.nextFloat() - 0.5D) * 0.5D;
+            d5 = ((double)par5Random.nextFloat() - 0.5D) * 0.5D;
+            par1World.spawnParticle("fireworksSpark", d0, d1, d2, d3, d4, d5);
+        }
+    }
 
 }
