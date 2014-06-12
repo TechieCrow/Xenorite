@@ -58,3 +58,5 @@ item.graphene Helmet.name=Graphene Helmet
 item.graphene Chestplate.name=Graphene Chestplate
 item.graphene Leggings.name=Graphene Leggings
 item.graphene Boots.name=Graphene Boots
+
+item.PlaceHolder Ingot.name=Placeholder Ingot
