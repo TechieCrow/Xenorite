@@ -12,11 +12,10 @@ public class GrapheneArmor extends ItemArmor {
 
 	private String [] armourTypes = new String [] {"helmetgraphene", "chestplategraphene", "leggingsgraphene", "bootsgraphene"};
 
-	public GrapheneArmor(ArmorMaterial armorMaterial, int renderIndex, int armourType) {
-		super(armorMaterial, renderIndex, armourType);
+	public GrapheneArmor(ArmorMaterial armorMaterial, int renderIndex, int armorType) {
+		super(armorMaterial, renderIndex, armorType);
 		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
 		this.setMaxStackSize(1);
-		RenderingRegistry.addNewArmourRendererPrefix("graphene");
 	}
 		
 		

@@ -13,13 +13,12 @@ public class CoreoriteArmor extends ItemArmor {
 			"chestplatecoreorite", "leggingscoreorite", "bootscoreorite" };
 
 	public CoreoriteArmor(ArmorMaterial armorMaterial, int renderIndex,
-			int armourType) {
-		super(armorMaterial, renderIndex, armourType);
+			int armorType) {
+		super(armorMaterial, renderIndex, armorType);
 		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
 		this.setMaxStackSize(1);
-		RenderingRegistry.addNewArmourRendererPrefix("coreorite");
 	}
-
+	
 	@Override
 	public void registerIcons(IIconRegister reg) {
 		if (this == XenoriteMain.coreoriteHelmet)
