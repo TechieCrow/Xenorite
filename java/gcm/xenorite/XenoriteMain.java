@@ -41,7 +41,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
-import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -222,59 +221,88 @@ public class XenoriteMain {
 		// Coreorite Sets
 		coreoriteOre = new CoreoriteOre();
 		GameRegistry.registerBlock(coreoriteOre, "coreoriteOre");
+		OreDictionary.registerOre("oreCoreorite", new ItemStack(coreoriteOre));
 
 		coreoriteBlock = new CoreoriteBlock();
 		GameRegistry.registerBlock(coreoriteBlock, "coreoriteBlock");
+		OreDictionary.registerOre("blockCoreorite", new ItemStack(
+				coreoriteBlock));
 
 		coreoriteIngot = new CoreoriteIngot();
 		GameRegistry.registerItem(coreoriteIngot, "coreoriteIngot");
+		OreDictionary.registerOre("ingotCoreorite", new ItemStack(
+				coreoriteIngot));
 
 		coreoriteSword = new CoreoriteSword(CoreoriteToolMaterials);
 		GameRegistry.registerItem(coreoriteSword, "coreoriteSword");
+		OreDictionary.registerOre("swordCoreorite", new ItemStack(
+				coreoriteSword));
 
 		coreoritePickaxe = new CoreoritePickaxe(CoreoriteToolMaterials);
 		GameRegistry.registerItem(coreoritePickaxe, "coreoritePickaxe");
+		OreDictionary.registerOre("pickaxeCoreorite", new ItemStack(
+				coreoritePickaxe));
 
 		coreoriteShovel = new CoreoriteShovel(CoreoriteToolMaterials);
 		GameRegistry.registerItem(coreoriteShovel, "coreoriteShovel");
+		OreDictionary.registerOre("shovelCoreorite", new ItemStack(
+				coreoriteShovel));
 
 		coreoriteAxe = new CoreoriteAxe(CoreoriteToolMaterials);
 		GameRegistry.registerItem(coreoriteAxe, "coreoriteAxe");
+		OreDictionary.registerOre("axeCoreorite", new ItemStack(coreoriteAxe));
 
 		coreoriteHoe = new CoreoriteHoe(CoreoriteToolMaterials);
 		GameRegistry.registerItem(coreoriteHoe, "coreoriteHoe");
+		OreDictionary.registerOre("hoeCoreorite", new ItemStack(coreoriteHoe));
 
 		coreoriteHelmet = new CoreoriteArmor(CoreoriteArmorMaterials, 5, 0)
 				.setUnlocalizedName("coreorite Helmet");
 		GameRegistry.registerItem(coreoriteHelmet, "coreoriteHelmet");
+		OreDictionary.registerOre("helmetCoreorite", new ItemStack(
+				coreoriteHelmet));
 
 		coreoriteChestplate = new CoreoriteArmor(CoreoriteArmorMaterials, 5, 1)
 				.setUnlocalizedName("coreorite Chestplate");
 		GameRegistry.registerItem(coreoriteChestplate, "coreoriteChestplate");
+		OreDictionary.registerOre("chestplateCoreorite", new ItemStack(
+				coreoriteChestplate));
 
 		coreoriteLeggings = new CoreoriteArmor(CoreoriteArmorMaterials, 5, 2)
 				.setUnlocalizedName("coreorite Leggings");
 		GameRegistry.registerItem(coreoriteLeggings, "coreoriteLeggings");
+		OreDictionary.registerOre("leggingsCoreorite", new ItemStack(
+				coreoriteLeggings));
 
 		coreoriteBoots = new CoreoriteArmor(CoreoriteArmorMaterials, 5, 3)
 				.setUnlocalizedName("coreorite Boots");
 		GameRegistry.registerItem(coreoriteBoots, "coreoriteBoots");
+		OreDictionary.registerOre("Coreorite", new ItemStack(coreoriteBoots));
 
 		// Finorite Sets
 		finoriteOre = new FinoriteOre();
 		GameRegistry.registerBlock(finoriteOre, "finoriteOre");
+		OreDictionary.registerOre("oreFinorite", new ItemStack(finoriteOre));
 
 		finoriteBlock = new FinoriteBlock();
 		GameRegistry.registerBlock(finoriteBlock, "finoriteBlock");
+		OreDictionary
+				.registerOre("blockFinorite", new ItemStack(finoriteBlock));
 
 		finoriteIngot = new FinoriteIngot();
 		GameRegistry.registerItem(finoriteIngot, "finoriteIngot");
+		OreDictionary
+				.registerOre("ingotFinorite", new ItemStack(finoriteIngot));
 
 		finoriteSword = new FinoriteSword(FinoriteToolMaterials);
 		GameRegistry.registerItem(finoriteSword, "finoriteSword");
+		OreDictionary
+				.registerOre("swordFinorite", new ItemStack(finoriteSword));
 
 		finoritePickaxe = new FinoritePickaxe(FinoriteToolMaterials);
 		GameRegistry.registerItem(finoritePickaxe, "finoritePickaxe");
+		OreDictionary.registerOre("pickaxeFinorite", new ItemStack(
+				finoritePickaxe));
 
 		finoriteShovel = new FinoriteShovel(FinoriteToolMaterials);
 		GameRegistry.registerItem(finoriteShovel, "finoriteShovel");
@@ -283,25 +311,35 @@ public class XenoriteMain {
 
 		finoriteAxe = new FinoriteAxe(FinoriteToolMaterials);
 		GameRegistry.registerItem(finoriteAxe, "finoriteAxe");
+		OreDictionary.registerOre("axeFinorite", new ItemStack(finoriteAxe));
 
 		finoriteHoe = new FinoriteHoe(FinoriteToolMaterials);
 		GameRegistry.registerItem(finoriteHoe, "finoriteHoe");
+		OreDictionary.registerOre("hoeFinorite", new ItemStack(finoriteHoe));
 
 		finoriteHelmet = new FinoriteArmor(FinoriteArmorMaterials, 5, 0)
 				.setUnlocalizedName("finorite Helmet");
 		GameRegistry.registerItem(finoriteHelmet, "finoriteHelmet");
+		OreDictionary.registerOre("helmetFinorite", new ItemStack(
+				finoriteHelmet));
 
 		finoriteChestplate = new FinoriteArmor(FinoriteArmorMaterials, 5, 1)
 				.setUnlocalizedName("finorite Chestplate");
 		GameRegistry.registerItem(finoriteChestplate, "finoriteChestplate");
+		OreDictionary.registerOre("chestplateFinorite", new ItemStack(
+				finoriteChestplate));
 
 		finoriteLeggings = new FinoriteArmor(FinoriteArmorMaterials, 5, 2)
 				.setUnlocalizedName("finorite Leggings");
 		GameRegistry.registerItem(finoriteLeggings, "finoriteLeggings");
+		OreDictionary.registerOre("leggingsFinorite", new ItemStack(
+				finoriteLeggings));
 
 		finoriteBoots = new FinoriteArmor(FinoriteArmorMaterials, 5, 3)
 				.setUnlocalizedName("finorite Boots");
 		GameRegistry.registerItem(finoriteBoots, "finoriteBoots");
+		OreDictionary
+				.registerOre("bootsFinorite", new ItemStack(finoriteBoots));
 
 		// Graphene Sets
 		// grapheneOre = new GrapheneOre();
@@ -409,7 +447,7 @@ public class XenoriteMain {
 
 		'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
 
-		// ////////**********coreorite Recipes**********//////////
+		// ////////*********Fineorite Recipes**********//////////
 
 		GameRegistry.addSmelting(XenoriteMain.coreoriteOre, new ItemStack(
 				XenoriteMain.coreoriteIngot), 0.1F);
