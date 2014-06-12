@@ -278,6 +278,8 @@ public class XenoriteMain {
 
 		finoriteShovel = new FinoriteShovel(FinoriteToolMaterials);
 		GameRegistry.registerItem(finoriteShovel, "finoriteShovel");
+		OreDictionary.registerOre("shovelFinorite", new ItemStack(
+				finoriteShovel));
 
 		finoriteAxe = new FinoriteAxe(FinoriteToolMaterials);
 		GameRegistry.registerItem(finoriteAxe, "finoriteAxe");
