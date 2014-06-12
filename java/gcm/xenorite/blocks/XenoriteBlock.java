@@ -15,6 +15,6 @@ public class XenoriteBlock extends Block {
 		this.setLightLevel(0.625F);
 		this.setStepSound(this.soundTypeStone);
 		this.setBlockName("Xenorite Block");
-		this.setBlockTextureName("xenorite:Xenorite_Block");
+		this.setBlockTextureName("xenorite:xenorite_block");
 	}
 }
