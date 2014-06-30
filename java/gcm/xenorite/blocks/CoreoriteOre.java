@@ -13,7 +13,7 @@ public class CoreoriteOre extends BlockFalling {
 
 	public CoreoriteOre() {
 		super(Material.iron);
-		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
+		this.setCreativeTab(gcm.xenorite.Xenorite.XenoriteTab);
 		this.setHardness(3.0F);
 		this.setResistance(5.0F);
 		this.setLightLevel(0.625F);

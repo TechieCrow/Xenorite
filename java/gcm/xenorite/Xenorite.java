@@ -9,6 +9,7 @@ import gcm.xenorite.blocks.FinoriteBlock;
 import gcm.xenorite.blocks.FinoriteOre;
 import gcm.xenorite.blocks.XenoriteBlock;
 import gcm.xenorite.blocks.XenoriteOre;
+import gcm.xenorite.configuration.ConfigurationHandler;
 import gcm.xenorite.items.CoreoriteIngot;
 import gcm.xenorite.items.FinoriteIngot;
 import gcm.xenorite.items.MeltedCoreoriteIngot;
@@ -16,7 +17,8 @@ import gcm.xenorite.items.MeltedFinoriteIngot;
 import gcm.xenorite.items.MeltedXenoriteIngot;
 import gcm.xenorite.items.PlaceHolderIngot;
 import gcm.xenorite.items.XenoriteIngot;
-import gcm.xenorite.proxy.XenoriteCommonProxy;
+import gcm.xenorite.proxy.IProxy;
+import gcm.xenorite.reference.Reference;
 import gcm.xenorite.tools.CoreoriteAxe;
 import gcm.xenorite.tools.CoreoriteHoe;
 import gcm.xenorite.tools.CoreoritePickaxe;
@@ -52,23 +54,25 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "Xenorite", name = "Xenorite Mod", version = "MC 1.7.2")
-public class XenoriteMain {
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+public class Xenorite {
 	public static String MODID = "Xenorite";
 	public static String VERSION = "MC 1.7.2";
 
-	@SidedProxy(clientSide = "gcm.xenorite.proxy.XenoriteClientProxy", serverSide = "gcm.xenorite.proxy.XenoriteCommonProxy")
-	public static XenoriteCommonProxy proxy;
+	@Mod.Instance(Reference.MOD_ID)
+	public static Xenorite instance;
 
-	@Mod.Instance("Xenorite")
-	public static XenoriteMain instance;
+	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS, modId = Reference.MOD_ID)
+	public static IProxy proxy;
 
+	// Creative Tabs
 	public static CreativeTabs XenoriteTab = new CreativeTabs("Xenorite Tab") {
 		public Item getTabIconItem() {
-			return Item.getItemFromBlock(XenoriteMain.xenoriteOre);
+			return Item.getItemFromBlock(Xenorite.xenoriteOre);
 		}
 	};
 
+	// Tool And Armor Materials
 	public static final Item.ToolMaterial XenoriteToolMaterials = EnumHelper
 			.addToolMaterial("XenoriteToolMaterials", 3, 655, 8.0F, 3.0F, 22);
 
@@ -88,13 +92,6 @@ public class XenoriteMain {
 
 	public static final ItemArmor.ArmorMaterial FinoriteArmorMaterials = EnumHelper
 			.addArmorMaterial("FinoriteArmorMaterials", 33, new int[] { 3, 8,
-					6, 3 }, 25);
-
-	public static final Item.ToolMaterial GrapheneToolMaterials = EnumHelper
-			.addToolMaterial("FinoriteToolMaterials", 3, 655, 8.0F, 3.0F, 22);
-
-	public static final ItemArmor.ArmorMaterial GrapheneArmorMaterials = EnumHelper
-			.addArmorMaterial("GrapheneArmorMaterials", 33, new int[] { 3, 8,
 					6, 3 }, 25);
 
 	public static final Item.ToolMaterial ItemPlaceHolderToolMaterials = EnumHelper
@@ -146,25 +143,12 @@ public class XenoriteMain {
 	public static Item finoriteLeggings;
 	public static Item finoriteBoots;
 
-	// Graphene Sets
-
-	// public static Block grapheneOre;
-	// public static Block grapheneBlock;
-	// public static Item grapheneIngot;
-	// public static ItemSword grapheneSword;
-	// public static ItemPickaxe graphenePickaxe;
-	// public static ItemSpade grapheneShovel;
-	// public static ItemAxe grapheneAxe;
-	// public static ItemHoe grapheneHoe;
-	// public static Item grapheneHelmet;
-	// public static Item grapheneChestplate;
-	// public static Item grapheneLeggings;
-	// public static Item grapheneBoots;
-
-	//public static Item placeHolderIngot;
+	public static Item placeHolderIngot;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
+		
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
 		GameRegistry.registerWorldGenerator(new EventManager(), 1);
 
@@ -369,40 +353,10 @@ public class XenoriteMain {
 		OreDictionary
 				.registerOre("bootsFinorite", new ItemStack(finoriteBoots));
 
-		// Graphene Sets
-		// grapheneOre = new GrapheneOre();
-		// GameRegistry.registerBlock(grapheneOre,"grapheneOre");
-		// grapheneBlock = new GrapheneBlock();
-		// GameRegistry.registerBlock(grapheneBlock, "grapheneBlock");
-		// grapheneIngot = new GrapheneIngot();
-		// GameRegistry.registerItem(grapheneIngot, "grapheneIngot");
-		// grapheneSword = new GrapheneSword(GrapheneToolMaterials);
-		// GameRegistry.registerItem(grapheneSword, "grapheneSword");
-		// graphenePickaxe = new GraphenePickaxe(GrapheneToolMaterials);
-		// GameRegistry.registerItem(graphenePickaxe, "graphenePickaxe");
-		// grapheneShovel = new GrapheneShovel(GrapheneToolMaterials);
-		// GameRegistry.registerItem(grapheneShovel, "grapheneShovel");
-		// grapheneAxe = new GrapheneAxe(GrapheneToolMaterials);
-		// GameRegistry.registerItem(grapheneAxe, "grapheneAxe");
-		// grapheneHoe = new GrapheneHoe(GrapheneToolMaterials);
-		// GameRegistry.registerItem(grapheneHoe, "grapheneHoe");
-		// grapheneHelmet = new GrapheneArmor(GrapheneArmorMaterials, 5,
-		// 0).setUnlocalizedName("graphene Helmet");
-		// GameRegistry.registerItem(grapheneHelmet, "grapheneHelmet");
-		// grapheneChestplate = new GrapheneArmor(GrapheneArmorMaterials, 5,
-		// 1).setUnlocalizedName("graphene Chestplate");
-		// GameRegistry.registerItem(grapheneChestplate, "grapheneChestplate");
-		// grapheneLeggings = new GrapheneArmor(GrapheneArmorMaterials, 5,
-		// 2).setUnlocalizedName("graphene Leggings");
-		// GameRegistry.registerItem(grapheneLeggings, "grapheneLeggings");
-		// grapheneBoots = new GrapheneArmor(GrapheneArmorMaterials, 5,
-		// 3).setUnlocalizedName("graphene Boots");
-		// GameRegistry.registerItem(grapheneBoots, "grapheneBoots");
-
-		//placeHolderIngot = new PlaceHolderIngot();
-		//GameRegistry.registerItem(placeHolderIngot, "placeHolderIngot");
-		//OreDictionary.registerOre("ingotPlaceHolder", new ItemStack(
-		//		placeHolderIngot));
+		placeHolderIngot = new PlaceHolderIngot();
+		GameRegistry.registerItem(placeHolderIngot, "placeHolderIngot");
+		OreDictionary.registerOre("ingotPlaceHolder", new ItemStack(
+				placeHolderIngot));
 
 	}
 
@@ -418,297 +372,222 @@ public class XenoriteMain {
 				meltedXenoriteIngot), 0.1F);
 
 		// Xenorite Sword
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.xenoriteSword),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteSword),
 
 		"I", "I", "S",
 
-		'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+		'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// Xenorite Pickaxe
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.xenoritePickaxe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoritePickaxe),
 
-				"III", " S ", " S ",
+		"III", " S ", " S ",
 
-				'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+		'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// Xenorite Shovel
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.xenoriteShovel),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteShovel),
 
-				"I", "S", "S",
+		"I", "S", "S",
 
-				'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+		'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// Xenorite Axe
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.xenoriteAxe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteAxe),
 
 		"II ", "IS ", " S ",
 
-		'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+		'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// Xenorite Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.xenoriteHoe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteHoe),
 
 		"II ", " S ", " S ",
 
-		'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+		'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// Xenorite Helmet
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.xenoriteHelmet),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteHelmet),
 
-				"III", "I I", "   ",
+		"III", "I I", "   ",
 
-				'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+		'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// Xenorite Chestplate
-		GameRegistry.addShapedRecipe(new ItemStack(
-				XenoriteMain.xenoriteChestplate),
+		GameRegistry.addShapedRecipe(
+				new ItemStack(Xenorite.xenoriteChestplate),
 
-		"I I", "III", "III",
+				"I I", "III", "III",
 
-		'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+				'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// Xenorite Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(
-				XenoriteMain.xenoriteLeggings),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteLeggings),
 
 		"III", "I I", "I I",
 
-		'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+		'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// Xenorite Boots
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.xenoriteBoots),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteBoots),
 
 		"   ", "I I", "I I",
 
-		'I', XenoriteMain.xenoriteIngot, 'S', Items.stick);
+		'I', Xenorite.xenoriteIngot, 'S', Items.stick);
 
 		// ////////*********Coreorite Recipes**********//////////
 
 		// Coreorite Ingot
-		GameRegistry.addSmelting(XenoriteMain.coreoriteOre, new ItemStack(
-				XenoriteMain.coreoriteIngot), 0.1F);
+		GameRegistry.addSmelting(Xenorite.coreoriteOre, new ItemStack(
+				Xenorite.coreoriteIngot), 0.1F);
 
 		// Coreorite Melted Ingot
 		GameRegistry.addSmelting(coreoriteIngot, new ItemStack(
 				meltedCoreoriteIngot), 0.1F);
 
 		// coreorite Sword
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.coreoriteSword),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.coreoriteSword),
 
-				"I", "I", "S",
+		"I", "I", "S",
 
-				'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+		'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// coreorite Pickaxe
-		GameRegistry.addShapedRecipe(new ItemStack(
-				XenoriteMain.coreoritePickaxe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.coreoritePickaxe),
 
 		"III", " S ", " S ",
 
-		'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+		'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// coreorite Shovel
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.coreoriteShovel),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.coreoriteShovel),
 
-				"I", "S", "S",
+		"I", "S", "S",
 
-				'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+		'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// coreorite Axe
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.coreoriteAxe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.coreoriteAxe),
 
 		"II ", "IS ", " S ",
 
-		'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+		'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// coreorite Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.coreoriteHoe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.coreoriteHoe),
 
 		"II ", " S ", " S ",
 
-		'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+		'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// coreorite Helmet
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.coreoriteHelmet),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.coreoriteHelmet),
 
-				"III", "I I", "   ",
+		"III", "I I", "   ",
 
-				'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+		'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// coreorite Chestplate
-		GameRegistry.addShapedRecipe(new ItemStack(
-				XenoriteMain.coreoriteChestplate),
+		GameRegistry.addShapedRecipe(
+				new ItemStack(Xenorite.coreoriteChestplate),
 
-		"I I", "III", "III",
+				"I I", "III", "III",
 
-		'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+				'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// coreorite Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(
-				XenoriteMain.coreoriteLeggings),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.coreoriteLeggings),
 
 		"III", "I I", "I I",
 
-		'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+		'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// coreorite Boots
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.coreoriteBoots),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.coreoriteBoots),
 
-				"   ", "I I", "I I",
+		"   ", "I I", "I I",
 
-				'I', XenoriteMain.coreoriteIngot, 'S', Items.stick);
+		'I', Xenorite.coreoriteIngot, 'S', Items.stick);
 
 		// ////////**********finorite Recipes**********//////////
 
 		// Finorite Ingot
-		GameRegistry.addSmelting(XenoriteMain.finoriteOre, new ItemStack(
-				XenoriteMain.finoriteIngot), 0.1F);
+		GameRegistry.addSmelting(Xenorite.finoriteOre, new ItemStack(
+				Xenorite.finoriteIngot), 0.1F);
 
 		// Finorite Melted Ingot
 		GameRegistry.addSmelting(finoriteIngot, new ItemStack(
 				meltedFinoriteIngot), 0.1F);
 
 		// finorite Sword
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.finoriteSword),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoriteSword),
 
 		"I", "I", "S",
 
-		'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
+		'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// finorite Pickaxe
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.finoritePickaxe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoritePickaxe),
 
-				"III", " S ", " S ",
+		"III", " S ", " S ",
 
-				'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
+		'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// finorite Shovel
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.finoriteShovel),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoriteShovel),
 
-				"I", "S", "S",
+		"I", "S", "S",
 
-				'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
+		'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// finorite Axe
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.finoriteAxe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoriteAxe),
 
 		"II ", "IS ", " S ",
 
-		'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
+		'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// finorite Hoe
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.finoriteHoe),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoriteHoe),
 
 		"II ", " S ", " S ",
 
-		'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
+		'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// finorite Helmet
-		GameRegistry.addShapedRecipe(
-				new ItemStack(XenoriteMain.finoriteHelmet),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoriteHelmet),
 
-				"III", "I I", "   ",
+		"III", "I I", "   ",
 
-				'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
+		'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// finorite Chestplate
-		GameRegistry.addShapedRecipe(new ItemStack(
-				XenoriteMain.finoriteChestplate),
+		GameRegistry.addShapedRecipe(
+				new ItemStack(Xenorite.finoriteChestplate),
 
-		"I I", "III", "III",
+				"I I", "III", "III",
 
-		'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
+				'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// finorite Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(
-				XenoriteMain.finoriteLeggings),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoriteLeggings),
 
 		"III", "I I", "I I",
 
-		'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
+		'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// finorite Boots
-		GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.finoriteBoots),
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoriteBoots),
 
 		"   ", "I I", "I I",
 
-		'I', XenoriteMain.finoriteIngot, 'S', Items.stick);
-
-		// ////////**********graphene Recipes**********//////////
-
-		/*
-		 * GameRegistry.addSmelting(XenoriteMain.grapheneOre, new ItemStack(XenoriteMain.grapheneIngot), 0.1F);
-		 * 
-		 * // graphene Sword GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.grapheneSword),
-		 * 
-		 * "I", "I", "S",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 * 
-		 * // graphene Pickaxe GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.graphenePickaxe),
-		 * 
-		 * "III", " S ", " S ",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 * 
-		 * // graphene Shovel GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.grapheneShovel),
-		 * 
-		 * "I", "S", "S",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 * 
-		 * // graphene Axe GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.grapheneAxe),
-		 * 
-		 * "II ", "IS ", " S ",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 * 
-		 * // graphene Hoe GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.grapheneHoe),
-		 * 
-		 * "II ", " S ", " S ",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 * 
-		 * // graphene Helmet GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.grapheneHelmet),
-		 * 
-		 * "III", "I I", "   ",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 * 
-		 * // graphene Chestplate GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.grapheneChestplate),
-		 * 
-		 * "I I", "III", "III",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 * 
-		 * // graphene Leggings GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.grapheneLeggings),
-		 * 
-		 * "III", "I I", "I I",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 * 
-		 * // graphene Boots GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.grapheneBoots),
-		 * 
-		 * "   ", "I I", "I I",
-		 * 
-		 * 'I', XenoriteMain.grapheneIngot, 'S', Items.stick);
-		 */
+		'I', Xenorite.finoriteIngot, 'S', Items.stick);
 
 		// PlaceHolder Ingot
-		//GameRegistry.addShapedRecipe(new ItemStack(XenoriteMain.placeHolderIngot),
-		//		"XXX",
-		//		"CCC",
-		//		"FFF",
-		//		'X', XenoriteMain.meltedXenoriteIngot, 'C', XenoriteMain.meltedCoreoriteIngot, 'F', XenoriteMain.meltedFinoriteIngot);
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.placeHolderIngot),
+				"XXX", "CCC", "FFF", 'X', Xenorite.meltedXenoriteIngot, 'C',
+				Xenorite.meltedCoreoriteIngot, 'F',
+				Xenorite.meltedFinoriteIngot);
 	}
 
 	@Mod.EventHandler

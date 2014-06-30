@@ -6,7 +6,7 @@ import net.minecraft.item.Item.ToolMaterial;
 public class FinoritePickaxe extends ItemPickaxe {
 	public FinoritePickaxe(ToolMaterial material) {
 		super(material);
-		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
+		this.setCreativeTab(gcm.xenorite.Xenorite.XenoriteTab);
 		this.setMaxStackSize(1);
 		this.setTextureName("xenorite:pickaxeFinorite");
 		this.setUnlocalizedName("Finorite Pickaxe");

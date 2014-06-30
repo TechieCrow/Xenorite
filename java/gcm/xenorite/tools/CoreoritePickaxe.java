@@ -6,7 +6,7 @@ import net.minecraft.item.Item.ToolMaterial;
 public class CoreoritePickaxe extends ItemPickaxe {
 	public CoreoritePickaxe(ToolMaterial material) {
 		super(material);
-		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
+		this.setCreativeTab(gcm.xenorite.Xenorite.XenoriteTab);
 		this.setMaxStackSize(1);
 		this.setTextureName("xenorite:pickaxeCoreorite");
 		this.setUnlocalizedName("Coreorite Pickaxe");

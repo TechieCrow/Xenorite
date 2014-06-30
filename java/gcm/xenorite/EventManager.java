@@ -25,9 +25,9 @@ public class EventManager implements IWorldGenerator {
 
 	 public void generateSurface(Random random, int chunkX, int chunkZ, World world)
 	    {
-         addOreSpawn(XenoriteMain.xenoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
-		 addOreSpawn(XenoriteMain.coreoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
-         addOreSpawn(XenoriteMain.finoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
+         addOreSpawn(Xenorite.xenoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
+		 addOreSpawn(Xenorite.coreoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
+         addOreSpawn(Xenorite.finoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
 	    }
 
 	    public void generateEnd(Random random, int chunkX, int chunkZ, World world)

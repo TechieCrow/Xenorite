@@ -1,6 +1,6 @@
 package gcm.xenorite.armor;
 
-import gcm.xenorite.XenoriteMain;
+import gcm.xenorite.Xenorite;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
@@ -14,32 +14,32 @@ public class XenoriteArmor extends ItemArmor {
 	public XenoriteArmor(ArmorMaterial armorMaterial, int renderIndex,
 			int armorType) {
 		super(armorMaterial, renderIndex, armorType);
-		this.setCreativeTab(gcm.xenorite.XenoriteMain.XenoriteTab);
+		this.setCreativeTab(gcm.xenorite.Xenorite.XenoriteTab);
 		this.setMaxStackSize(1);
 	}
 
 	@Override
 	public void registerIcons(IIconRegister reg) {
-		if (this == XenoriteMain.xenoriteHelmet)
+		if (this == Xenorite.xenoriteHelmet)
 			this.itemIcon = reg.registerIcon("xenorite:helmetXenorite");
-		if (this == XenoriteMain.xenoriteChestplate)
+		if (this == Xenorite.xenoriteChestplate)
 			this.itemIcon = reg.registerIcon("xenorite:chestplateXenorite");
-		if (this == XenoriteMain.xenoriteLeggings)
+		if (this == Xenorite.xenoriteLeggings)
 			this.itemIcon = reg.registerIcon("xenorite:leggingsXenorite");
-		if (this == XenoriteMain.xenoriteBoots)
+		if (this == Xenorite.xenoriteBoots)
 			this.itemIcon = reg.registerIcon("xenorite:bootsXenorite");
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
 			String type) {
-		if (stack.getItem() == XenoriteMain.xenoriteHelmet
-				|| stack.getItem() == XenoriteMain.xenoriteChestplate
-				|| stack.getItem() == XenoriteMain.xenoriteBoots) {
-			return XenoriteMain.MODID
+		if (stack.getItem() == Xenorite.xenoriteHelmet
+				|| stack.getItem() == Xenorite.xenoriteChestplate
+				|| stack.getItem() == Xenorite.xenoriteBoots) {
+			return Xenorite.MODID
 					+ ":textures/models/armor/xenorite_layer_1.png";
 		}
-		if (stack.getItem() == XenoriteMain.xenoriteLeggings) {
-			return XenoriteMain.MODID
+		if (stack.getItem() == Xenorite.xenoriteLeggings) {
+			return Xenorite.MODID
 					+ ":textures/models/armor/xenorite_layer_2.png";
 		} else {
 			return null;
