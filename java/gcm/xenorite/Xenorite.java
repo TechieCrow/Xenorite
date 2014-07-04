@@ -9,7 +9,7 @@ import gcm.xenorite.blocks.FinoriteBlock;
 import gcm.xenorite.blocks.FinoriteOre;
 import gcm.xenorite.blocks.XenoriteBlock;
 import gcm.xenorite.blocks.XenoriteOre;
-import gcm.xenorite.configuration.ConfigurationHandler;
+import gcm.xenorite.handler.ConfigurationHandler;
 import gcm.xenorite.items.CoreoriteIngot;
 import gcm.xenorite.items.FinoriteIngot;
 import gcm.xenorite.items.MeltedCoreoriteIngot;
@@ -31,6 +31,7 @@ import gcm.xenorite.tools.XenoriteAxe;
 import gcm.xenorite.tools.XenoriteHoe;
 import gcm.xenorite.tools.XenoritePickaxe;
 import gcm.xenorite.tools.XenoriteShovel;
+import gcm.xenorite.utility.LogHelper;
 import gcm.xenorite.weapons.CoreoriteSword;
 import gcm.xenorite.weapons.FinoriteSword;
 import gcm.xenorite.weapons.XenoriteSword;
@@ -47,6 +48,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -54,7 +56,7 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class Xenorite {
 	public static String MODID = "Xenorite";
 	public static String VERSION = "MC 1.7.2";
@@ -149,6 +151,7 @@ public class Xenorite {
 	public void preInit(FMLPreInitializationEvent event) {
 		
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
 		GameRegistry.registerWorldGenerator(new EventManager(), 1);
 
@@ -357,11 +360,14 @@ public class Xenorite {
 		GameRegistry.registerItem(placeHolderIngot, "placeHolderIngot");
 		OreDictionary.registerOre("ingotPlaceHolder", new ItemStack(
 				placeHolderIngot));
+		
+		LogHelper.info("Pre Int Complete");
 
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
+		
 
 		// Xenorite Ingot
 		GameRegistry.addSmelting(xenoriteOre, new ItemStack(xenoriteIngot),
@@ -588,9 +594,13 @@ public class Xenorite {
 				"XXX", "CCC", "FFF", 'X', Xenorite.meltedXenoriteIngot, 'C',
 				Xenorite.meltedCoreoriteIngot, 'F',
 				Xenorite.meltedFinoriteIngot);
+		
+		LogHelper.info("Int Complete");
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent e) {
+		
+		LogHelper.info("Post Int Complete");
 	}
 }
