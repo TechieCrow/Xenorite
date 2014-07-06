@@ -1,28 +1,19 @@
 package gcm.xenorite.blocks;
 
-import gcm.xenorite.crativetab.CreativeTab;
-
 import java.util.Random;
 
-import net.minecraft.block.BlockFalling;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
-public class XenoriteOre extends BlockFalling {
-	public static boolean fallInstantly = false;
-
-	public XenoriteOre() {
-
-		super(Material.iron);
-		this.setCreativeTab(CreativeTab.Xenorite);
-		this.setHardness(3.0F);
-		this.setResistance(5.0F);
-		this.setLightLevel(0.625F);
-		this.setStepSound(this.soundTypeStone);
-		this.setBlockName("Xenorite Ore");
-		this.setBlockTextureName("xenorite:oreXenorite");
+public class BlockFinoriteOre extends BlockOresXenorite
+{
+	public BlockFinoriteOre() {
+	super();
+	this.setHardness(3.0F);
+	this.setResistance(5.0F);
+	this.setLightLevel(0.625F);
+	this.setBlockName("finoriteOre");
 	}
 
 	public void onBlockClicked(World world, int i, int j, int k,

@@ -1,7 +1,10 @@
 package gcm.xenorite.armor;
 
 import gcm.xenorite.Xenorite;
+import gcm.xenorite.crativetab.CreativeTab;
+import gcm.xenorite.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
@@ -14,7 +17,7 @@ public class CoreoriteArmor extends ItemArmor {
 	public CoreoriteArmor(ArmorMaterial armorMaterial, int renderIndex,
 			int armorType) {
 		super(armorMaterial, renderIndex, armorType);
-		this.setCreativeTab(gcm.xenorite.Xenorite.XenoriteTab);
+		this.setCreativeTab(CreativeTab.Xenorite);
 		this.setMaxStackSize(1);
 	}
 
@@ -35,11 +38,11 @@ public class CoreoriteArmor extends ItemArmor {
 		if (stack.getItem() == Xenorite.coreoriteHelmet
 				|| stack.getItem() == Xenorite.coreoriteChestplate
 				|| stack.getItem() == Xenorite.coreoriteBoots) {
-			return Xenorite.MODID
+			return Reference.MOD_ID
 					+ ":textures/models/armor/coreorite_layer_1.png";
 		}
 		if (stack.getItem() == Xenorite.coreoriteLeggings) {
-			return Xenorite.MODID
+			return Reference.MOD_ID
 					+ ":textures/models/armor/coreorite_layer_2.png";
 		} else {
 			return null;

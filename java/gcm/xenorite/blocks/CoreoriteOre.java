@@ -1,5 +1,7 @@
 package gcm.xenorite.blocks;
 
+import gcm.xenorite.crativetab.CreativeTab;
+
 import java.util.Random;
 
 import net.minecraft.block.BlockFalling;
@@ -13,7 +15,7 @@ public class CoreoriteOre extends BlockFalling {
 
 	public CoreoriteOre() {
 		super(Material.iron);
-		this.setCreativeTab(gcm.xenorite.Xenorite.XenoriteTab);
+		this.setCreativeTab(CreativeTab.Xenorite);
 		this.setHardness(3.0F);
 		this.setResistance(5.0F);
 		this.setLightLevel(0.625F);

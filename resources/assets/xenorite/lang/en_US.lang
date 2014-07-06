@@ -1,19 +1,22 @@
-itemGroup.Xenorite Tab=Xenorite Mod
+# Creative Tab Names
+key.categories.xenorite=Xenorite Mod
 
-tile.Xenorite Ore.name=Xenorite Ore
-tile.Xenorite Block.name=Xenorite Block
+# Block Names - Xenorite
+item.xenorite:xenoriteOre.name=Xenorite Ore
+item.xenorite:xenoriteBlock.name=Xenorite Block
 
-tile.Coreorite Ore.name=Coreorite Ore
-tile.Block of Coreorite.name=Coreorite Block
+# Block Names - Coreorite
+item.xenorite:coreoriteOre.name=Coreorite Ore
+item.xenorite:coreoriteBlock.name=Coreorite Block
 
-tile.Finorite Ore.name=Finorite Ore
-tile.Block of Finorite.name=Finorite Block
+# Block Names - Finorite
+item.xenorite:finoriteOre.name=Finorite Ore
+item.xenorite:finoriteBlock.name=Finorite Block
 
-tile.Graphene Ore.name=Graphene Ore
-tile.Block of Graphene.name=Graphene Block
+# Item Names - Xenorite
+item.xenorite:xenoriteIngot.name=Xenorite Ingot
+item.xenorite:xenoriteMeltedIngot.name=Melted Xenorite Ingot
 
-item.Xenorite Ingot.name=Xenorite Ingot
-item.Melted Xenorite Ingot.name=Melted Xenorite Ingot
 item.Xenorite Sword.name=Xenorite Sword
 item.Xenorite Pickaxe.name=Xenorite Pickaxe
 item.Xenorite Shove.name=Xenorite Shovel
@@ -24,39 +27,37 @@ item.Xenorite Chestplate.name=Xenorite Chestplate
 item.Xenorite Leggings.name=Xenorite Leggings
 item.Xenorite Boots.name=Xenorite Boots
 
-item.Coreorite Ingot.name=Coreorite Ingot
-item.Melted Coreorite Ingot.name=Melted Coreorite Ingot
+# Item Names - Coreorite
+item.xenorite:coreoriteIngot.name=Coreorite Ingot
+item.xenorite:coreoriteMeltedIngot.name=Melted Coreorite Ingot
+
 item.Coreorite Sword.name=Coreorite Sword
 item.Coreorite Pickaxe.name=Coreorite Pickaxe
 item.Coreorite Shove.name=Coreorite Shovel
 item.Coreorite Axe.name=Coreorite Axe
 item.Coreorite Hoe.name=Coreorite Hoe
-item.coreorite Helmet.name=Coreorite Helmet
-item.coreorite Chestplate.name=Coreorite Chestplate
-item.coreorite Leggings.name=Coreorite Leggings
-item.coreorite Boots.name=Coreorite Boots
+item.Coreorite Helmet.name=Coreorite Helmet
+item.Coreorite Chestplate.name=Coreorite Chestplate
+item.Coreorite Leggings.name=Coreorite Leggings
+item.Coreorite Boots.name=Coreorite Boots
 
-item.Finorite Ingot.name=Finorite Ingot
-item.Melted Finorite Ingot.name=Melted Finorite Ingot
+# Item Names - Finorite
+item.xenorite:finoriteIngot.name=Finorite Ingot
+item.xenorite:finoriteMeltedIngot.name=Melted Finorite Ingot
+
 item.Finorite Sword.name=Finorite Sword
 item.Finorite Pickaxe.name=Finorite Pickaxe
 item.Finorite Shove.name=Finorite Shovel
 item.Finorite Axe.name=Finorite Axe
 item.Finorite Hoe.name=Finorite Hoe
-item.finorite Helmet.name=Finorite Helmet
-item.finorite Chestplate.name=Finorite Chestplate
-item.finorite Leggings.name=Finorite Leggings
-item.finorite Boots.name=Finorite Boots
+item.Finorite Helmet.name=Finorite Helmet
+item.Finorite Chestplate.name=Finorite Chestplate
+item.Finorite Leggings.name=Finorite Leggings
+item.Finorite Boots.name=Finorite Boots
 
-item.Graphene Ingot.name=Graphene Ingot
-item.Graphene Sword.name=Graphene Sword
-item.Graphene Pickaxe.name=Graphene Pickaxe
-item.Graphene Shovel.name=Graphene Shovel
-item.Graphene Axe.name=Graphene Axe
-item.Graphenes Hoe.name=Graphene Hoe
-item.graphene Helmet.name=Graphene Helmet
-item.graphene Chestplate.name=Graphene Chestplate
-item.graphene Leggings.name=Graphene Leggings
-item.graphene Boots.name=Graphene Boots
+# Item Names - Placeholder
+item.xenorite:placeHolderIngot.name=Placeholder Ingot
 
-item.PlaceHolder Ingot.name=Placeholder Ingot
+# Achievement Names
+achievement.xenoriteIngotAchievement=Hello World
+achievement.xenoritePickaxeAchievement=Hello World For The Picks!
