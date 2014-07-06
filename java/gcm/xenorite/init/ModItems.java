@@ -1,7 +1,5 @@
-package gcm.xenorite.init;
+	package gcm.xenorite.init;
 
-import net.minecraft.item.ItemStack;
-import gcm.xenorite.Xenorite;
 import gcm.xenorite.items.ItemCoreoriteIngot;
 import gcm.xenorite.items.ItemCoreoriteMeltedIngot;
 import gcm.xenorite.items.ItemFinoriteIngot;
@@ -10,6 +8,7 @@ import gcm.xenorite.items.ItemPlaceHolderIngot;
 import gcm.xenorite.items.ItemXenorite;
 import gcm.xenorite.items.ItemXenoriteIngot;
 import gcm.xenorite.items.ItemXenoriteMeltedIngot;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModItems
@@ -25,17 +24,17 @@ public class ModItems
     public static void init()
     {
         GameRegistry.registerItem(xenoriteIngot, "xenoriteIngot");
-        //GameRegistry.addSmelting(xenoriteOre, new ItemStack(xenoriteIngot), 0.1F);
+        GameRegistry.addSmelting(gcm.xenorite.init.ModBlockOres.xenoriteOre, new ItemStack(xenoriteIngot), 1.0F);
         GameRegistry.registerItem(coreoriteIngot, "coreoriteIngot");
-        //GameRegistry.addSmelting(coreoriteOre, new ItemStack(coreoriteIngot), 0.1F);
+        GameRegistry.addSmelting(gcm.xenorite.init.ModBlockOres.coreoriteOre, new ItemStack(coreoriteIngot), 1.0F);
         GameRegistry.registerItem(finoriteIngot, "finoriteIngot");
-        //GameRegistry.addSmelting(finoriteOre, new ItemStack(finoriteIngot), 0.1F);
+        GameRegistry.addSmelting(gcm.xenorite.init.ModBlockOres.finoriteOre, new ItemStack(finoriteIngot), 1.0F);
         GameRegistry.registerItem(xenoriteMeltedIngot, "xenoriteMeltedIngot");
-        //GameRegistry.addSmelting(xenoriteIngot, new ItemStack(xenoriteMeltedIngot), 0.1F);
+        GameRegistry.addSmelting(xenoriteIngot, new ItemStack(xenoriteMeltedIngot), 0.1F);
         GameRegistry.registerItem(coreoriteMeltedIngot, "coreoriteMeltedIngot");
-        //GameRegistry.addSmelting(coreoriteIngot, new ItemStack(finoriteMeltedIngot), 0.1F);
+        GameRegistry.addSmelting(coreoriteIngot, new ItemStack(finoriteMeltedIngot), 0.1F);
         GameRegistry.registerItem(finoriteMeltedIngot, "finoriteMeltedIngot");
-        //GameRegistry.addSmelting(finoriteIngot, new ItemStack(coreoriteMeltedIngot), 0.1F);
+        GameRegistry.addSmelting(finoriteIngot, new ItemStack(coreoriteMeltedIngot), 0.1F);
         GameRegistry.registerItem(placeHolderIngot, "placeHolderIngot");
 		GameRegistry.addShapedRecipe(new ItemStack(placeHolderIngot),
 				"XXX",
