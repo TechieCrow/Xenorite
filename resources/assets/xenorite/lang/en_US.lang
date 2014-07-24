@@ -13,6 +13,13 @@ item.xenorite:coreoriteBlock.name=Coreorite Block
 item.xenorite:finoriteOre.name=Finorite Ore
 item.xenorite:finoriteBlock.name=Finorite Block
 
+# Block Names - Heavenly Glint
+item.xenorite:HeavenlyGlintOre.name=Heavenly Glint Ore
+
+#Block Names - 
+item.xenorite:ShadowBoronOre.name=Shadow Boron Ore
+
+
 # Item Names - Xenorite
 item.xenorite:xenoriteIngot.name=Xenorite Ingot
 item.xenorite:xenoriteMeltedIngot.name=Melted Xenorite Ingot

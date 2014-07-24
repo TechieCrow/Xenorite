@@ -1,5 +1,8 @@
 package gcm.xenorite.proxy;
 
-public abstract class CommonProxy implements IProxy {
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.world.World;
 
+public abstract class CommonProxy implements IProxy {
+	
 }

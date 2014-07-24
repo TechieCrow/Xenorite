@@ -7,7 +7,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import scala.tools.nsc.settings.AdvancedScalaSettings.X;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class EventManager implements IWorldGenerator {
@@ -25,9 +24,12 @@ public class EventManager implements IWorldGenerator {
 
 	 public void generateSurface(Random random, int chunkX, int chunkZ, World world)
 	    {
-         addOreSpawn(gcm.xenorite.init.ModBlockOres.xenoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
-		 addOreSpawn(gcm.xenorite.init.ModBlockOres.coreoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
-         addOreSpawn(gcm.xenorite.init.ModBlockOres.finoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
+		 //Overworld Generation
+         this.addOreSpawn(gcm.xenorite.init.ModBlockOres.xenoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
+		 this.addOreSpawn(gcm.xenorite.init.ModBlockOres.coreoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
+         this.addOreSpawn(gcm.xenorite.init.ModBlockOres.finoriteOre, world, random, chunkX, chunkZ, 2, 6, 5, 1, 40);
+         this.addOreSpawn(gcm.xenorite.init.ModBlockOres.HeavenlyGlintOre, world, random, chunkX, chunkZ, 2, 6, 2, 1, 15);
+         this.addOreSpawn(gcm.xenorite.init.ModBlockOres.ShadowBoronOre, world, random, chunkX, chunkZ, 2, 6, 2, 1, 15);
 	    }
 
 	    public void generateEnd(Random random, int chunkX, int chunkZ, World world)
@@ -37,7 +39,7 @@ public class EventManager implements IWorldGenerator {
 
 	    public void generateNether(Random random, int chunkX, int chunkZ, World world)
 	    {
-	        //Add Nether Generation
+	     //Add Nether Generation
 	    }
 
 	/**
