@@ -1,6 +1,11 @@
 package gcm.xenorite.weapons;
 
+import java.util.List;
+
 import gcm.xenorite.crativetab.CreativeTab;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.EnumRarity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.Item.ToolMaterial;
 
