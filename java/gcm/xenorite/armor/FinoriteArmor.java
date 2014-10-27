@@ -1,11 +1,16 @@
 package gcm.xenorite.armor;
 
+import java.util.List;
+
+import org.lwjgl.input.Keyboard;
+
 import gcm.xenorite.Xenorite;
 import gcm.xenorite.crativetab.CreativeTabArmour;
 import gcm.xenorite.crativetab.CreativeTabItems;
 import gcm.xenorite.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -49,4 +54,17 @@ public class FinoriteArmor extends ItemArmor {
 			return null;
 		}
 	}
+	
+	/*public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List List, boolean par3)
+    {
+        if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
+        {
+            {
+            	List.add(String.format("§7Some text."));
+            }
+        } else
+        {
+            List.add("Hold §l§oSHIFT§r §7for weird description");
+        }
+    }*/
 }

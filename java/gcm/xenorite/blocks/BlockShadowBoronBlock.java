@@ -1,5 +1,12 @@
 package gcm.xenorite.blocks;
 
+import java.util.List;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
+
+import org.lwjgl.input.Keyboard;
+
 public class BlockShadowBoronBlock extends BlockXenorite
 {
 	public BlockShadowBoronBlock() {

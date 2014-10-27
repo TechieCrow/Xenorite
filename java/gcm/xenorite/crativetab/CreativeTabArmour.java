@@ -1,6 +1,6 @@
 package gcm.xenorite.crativetab;
 
-import gcm.xenorite.init.ModItems;
+import gcm.xenorite.Xenorite;
 import gcm.xenorite.reference.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -15,7 +15,7 @@ public class CreativeTabArmour
         @Override
         public Item getTabIconItem()
         {
-            return ModItems.xenoriteIngot;
+            return Xenorite.xenoriteChestplate;
         }
 
         @Override

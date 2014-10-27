@@ -1,7 +1,13 @@
 package gcm.xenorite.tools;
 
+import java.util.List;
+
+import org.lwjgl.input.Keyboard;
+
 import gcm.xenorite.crativetab.CreativeTabTools;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemAxe;
+import net.minecraft.item.ItemStack;
 
 public class FinoriteAxe extends ItemAxe {
 	public FinoriteAxe(ToolMaterial material) {
@@ -12,5 +18,18 @@ public class FinoriteAxe extends ItemAxe {
 		this.setUnlocalizedName("Finorite Axe");
 
 	}
+	
+	/*public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List List, boolean par3)
+    {
+        if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
+        {
+            {
+            	List.add(String.format("§7Some text."));
+            }
+        } else
+        {
+            List.add("Hold §l§oSHIFT§r §7for weird description");
+        }
+    }*/
 
 }

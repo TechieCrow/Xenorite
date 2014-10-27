@@ -1,6 +1,7 @@
 package gcm.xenorite.crativetab;
 
-import gcm.xenorite.init.ModItems;
+import gcm.xenorite.Xenorite;
+import gcm.xenorite.init.ModBlocks;
 import gcm.xenorite.reference.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -15,7 +16,7 @@ public class CreativeTabBlocks
         @Override
         public Item getTabIconItem()
         {
-            return ModItems.xenoriteIngot;
+            return Item.getItemFromBlock(ModBlocks.xenoriteBlock);
         }
 
         @Override
