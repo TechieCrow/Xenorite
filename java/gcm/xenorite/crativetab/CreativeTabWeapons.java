@@ -8,9 +8,9 @@ import net.minecraft.util.StatCollector;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class CreativeTab
+public class CreativeTabWeapons
 {
-    public static final CreativeTabs Xenorite = new CreativeTabs(Reference.MOD_ID)
+    public static final CreativeTabs Xenoriteweapons = new CreativeTabs(Reference.MOD_ID)
     {
         @Override
         public Item getTabIconItem()
@@ -22,7 +22,7 @@ public class CreativeTab
         @SideOnly(Side.CLIENT)
         public String getTranslatedTabLabel()
         {
-            return StatCollector.translateToLocal("key.categories.xenorite");
+            return StatCollector.translateToLocal("key.categories.xenoriteweapons");
         }
     };
 }

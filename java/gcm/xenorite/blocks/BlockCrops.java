@@ -1,6 +1,6 @@
 package gcm.xenorite.blocks;
 
-import gcm.xenorite.crativetab.CreativeTab;
+import gcm.xenorite.crativetab.CreativeTabItems;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -32,7 +32,7 @@ public class BlockCrops extends BlockBush implements IGrowable
         this.setTickRandomly(true);
         float f = 0.5F;
         this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
-        this.setCreativeTab(CreativeTab.Xenorite);
+        this.setCreativeTab(CreativeTabItems.Xenoriteitems);
         this.setHardness(0.0F);
         this.setStepSound(soundTypeSand);
         this.disableStats();

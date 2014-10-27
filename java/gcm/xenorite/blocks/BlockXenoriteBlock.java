@@ -1,6 +1,6 @@
 package gcm.xenorite.blocks;
 
-import gcm.xenorite.crativetab.CreativeTab;
+import gcm.xenorite.crativetab.CreativeTabItems;
 
 public class BlockXenoriteBlock extends BlockXenorite
 {

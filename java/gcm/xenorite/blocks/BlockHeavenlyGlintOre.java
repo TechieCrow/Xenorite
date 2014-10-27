@@ -24,9 +24,6 @@ public class BlockHeavenlyGlintOre extends BlockOresXenorite
 	{
 		entity.addPotionEffect((new PotionEffect(Potion.moveSpeed.getId(), 300, 0)));
 		entity.addPotionEffect((new PotionEffect(Potion.digSpeed.getId(), 300, 1)));
-		
-		if(!world.isRemote)
-		entity.addChatMessage((new ChatComponentText("Test")));
 	}
 	
 }

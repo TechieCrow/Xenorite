@@ -2,6 +2,8 @@ package gcm.xenorite.init;
 
 import gcm.xenorite.blocks.BlockCoreoriteBlock;
 import gcm.xenorite.blocks.BlockFinoriteBlock;
+import gcm.xenorite.blocks.BlockHeavenlyGlintBlock;
+import gcm.xenorite.blocks.BlockShadowBoronBlock;
 import gcm.xenorite.blocks.BlockXenorite;
 import gcm.xenorite.blocks.BlockXenoriteBlock;
 import gcm.xenorite.items.ItemCoreoriteIngot;
@@ -16,6 +18,8 @@ public class ModBlocks
 	public static final BlockXenorite xenoriteBlock = new BlockXenoriteBlock();
 	public static final BlockXenorite coreoriteBlock = new BlockCoreoriteBlock();
 	public static final BlockXenorite finoriteBlock = new BlockFinoriteBlock();
+	public static final BlockXenorite heavenlyglintBlock = new BlockHeavenlyGlintBlock();
+	public static final BlockXenorite shadowboronBlock = new BlockShadowBoronBlock();
 	
     public static void init()
     {
@@ -40,5 +44,19 @@ public class ModBlocks
     			"III",
     			"III",
     			'I', gcm.xenorite.init.ModItems.finoriteIngot);
+    	
+    	GameRegistry.registerBlock(heavenlyglintBlock, "heavenlyglintBlock");
+    	GameRegistry.addShapedRecipe(new ItemStack(heavenlyglintBlock),
+    			"III",
+    			"III",
+    			"III",
+    			'I', gcm.xenorite.init.ModItems.heavenlyglintIngot);
+    	
+    	GameRegistry.registerBlock(shadowboronBlock, "shadowboronBlock");
+    	GameRegistry.addShapedRecipe(new ItemStack(shadowboronBlock),
+    			"III",
+    			"III",
+    			"III",
+    			'I', gcm.xenorite.init.ModItems.shadowboronIngot);
     }
 }

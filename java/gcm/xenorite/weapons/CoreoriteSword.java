@@ -1,13 +1,12 @@
 package gcm.xenorite.weapons;
 
-import gcm.xenorite.crativetab.CreativeTab;
+import gcm.xenorite.crativetab.CreativeTabWeapons;
 import net.minecraft.item.ItemSword;
-import net.minecraft.item.Item.ToolMaterial;
 
 public class CoreoriteSword extends ItemSword {
 	public CoreoriteSword(ToolMaterial material) {
 		super(material);
-		this.setCreativeTab(CreativeTab.Xenorite);
+		this.setCreativeTab(CreativeTabWeapons.Xenoriteweapons);
 		this.setMaxStackSize(1);
 		this.setTextureName("xenorite:swordCoreorite");
 		this.setUnlocalizedName("Coreorite Sword");

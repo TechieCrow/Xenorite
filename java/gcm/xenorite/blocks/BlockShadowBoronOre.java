@@ -21,7 +21,6 @@ public class BlockShadowBoronOre extends BlockOresXenorite
 
 		entity.addPotionEffect((new PotionEffect(Potion.blindness.getId(), 300, 0)));
 		entity.addPotionEffect((new PotionEffect(Potion.digSlowdown.getId(), 300, 5)));
-		entity.addChatMessage((new ChatComponentText("The shadows gather near the ore as it breaks.")));
 	}
 
 }

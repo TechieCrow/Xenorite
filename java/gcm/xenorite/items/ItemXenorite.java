@@ -3,7 +3,7 @@ package gcm.xenorite.items;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import gcm.xenorite.Xenorite;
-import gcm.xenorite.crativetab.CreativeTab;
+import gcm.xenorite.crativetab.CreativeTabItems;
 import gcm.xenorite.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -16,7 +16,7 @@ public class ItemXenorite extends Item
     {
         super();
         this.maxStackSize = 1;
-        this.setCreativeTab(CreativeTab.Xenorite);
+        this.setCreativeTab(CreativeTabItems.Xenoriteitems);
     }
 
     @Override
