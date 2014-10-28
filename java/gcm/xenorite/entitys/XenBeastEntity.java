@@ -1,4 +1,4 @@
-package gcm.xenorite.entitys;
+/*package gcm.xenorite.entitys;
 
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -51,4 +51,4 @@ public class XenBeastEntity extends EntityMob
 		return true;
 	}
 
-}
+}*/

@@ -1,18 +1,14 @@
 package gcm.xenorite;
 
-import java.util.Random;
-
 import gcm.xenorite.armor.CoreoriteArmor;
 import gcm.xenorite.armor.FinoriteArmor;
 import gcm.xenorite.armor.HeavenlyGlintArmor;
 import gcm.xenorite.armor.ShadowBoronArmor;
 import gcm.xenorite.armor.XenoriteArmor;
-import gcm.xenorite.entitys.XenBeastEntity;
 import gcm.xenorite.init.ModBlockOres;
 import gcm.xenorite.init.ModBlocks;
 import gcm.xenorite.init.ModItems;
 import gcm.xenorite.init.Recipes;
-import gcm.xenorite.proxy.CommonProxy;
 import gcm.xenorite.proxy.IProxy;
 import gcm.xenorite.reference.Reference;
 import gcm.xenorite.tools.CoreoriteAxe;
@@ -42,6 +38,9 @@ import gcm.xenorite.weapons.HeavenlyGlintSword;
 import gcm.xenorite.weapons.ShadowBoronSword;
 import gcm.xenorite.weapons.XenoriteSword;
 import gcm.xenorite.world.gen.Oregen;
+
+import java.util.Random;
+
 import net.minecraft.entity.EntityList;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
@@ -189,7 +188,7 @@ public class Xenorite
 		
 		proxy.registerRenderers();
 		
-		registerEntity(XenBeastEntity.class, "XenBeastEntity");
+		//registerEntity(XenBeastEntity.class, "XenBeastEntity");
 		
 		ModBlockOres.init();
 		
