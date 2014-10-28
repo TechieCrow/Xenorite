@@ -26,12 +26,12 @@ public class XenoriteSword extends ItemSword {
         if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
         {
             {
-            	List.add(String.format("§kit's hard"));
-            	List.add(String.format("§7Thats what she said!"));
+            	List.add(String.format("..."));
+            	List.add(String.format("Thats what she said!"));
             }
         } else
         {
-            List.add("Hold §l§oSHIFT§r §7for weird description");
+            List.add("Hold SHIFT for weird description");
         }
     }
 }

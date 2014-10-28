@@ -30,7 +30,7 @@ public class HeavenlyGlintSword extends ItemSword {
             }
         } else
         {
-            List.add("Hold §l§oSHIFT§r §7for weird description");
+            List.add("Hold SHIFT for weird description");
         }
     }
 

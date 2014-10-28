@@ -94,5 +94,59 @@ public class Recipes
 
 				// finorite Boots
 				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.finoriteBoots), "   ", "I I", "I I", 'I', ModItems.finoriteIngot);
+				
+				// heavenlyglint Sword
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.heavenlyglintSword), "I", "I", "S", 'I', ModItems.heavenlyglintIngot, 'S', "stickWood"));
+
+				// heavenlyglint Pickaxe
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.heavenlyglintPickaxe), "III", " S ", " S ", 'I', ModItems.heavenlyglintIngot, 'S', "stickWood"));
+
+				// finorite Shovel
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.heavenlyglintShovel), "I", "S", "S", 'I', ModItems.heavenlyglintIngot, 'S', "stickWood"));
+
+				// heavenlyglint Axe
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.heavenlyglintAxe), "II ", "IS ", " S ", 'I', ModItems.heavenlyglintIngot, 'S', "stickWood"));
+
+				// heavenlyglint Hoe
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.heavenlyglintHoe), "II ", " S ", " S ", 'I', ModItems.heavenlyglintIngot, 'S', "stickWood"));
+
+				// heavenlyglint Helmet
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.heavenlyglintHelmet), "III", "I I", "   ", 'I', ModItems.heavenlyglintIngot);
+
+				// heavenlyglint Chestplate
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.heavenlyglintChestplate), "I I", "III", "III", 'I', ModItems.heavenlyglintIngot);
+
+				// heavenlyglint Leggings
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.heavenlyglintLeggings), "III", "I I", "I I", 'I', ModItems.heavenlyglintIngot);
+
+				// heavenlyglint Boots
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.heavenlyglintBoots), "   ", "I I", "I I", 'I', ModItems.heavenlyglintIngot);
+				
+				// shadowboron Sword
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.shadowboronSword), "I", "I", "S", 'I', ModItems.shadowboronIngot, 'S', "stickWood"));
+
+				// shadowboron Pickaxe
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.shadowboronPickaxe), "III", " S ", " S ", 'I', ModItems.shadowboronIngot, 'S', "stickWood"));
+
+				// finorite Shovel
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.shadowboronShovel), "I", "S", "S", 'I', ModItems.shadowboronIngot, 'S', "stickWood"));
+
+				// shadowboron Axe
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.shadowboronAxe), "II ", "IS ", " S ", 'I', ModItems.shadowboronIngot, 'S', "stickWood"));
+
+				// shadowboron Hoe
+				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.shadowboronHoe), "II ", " S ", " S ", 'I', ModItems.shadowboronIngot, 'S', "stickWood"));
+
+				// shadowboron Helmet
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.shadowboronHelmet), "III", "I I", "   ", 'I', ModItems.shadowboronIngot);
+
+				// shadowboron Chestplate
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.shadowboronChestplate), "I I", "III", "III", 'I', ModItems.shadowboronIngot);
+
+				// shadowboron Leggings
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.shadowboronLeggings), "III", "I I", "I I", 'I', ModItems.shadowboronIngot);
+
+				// shadowboron Boots
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.shadowboronBoots), "   ", "I I", "I I", 'I', ModItems.shadowboronIngot);
 	}
 }
