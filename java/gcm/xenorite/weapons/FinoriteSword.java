@@ -4,11 +4,15 @@ import gcm.xenorite.crativetab.CreativeTabWeapons;
 
 import java.util.List;
 
-import org.lwjgl.input.Keyboard;
-
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
+
+import org.lwjgl.input.Keyboard;
 
 public class FinoriteSword extends ItemSword {
 	public FinoriteSword(ToolMaterial material) {
@@ -19,21 +23,65 @@ public class FinoriteSword extends ItemSword {
 		this.setUnlocalizedName("Finorite Sword");
 
 	}
-	
-    public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List List, boolean par3)
-    {
-        if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
-        {
-            {
-        		List.add(String.format("You may turn yellow"));
-        		List.add(String.format("If you stick the pointy"));
-        		List.add(String.format("End in your mouth!"));
-        		List.add(String.format("Go ahead and try it!"));
-            }
-        } else
-        {
-            List.add("Hold SHIFT for weird description");
-        }
-    }
+
+	@Override
+	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World,
+			EntityPlayer par3EntityPlayer) {
+
+		if (par3EntityPlayer.isSneaking()) {
+			return par1ItemStack;
+		}
+
+		if (par1ItemStack.stackTagCompound == null) {
+			par1ItemStack.setTagCompound(new NBTTagCompound());
+		}
+
+		NBTTagCompound tag = par1ItemStack.stackTagCompound;
+		tag.setBoolean("isActive", !(tag.getBoolean("isActive")));
+
+		if (tag.getBoolean("isActive")) {
+			par1ItemStack.setItemDamage(1);
+			par3EntityPlayer.addPotionEffect(new PotionEffect(5, 0, 0, true));
+		}
+
+		return par1ItemStack;
+	}
+
+	@Override
+	public void onUpdate(ItemStack par1ItemStack, World par2World,
+			Entity par3Entity, int par4, boolean par5) {
+		if (!(par3Entity instanceof EntityPlayer)) {
+			return;
+		}
+
+		EntityPlayer par3EntityPlayer = (EntityPlayer) par3Entity;
+
+		if (par1ItemStack.stackTagCompound == null) {
+			par1ItemStack.setTagCompound(new NBTTagCompound());
+		}
+
+		if (par1ItemStack.stackTagCompound.getBoolean("isActive")) {
+			par3EntityPlayer.addPotionEffect(new PotionEffect(5, 0, 0, true));
+		}
+
+		return;
+	}
+
+	public void addInformation(ItemStack par1ItemStack,
+			EntityPlayer par2EntityPlayer, List List, boolean par3) {
+		if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)
+				|| Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
+			{
+				List.add(String
+						.format("Right click to activate strength buff."));
+				List.add(String.format("You may turn yellow"));
+				List.add(String.format("If you stick the pointy"));
+				List.add(String.format("End in your mouth!"));
+				List.add(String.format("Go ahead and try it!"));
+			}
+		} else {
+			List.add("Hold SHIFT for weird description");
+		}
+	}
 
 }

@@ -1,9 +1,5 @@
 package gcm.xenorite.armor;
 
-import java.util.List;
-
-import org.lwjgl.input.Keyboard;
-
 import gcm.xenorite.Xenorite;
 import gcm.xenorite.crativetab.CreativeTabArmour;
 import gcm.xenorite.reference.Reference;
@@ -12,6 +8,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
 
 public class CoreoriteArmor extends ItemArmor {
 
@@ -23,6 +22,28 @@ public class CoreoriteArmor extends ItemArmor {
 		super(armorMaterial, renderIndex, armorType);
 		this.setCreativeTab(CreativeTabArmour.Xenoritearmour);
 		this.setMaxStackSize(1);
+	}
+
+	@Override
+	public void onArmorTick(World world, EntityPlayer entity,
+			ItemStack itemstack) {
+		if (world.isDaytime()
+				&& (itemstack.getItem() == Xenorite.heavenlyglintHelmet)) {
+			entity.addPotionEffect((new PotionEffect(Potion.moveSpeed.getId(),
+					0, 0)));
+		} else if (world.isDaytime()
+				&& (itemstack.getItem() == Xenorite.heavenlyglintChestplate)) {
+			entity.addPotionEffect((new PotionEffect(Potion.digSpeed.getId(),
+					0, 0)));
+		} else if (world.isDaytime()
+				&& (itemstack.getItem() == Xenorite.heavenlyglintLeggings)) {
+			entity.addPotionEffect((new PotionEffect(Potion.jump.getId(), 0, 0)));
+		} else if (world.isDaytime()
+				&& (itemstack.getItem() == Xenorite.heavenlyglintBoots)) {
+			entity.addPotionEffect((new PotionEffect(Potion.fireResistance
+					.getId(), 0, 0)));
+
+		}
 	}
 
 	@Override
@@ -52,17 +73,13 @@ public class CoreoriteArmor extends ItemArmor {
 			return null;
 		}
 	}
-	
-	/*public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List List, boolean par3)
-    {
-        if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
-        {
-            {
-            	List.add(String.format("§7Some text."));
-            }
-        } else
-        {
-            List.add("Hold §l§oSHIFT§r §7for weird description");
-        }
-    }*/
+
+	/*
+	 * public void addInformation(ItemStack par1ItemStack, EntityPlayer
+	 * par2EntityPlayer, List List, boolean par3) { if
+	 * (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) ||
+	 * Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) { {
+	 * List.add(String.format("§7Some text.")); } } else {
+	 * List.add("Hold §l§oSHIFT§r §7for weird description"); } }
+	 */
 }
