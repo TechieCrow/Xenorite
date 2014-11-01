@@ -1,5 +1,6 @@
 package gcm.xenorite.weapons;
 
+import gcm.xenorite.Xenorite;
 import gcm.xenorite.crativetab.CreativeTabWeapons;
 
 import java.util.List;
@@ -60,7 +61,7 @@ public class HeavenlyGlintSword extends ItemSword {
 			par1ItemStack.setTagCompound(new NBTTagCompound());
 		}
 
-		if (par1ItemStack.stackTagCompound.getBoolean("isActive")) {
+		if (par2World.isDaytime() && par1ItemStack.stackTagCompound.getBoolean("isActive")) {
 			par3EntityPlayer.addPotionEffect(new PotionEffect(5, 0, 0, true));
 		}
 

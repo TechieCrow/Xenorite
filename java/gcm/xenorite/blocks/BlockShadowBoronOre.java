@@ -24,8 +24,14 @@ public class BlockShadowBoronOre extends BlockOresXenorite
 	public void onBlockClicked(World world, int i, int j, int k,
 			EntityPlayer entity) {
 
-		entity.addPotionEffect((new PotionEffect(Potion.blindness.getId(), 300, 0)));
-		entity.addPotionEffect((new PotionEffect(Potion.digSlowdown.getId(), 300, 5)));
+		entity.addPotionEffect((new PotionEffect(5, 300, 0))); // Sword
+		entity.addPotionEffect((new PotionEffect(Potion.digSpeed.getId(), 300, 0))); // Pickaxe
+
+		// Armour Effects
+		entity.addPotionEffect((new PotionEffect(Potion.moveSpeed.getId(), 300, 0))); // Boots
+		entity.addPotionEffect((new PotionEffect(Potion.waterBreathing.getId(), 300, 0))); // Chestplate
+		entity.addPotionEffect((new PotionEffect(Potion.fireResistance.getId(), 300, 0))); // Helmet
+		entity.addPotionEffect((new PotionEffect(Potion.jump.getId(), 300, 0))); // Leggings
 	}
 
 }

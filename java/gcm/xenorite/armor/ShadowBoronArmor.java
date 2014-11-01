@@ -27,18 +27,18 @@ public class ShadowBoronArmor extends ItemArmor {
 	@Override
 	public void onArmorTick(World world, EntityPlayer entity,
 			ItemStack itemstack) {
-		if (world.isDaytime()
+		if (!world.isDaytime()
 				&& (itemstack.getItem() == Xenorite.heavenlyglintHelmet)) {
 			entity.addPotionEffect((new PotionEffect(Potion.moveSpeed.getId(),
 					0, 0)));
-		} else if (world.isDaytime()
+		} else if (!world.isDaytime()
 				&& (itemstack.getItem() == Xenorite.heavenlyglintChestplate)) {
 			entity.addPotionEffect((new PotionEffect(Potion.digSpeed.getId(),
 					0, 0)));
-		} else if (world.isDaytime()
+		} else if (!world.isDaytime()
 				&& (itemstack.getItem() == Xenorite.heavenlyglintLeggings)) {
 			entity.addPotionEffect((new PotionEffect(Potion.jump.getId(), 0, 0)));
-		} else if (world.isDaytime()
+		} else if (!world.isDaytime()
 				&& (itemstack.getItem() == Xenorite.heavenlyglintBoots)) {
 			entity.addPotionEffect((new PotionEffect(Potion.fireResistance
 					.getId(), 0, 0)));

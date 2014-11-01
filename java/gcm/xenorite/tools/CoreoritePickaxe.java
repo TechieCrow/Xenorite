@@ -5,9 +5,14 @@ import java.util.List;
 import org.lwjgl.input.Keyboard;
 
 import gcm.xenorite.crativetab.CreativeTabTools;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
 
 public class CoreoritePickaxe extends ItemPickaxe {
 	public CoreoritePickaxe(ToolMaterial material) {
