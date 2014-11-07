@@ -8,15 +8,15 @@ import net.minecraft.util.ResourceLocation;
 
 public class XenBeastRender extends RenderBiped {
 
-private static final ResourceLocation textureLocation = new ResourceLocation(Reference.MOD_ID + ":" + "textures/models/entitys/entityTest.png");
+	private static final ResourceLocation textureLocation = new ResourceLocation(
+			Reference.MOD_ID + ":" + "textures/models/entitys/entityTest.png");
 
-public XenBeastRender(ModelBiped model, float shadowSize) {
-super(model, shadowSize);
-}
+	public XenBeastRender(ModelBiped model, float shadowSize) {
+		super(model, shadowSize);
+	}
 
-@Override
-protected ResourceLocation getEntityTexture(Entity par1Entity)
-{
-return textureLocation;
-}
+	@Override
+	protected ResourceLocation getEntityTexture(Entity par1Entity) {
+		return textureLocation;
+	}
 }

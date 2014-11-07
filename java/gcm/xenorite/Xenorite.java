@@ -5,6 +5,9 @@ import gcm.xenorite.armor.FinoriteArmor;
 import gcm.xenorite.armor.HeavenlyGlintArmor;
 import gcm.xenorite.armor.ShadowBoronArmor;
 import gcm.xenorite.armor.XenoriteArmor;
+import gcm.xenorite.crativetab.CreativeTabArmour;
+import gcm.xenorite.crativetab.CreativeTabItems;
+import gcm.xenorite.entitys.XenBeastEntity;
 import gcm.xenorite.init.ModBlockOres;
 import gcm.xenorite.init.ModBlocks;
 import gcm.xenorite.init.ModItems;
@@ -41,7 +44,12 @@ import gcm.xenorite.world.gen.Oregen;
 
 import java.util.Random;
 
+import com.google.common.base.Predicates;
+import com.google.common.collect.Iterators;
+
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemAxe;
@@ -50,6 +58,10 @@ import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
+import net.minecraftforge.common.BiomeDictionary;
+import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
 import cpw.mods.fml.common.Mod;
@@ -66,9 +78,9 @@ public class Xenorite
 
 	@Mod.Instance(Reference.MOD_ID)
 	public static Xenorite instance;
-	
+
 	public static Oregen Oregen = new Oregen();
-	
+
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS, modId = Reference.MOD_ID)
 	public static IProxy proxy;
 
@@ -95,18 +107,19 @@ public class Xenorite
 					6, 3 }, 25);
 
 	public static final Item.ToolMaterial HeavenlyGlintToolMaterials = EnumHelper
-			.addToolMaterial("HeavenlyGlintToolMaterials", 3, 655, 8.0F, 3.0F, 22);
-	
+			.addToolMaterial("HeavenlyGlintToolMaterials", 3, 655, 8.0F, 3.0F,
+					22);
+
 	public static final ItemArmor.ArmorMaterial HeavenlyGlintArmorMaterials = EnumHelper
-			.addArmorMaterial("HeavenlyGlintArmorMaterials", 33, new int[] { 3, 8,
-					6, 3 }, 25);
-	
+			.addArmorMaterial("HeavenlyGlintArmorMaterials", 33, new int[] { 3,
+					8, 6, 3 }, 25);
+
 	public static final Item.ToolMaterial ShadowBoronToolMaterials = EnumHelper
 			.addToolMaterial("ShadowBoronToolMaterials", 3, 655, 8.0F, 3.0F, 22);
-	
+
 	public static final ItemArmor.ArmorMaterial ShadowBoronArmorMaterials = EnumHelper
-			.addArmorMaterial("ShadowBoronArmorMaterials", 33, new int[] { 3, 8,
-					6, 3 }, 25);
+			.addArmorMaterial("ShadowBoronArmorMaterials", 33, new int[] { 3,
+					8, 6, 3 }, 25);
 
 	// Xenorite Sets
 	public static ItemSword xenoriteSword;
@@ -140,7 +153,7 @@ public class Xenorite
 	public static Item finoriteChestplate;
 	public static Item finoriteLeggings;
 	public static Item finoriteBoots;
-	
+
 	// Heavenly Glint Sets
 	public static ItemSword heavenlyglintSword;
 	public static ItemPickaxe heavenlyglintPickaxe;
@@ -151,7 +164,7 @@ public class Xenorite
 	public static Item heavenlyglintChestplate;
 	public static Item heavenlyglintLeggings;
 	public static Item heavenlyglintBoots;
-	
+
 	// Shadow Boron Sets
 	public static ItemSword shadowboronSword;
 	public static ItemPickaxe shadowboronPickaxe;
@@ -162,42 +175,47 @@ public class Xenorite
 	public static Item shadowboronChestplate;
 	public static Item shadowboronLeggings;
 	public static Item shadowboronBoots;
-	
-	//Mob Stuff
+	public static Entity XenBeastEntity;
+
+	// Mob Stuff
 	public static void registerEntity(Class entityClass, String name)
 	{
-	int entityID = EntityRegistry.findGlobalUniqueEntityId();
-	long seed = name.hashCode();
-	Random rand = new Random(seed);
-	int primaryColor = rand.nextInt() * 16777215;
-	int secondaryColor = rand.nextInt() * 16777215;
+		int entityID = EntityRegistry.findGlobalUniqueEntityId();
+		long seed = name.hashCode();
+		Random rand = new Random(seed);
+		int primaryColor = rand.nextInt() * 16777215;
+		int secondaryColor = rand.nextInt() * 16777215;
 
-	EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
-	EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
-	EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
+		EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
+		EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
+		EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
 	}
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
 
-		//ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-		//FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-		
-		//NetworkRegistry.instance().registerGuiHandler(this, new CommonProxy());
-		
+		// ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		// FMLCommonHandler.instance().bus().register(new
+		// ConfigurationHandler());
+
+		// NetworkRegistry.instance().registerGuiHandler(this, new
+		// CommonProxy());
+
 		proxy.registerRenderers();
-		
-		//registerEntity(XenBeastEntity.class, "XenBeastEntity");
-		
+
+		registerEntity(XenBeastEntity.class, "XenBeastEntity");
+
 		ModBlockOres.init();
-		
+
 		ModBlocks.init();
-		
+
 		ModItems.init();
 
 		// Xenorite Sets
 
+		proxy.addArmor("xenorite");
+		
 		xenoriteSword = new XenoriteSword(XenoriteToolMaterials);
 		GameRegistry.registerItem(xenoriteSword, "xenoriteSword");
 		OreDictionary.registerOre("swordXenorite", new ItemStack(xenoriteSword));
@@ -220,7 +238,6 @@ public class Xenorite
 
 		xenoriteHelmet = new XenoriteArmor(XenoriteArmorMaterials, 5, 0).setUnlocalizedName("Xenorite Helmet");
 		GameRegistry.registerItem(xenoriteHelmet, "xenoriteHelmet");
-		proxy.addArmor("xenorite");
 		OreDictionary.registerOre("helmetXenorite", new ItemStack(xenoriteHelmet));
 
 		xenoriteChestplate = new XenoriteArmor(XenoriteArmorMaterials, 5, 1).setUnlocalizedName("Xenorite Chestplate");
@@ -310,7 +327,7 @@ public class Xenorite
 		finoriteBoots = new FinoriteArmor(FinoriteArmorMaterials, 5, 3).setUnlocalizedName("Finorite Boots");
 		GameRegistry.registerItem(finoriteBoots, "finoriteBoots");
 		OreDictionary.registerOre("bootsFinorite", new ItemStack(finoriteBoots));
-		
+
 		// Heavenly Glint Sets
 
 		heavenlyglintSword = new HeavenlyGlintSword(HeavenlyGlintToolMaterials);
@@ -338,7 +355,7 @@ public class Xenorite
 		OreDictionary.registerOre("helmetHeavenlyGlint", new ItemStack(heavenlyglintHelmet));
 
 		heavenlyglintChestplate = new HeavenlyGlintArmor(HeavenlyGlintArmorMaterials, 5, 1).setUnlocalizedName("HeavenlyGlint Chestplate");
-		GameRegistry.registerItem(heavenlyglintChestplate, "heavenlyglintChestplate");
+		GameRegistry.registerItem(heavenlyglintChestplate,"heavenlyglintChestplate");
 		OreDictionary.registerOre("chestplateHeavenlyGlint", new ItemStack(heavenlyglintChestplate));
 
 		heavenlyglintLeggings = new HeavenlyGlintArmor(HeavenlyGlintArmorMaterials, 5, 2).setUnlocalizedName("HeavenlyGlint Leggings");
@@ -348,7 +365,7 @@ public class Xenorite
 		heavenlyglintBoots = new HeavenlyGlintArmor(HeavenlyGlintArmorMaterials, 5, 3).setUnlocalizedName("HeavenlyGlint Boots");
 		GameRegistry.registerItem(heavenlyglintBoots, "heavenlyglintBoots");
 		OreDictionary.registerOre("bootsHeavenlyGlint", new ItemStack(heavenlyglintBoots));
-		
+
 		// Shadow Boron Sets
 
 		shadowboronSword = new ShadowBoronSword(ShadowBoronToolMaterials);
@@ -376,7 +393,7 @@ public class Xenorite
 		OreDictionary.registerOre("helmetShadowBoron", new ItemStack(shadowboronHelmet));
 
 		shadowboronChestplate = new ShadowBoronArmor(ShadowBoronArmorMaterials, 5, 1).setUnlocalizedName("ShadowBoron Chestplate");
-		GameRegistry.registerItem(shadowboronChestplate, "shadowboronChestplate");
+		GameRegistry.registerItem(shadowboronChestplate,"shadowboronChestplate");
 		OreDictionary.registerOre("chestplateShadowBoron", new ItemStack(shadowboronChestplate));
 
 		shadowboronLeggings = new ShadowBoronArmor(ShadowBoronArmorMaterials, 5, 2).setUnlocalizedName("ShadowBoron Leggings");
@@ -394,17 +411,17 @@ public class Xenorite
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
-		
+
 		Recipes.init();
-		
+
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
 		LogHelper.info("Initialization Completed - Set!");
-		
+
 	}
 
 	@Mod.EventHandler
-	public void postInit(FMLPostInitializationEvent e)
+	public void postInit(FMLPostInitializationEvent event)
 	{
 
 		LogHelper.info("Post Initialization Completed - Mine!");
