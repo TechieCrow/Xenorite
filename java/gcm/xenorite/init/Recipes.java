@@ -30,16 +30,16 @@ public class Recipes
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xenoriteHoe), "II ", " S ", " S ", 'I', ModItems.xenoriteIngot, 'S', "stickWood"));
 
 				// Xenorite Helmet
-				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteHelmet), "III", "I I", "   ", 'I', ModItems.xenoriteIngot);
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenorite_helmet), "III", "I I", "   ", 'I', ModItems.xenoriteIngot);
 
 				// Xenorite Chestplate
-				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteChestplate), "I I", "III", "III", 'I', ModItems.xenoriteIngot);
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenorite_chestplate), "I I", "III", "III", 'I', ModItems.xenoriteIngot);
 
 				// Xenorite Leggings
-				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteLeggings), "III", "I I", "I I", 'I', ModItems.xenoriteIngot);
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenorite_leggings), "III", "I I", "I I", 'I', ModItems.xenoriteIngot);
 
 				// Xenorite Boots
-				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteBoots), "   ", "I I", "I I", 'I', ModItems.xenoriteIngot);
+				GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenorite_boots), "   ", "I I", "I I", 'I', ModItems.xenoriteIngot);
 
 				// coreorite Sword
 				GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.coreoriteSword), "I", "I", "S", 'I', ModItems.coreoriteIngot, 'S', "stickWood"));

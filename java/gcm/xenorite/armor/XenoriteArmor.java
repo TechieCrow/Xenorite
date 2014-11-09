@@ -26,25 +26,25 @@ public class XenoriteArmor extends ItemArmor {
 
 	@Override
 	public void registerIcons(IIconRegister reg) {
-		if (this == Xenorite.xenoriteHelmet)
+		if (this == Xenorite.xenorite_helmet)
 			this.itemIcon = reg.registerIcon("xenorite:helmetXenorite");
-		if (this == Xenorite.xenoriteChestplate)
+		if (this == Xenorite.xenorite_chestplate)
 			this.itemIcon = reg.registerIcon("xenorite:chestplateXenorite");
-		if (this == Xenorite.xenoriteLeggings)
+		if (this == Xenorite.xenorite_leggings)
 			this.itemIcon = reg.registerIcon("xenorite:leggingsXenorite");
-		if (this == Xenorite.xenoriteBoots)
+		if (this == Xenorite.xenorite_boots)
 			this.itemIcon = reg.registerIcon("xenorite:bootsXenorite");
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
 			String type) {
-		if (stack.getItem() == Xenorite.xenoriteHelmet
-				|| stack.getItem() == Xenorite.xenoriteChestplate
-				|| stack.getItem() == Xenorite.xenoriteBoots) {
+		if (stack.getItem() == Xenorite.xenorite_helmet
+				|| stack.getItem() == Xenorite.xenorite_chestplate
+				|| stack.getItem() == Xenorite.xenorite_boots) {
 			return Reference.MOD_ID
 					+ ":textures/models/armor/xenorite_layer_1.png";
 		}
-		if (stack.getItem() == Xenorite.xenoriteLeggings) {
+		if (stack.getItem() == Xenorite.xenorite_leggings) {
 			return Reference.MOD_ID
 					+ ":textures/models/armor/xenorite_layer_2.png";
 		} else {

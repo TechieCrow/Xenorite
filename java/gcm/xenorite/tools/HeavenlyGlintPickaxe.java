@@ -5,6 +5,7 @@ import java.util.List;
 import org.lwjgl.input.Keyboard;
 
 import gcm.xenorite.crativetab.CreativeTabTools;
+import gcm.xenorite.handler.ConfigurationHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemPickaxe;
@@ -61,7 +62,7 @@ public class HeavenlyGlintPickaxe extends ItemPickaxe {
 		}
 
 		if (par2World.isDaytime() && par1ItemStack.stackTagCompound.getBoolean("isActive")) {
-			par3EntityPlayer.addPotionEffect((new PotionEffect(Potion.digSpeed.getId(), 0, 0, true)));
+			par3EntityPlayer.addPotionEffect((new PotionEffect(ConfigurationHandler.swordHeavenlyGlintEffect1, 0, 0, true)));
 		}
 
 		return;

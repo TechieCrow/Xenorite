@@ -5,13 +5,13 @@ import gcm.xenorite.armor.FinoriteArmor;
 import gcm.xenorite.armor.HeavenlyGlintArmor;
 import gcm.xenorite.armor.ShadowBoronArmor;
 import gcm.xenorite.armor.XenoriteArmor;
-import gcm.xenorite.crativetab.CreativeTabArmour;
-import gcm.xenorite.crativetab.CreativeTabItems;
 import gcm.xenorite.entitys.XenBeastEntity;
+import gcm.xenorite.handler.ConfigurationHandler;
 import gcm.xenorite.init.ModBlockOres;
 import gcm.xenorite.init.ModBlocks;
 import gcm.xenorite.init.ModItems;
 import gcm.xenorite.init.Recipes;
+import gcm.xenorite.proxy.CommonProxy;
 import gcm.xenorite.proxy.IProxy;
 import gcm.xenorite.reference.Reference;
 import gcm.xenorite.tools.CoreoriteAxe;
@@ -44,12 +44,8 @@ import gcm.xenorite.world.gen.Oregen;
 
 import java.util.Random;
 
-import com.google.common.base.Predicates;
-import com.google.common.collect.Iterators;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemAxe;
@@ -58,17 +54,15 @@ import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraft.world.biome.BiomeGenBase.SpawnListEntry;
-import net.minecraftforge.common.BiomeDictionary;
-import net.minecraftforge.common.BiomeDictionary.Type;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -127,10 +121,10 @@ public class Xenorite
 	public static ItemSpade xenoriteShovel;
 	public static ItemAxe xenoriteAxe;
 	public static ItemHoe xenoriteHoe;
-	public static Item xenoriteHelmet;
-	public static Item xenoriteChestplate;
-	public static Item xenoriteLeggings;
-	public static Item xenoriteBoots;
+	public static Item xenorite_helmet;
+	public static Item xenorite_chestplate;
+	public static Item xenorite_leggings;
+	public static Item xenorite_boots;
 
 	// Coreorite Sets
 	public static ItemSword coreoriteSword;
@@ -195,12 +189,8 @@ public class Xenorite
 	public void preInit(FMLPreInitializationEvent event)
 	{
 
-		// ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-		// FMLCommonHandler.instance().bus().register(new
-		// ConfigurationHandler());
-
-		// NetworkRegistry.instance().registerGuiHandler(this, new
-		// CommonProxy());
+		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
 		proxy.registerRenderers();
 
@@ -236,21 +226,21 @@ public class Xenorite
 		GameRegistry.registerItem(xenoriteHoe, "xenoriteHoe");
 		OreDictionary.registerOre("hoeXenorite", new ItemStack(xenoriteHoe));
 
-		xenoriteHelmet = new XenoriteArmor(XenoriteArmorMaterials, 5, 0).setUnlocalizedName("Xenorite Helmet");
-		GameRegistry.registerItem(xenoriteHelmet, "xenoriteHelmet");
-		OreDictionary.registerOre("helmetXenorite", new ItemStack(xenoriteHelmet));
+		xenorite_helmet = new XenoriteArmor(XenoriteArmorMaterials, 5, 0).setUnlocalizedName("Xenorite Helmet");
+		GameRegistry.registerItem(xenorite_helmet, "xenorite_helmet");
+		OreDictionary.registerOre("xenorite_helmet", new ItemStack(xenorite_helmet));
 
-		xenoriteChestplate = new XenoriteArmor(XenoriteArmorMaterials, 5, 1).setUnlocalizedName("Xenorite Chestplate");
-		GameRegistry.registerItem(xenoriteChestplate, "xenoriteChestplate");
-		OreDictionary.registerOre("chestplateXenorite", new ItemStack(xenoriteChestplate));
+		xenorite_chestplate = new XenoriteArmor(XenoriteArmorMaterials, 5, 1).setUnlocalizedName("Xenorite Chestplate");
+		GameRegistry.registerItem(xenorite_chestplate, "xenorite_chestplate");
+		OreDictionary.registerOre("xenorite_chestplate", new ItemStack(xenorite_chestplate));
 
-		xenoriteLeggings = new XenoriteArmor(XenoriteArmorMaterials, 5, 2).setUnlocalizedName("Xenorite Leggings");
-		GameRegistry.registerItem(xenoriteLeggings, "xenoriteLeggings");
-		OreDictionary.registerOre("leggingsXenorite", new ItemStack(xenoriteLeggings));
+		xenorite_leggings = new XenoriteArmor(XenoriteArmorMaterials, 5, 2).setUnlocalizedName("Xenorite Leggings");
+		GameRegistry.registerItem(xenorite_leggings, "xenorite_leggings");
+		OreDictionary.registerOre("xenorite_leggings", new ItemStack(xenorite_leggings));
 
-		xenoriteBoots = new XenoriteArmor(XenoriteArmorMaterials, 5, 3).setUnlocalizedName("Xenorite Boots");
-		GameRegistry.registerItem(xenoriteBoots, "xenoriteBoots");
-		OreDictionary.registerOre("bootsXenorite", new ItemStack(xenoriteBoots));
+		xenorite_boots = new XenoriteArmor(XenoriteArmorMaterials, 5, 3).setUnlocalizedName("Xenorite Boots");
+		GameRegistry.registerItem(xenorite_boots, "xenorite_boots");
+		OreDictionary.registerOre("xenorite_boots", new ItemStack(xenorite_boots));
 
 		// Coreorite Sets
 

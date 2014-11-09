@@ -1,6 +1,7 @@
 package gcm.xenorite.weapons;
 
 import gcm.xenorite.crativetab.CreativeTabWeapons;
+import gcm.xenorite.handler.ConfigurationHandler;
 
 import java.util.List;
 
@@ -61,7 +62,7 @@ public class ShadowBoronSword extends ItemSword {
 		}
 
 		if (!par2World.isDaytime() && par1ItemStack.stackTagCompound.getBoolean("isActive")) {
-			par3EntityPlayer.addPotionEffect(new PotionEffect(5, 0, 0, true));
+			par3EntityPlayer.addPotionEffect(new PotionEffect(ConfigurationHandler.swordShadowBoronEffect1, 0, 0, true));
 		}
 
 		return;

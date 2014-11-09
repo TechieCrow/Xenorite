@@ -1,4 +1,4 @@
-package gcm.xenorite.client.gui;
+/*package gcm.xenorite.client.gui;
 
 import java.util.Set;
 
@@ -33,4 +33,4 @@ public class GuiFactory implements IModGuiFactory {
 		return null;
 	}
 
-}
+}*/
