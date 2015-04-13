@@ -23,6 +23,11 @@ public class ItemXenBeastSoulFragment extends ItemXenorite
         this.setUnlocalizedName("xenbeastsoulFragment1");
     }
     
+	public boolean hasEffect(ItemStack ItemStack) {
+		
+	return true;
+	}
+    
     @Override
 	public ItemStack onItemRightClick(ItemStack ItemStack, World World, EntityPlayer EntityPlayer) {
 		
