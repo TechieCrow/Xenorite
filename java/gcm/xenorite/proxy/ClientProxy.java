@@ -11,8 +11,7 @@ public class ClientProxy extends CommonProxy
 	@Override
 	public void registerRenderers() {}
 	{
-	RenderingRegistry.registerEntityRenderingHandler(XenBeastEntity.class, new XenBeastRender(new ModelBiped(), 0.5F));
-
+	RenderingRegistry.registerEntityRenderingHandler(XenBeastEntity.class, new XenBeastRender(new ModelBiped(), 0));
 	}
 	
 	@Override
