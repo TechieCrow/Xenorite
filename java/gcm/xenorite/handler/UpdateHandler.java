@@ -31,13 +31,13 @@ public class UpdateHandler {
 		if (newestVersion != null) {
 			// Compare new version with running version
 			if (newestVersion.equalsIgnoreCase(currentVersion)) {
-				updateStatus = "§a[Xenorite] is up to date!";
+				updateStatus = "§b[Xenorite] is up to date!";
 				// Part of my log helper.
 				LogHelper.info("[Xenorite] is up to date!");
 			} else {
 				show = true;
-				updateStatus = "§b[Xenorite] Current Version: " + currentVersion + " §b- New Version: " + newestVersion;
-				LogHelper.info("[Xenorite] Current Version: " + currentVersion + " - New Version: " + newestVersion);
+				updateStatus = "§b[Xenorite] Current Version: " + currentVersion + " §bNewest Version: " + newestVersion;
+				LogHelper.info("[Xenorite] out of date! Your Version: " + currentVersion + " Latest Version: " + newestVersion);
 			}
 		} else {
 			show = true;
@@ -50,7 +50,7 @@ public class UpdateHandler {
 		// We use a try/catch incase something goes wrong AKA server is down, or
 		// no internet connection
 		try {
-			URL url = new URL("http://techiecrow.ddns.net//minecraft/mods/xenorite/version.txt");
+			URL url = new URL("http://techiecrow.ddns.net/minecraft/mods/xenorite/version.txt");
 			Scanner s = new Scanner(url.openStream());
 			// The way I did this, well I have a space in my version so that why
 			// I add a space in and get the next
@@ -61,7 +61,8 @@ public class UpdateHandler {
 		} catch (IOException ex) {
 			ex.printStackTrace();
 			// Part of my log helper!
-			LogHelper.info("Could not connect to determine if mod was up to date!");
+			LogHelper
+					.info("Could not connect to determine if mod was up to date!");
 		}
 	}
 }
