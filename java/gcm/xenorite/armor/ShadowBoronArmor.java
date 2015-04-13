@@ -1,5 +1,7 @@
 package gcm.xenorite.armor;
 
+import java.util.List;
+
 import gcm.xenorite.Xenorite;
 import gcm.xenorite.crativetab.CreativeTabArmour;
 import gcm.xenorite.reference.Reference;
@@ -72,8 +74,7 @@ public class ShadowBoronArmor extends ItemArmor {
 	}
 
 	/*
-	 * public void addInformation(ItemStack par1ItemStack, EntityPlayer
-	 * par2EntityPlayer, List List, boolean par3) { if
+	 * public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par1) { if
 	 * (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) ||
 	 * Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) { {
 	 * List.add(String.format("§7Some text.")); } } else {

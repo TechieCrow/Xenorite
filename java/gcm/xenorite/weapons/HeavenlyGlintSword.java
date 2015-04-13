@@ -27,55 +27,50 @@ public class HeavenlyGlintSword extends ItemSword {
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World,
-			EntityPlayer par3EntityPlayer) {
-
-		if (par3EntityPlayer.isSneaking()) {
-			return par1ItemStack;
+	public ItemStack onItemRightClick(ItemStack ItemStack, World World, EntityPlayer EntityPlayer) {
+		
+		if (EntityPlayer.isSneaking()) {
+			return ItemStack;
 		}
 
-		if (par1ItemStack.stackTagCompound == null) {
-			par1ItemStack.setTagCompound(new NBTTagCompound());
+		if (ItemStack.stackTagCompound == null) {
+			ItemStack.setTagCompound(new NBTTagCompound());
 		}
 
-		NBTTagCompound tag = par1ItemStack.stackTagCompound;
+		NBTTagCompound tag = ItemStack.stackTagCompound;
 		tag.setBoolean("isActive", !(tag.getBoolean("isActive")));
 
 		if (tag.getBoolean("isActive")) {
-			par1ItemStack.setItemDamage(1);
-			par3EntityPlayer.addPotionEffect(new PotionEffect(5, 0, 0, true));
+			ItemStack.setItemDamage(1);
+			EntityPlayer.addPotionEffect(new PotionEffect(5, 0, 0, true));
 		}
 
-		return par1ItemStack;
+		return ItemStack;
 	}
 
 	@Override
-	public void onUpdate(ItemStack par1ItemStack, World par2World,
-			Entity par3Entity, int par4, boolean par5) {
-		if (!(par3Entity instanceof EntityPlayer)) {
+	public void onUpdate(ItemStack ItemStack, World World, Entity Entity, int par4, boolean par5) {
+		if (!(Entity instanceof EntityPlayer)) {
 			return;
 		}
 
-		EntityPlayer par3EntityPlayer = (EntityPlayer) par3Entity;
+		EntityPlayer EntityPlayer = (EntityPlayer) Entity;
 
-		if (par1ItemStack.stackTagCompound == null) {
-			par1ItemStack.setTagCompound(new NBTTagCompound());
+		if (ItemStack.stackTagCompound == null) {
+			ItemStack.setTagCompound(new NBTTagCompound());
 		}
 
-		if (par2World.isDaytime() && par1ItemStack.stackTagCompound.getBoolean("isActive")) {
-			par3EntityPlayer.addPotionEffect(new PotionEffect(ConfigurationHandler.swordHeavenlyGlintEffect1, 0, 0, true));
+		if (World.isDaytime() && (ItemStack.stackTagCompound.getBoolean("isActive"))) {
+			EntityPlayer.addPotionEffect(new PotionEffect(ConfigurationHandler.swordShadowBoronEffect1, 0, 0, true));
 		}
 
 		return;
 	}
 
-	public void addInformation(ItemStack par1ItemStack,
-			EntityPlayer par2EntityPlayer, List List, boolean par3) {
-		if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)
-				|| Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
+	public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par1) {
+		if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
 			{
-				List.add(String
-						.format("Right click to activate strength buff."));
+				List.add(String.format("Right click to activate strength buff."));
 				List.add(String.format("It seems to shine as much as a rock."));
 			}
 		} else {
