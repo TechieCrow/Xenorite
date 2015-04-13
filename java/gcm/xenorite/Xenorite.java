@@ -7,6 +7,8 @@ import gcm.xenorite.armor.ShadowBoronArmor;
 import gcm.xenorite.armor.XenoriteArmor;
 import gcm.xenorite.entitys.XenBeastEntity;
 import gcm.xenorite.handler.ConfigurationHandler;
+import gcm.xenorite.handler.EventHandler;
+import gcm.xenorite.handler.UpdateHandler;
 import gcm.xenorite.init.ModBlockOres;
 import gcm.xenorite.init.ModBlocks;
 import gcm.xenorite.init.ModItems;
@@ -184,7 +186,7 @@ public class Xenorite {
 		EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
 		EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor));
 		// probablity of space/minimal to spawn/max to spawn
-		EntityRegistry.addSpawn(XenBeastEntity.class, 100, 10, 50, EnumCreatureType.monster, new BiomeGenBase[] {
+		EntityRegistry.addSpawn(XenBeastEntity.class, 10, 1, 5, EnumCreatureType.monster, new BiomeGenBase[] {
 						BiomeGenBase.ocean, BiomeGenBase.plains,
 						BiomeGenBase.desert, BiomeGenBase.extremeHills,
 						BiomeGenBase.forest, BiomeGenBase.taiga,
@@ -213,6 +215,7 @@ public class Xenorite {
 
 		ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
+		FMLCommonHandler.instance().bus().register(new EventHandler());
 		MinecraftForge.EVENT_BUS.register(new CustomDrops());
 
 		proxy.registerRenderers();
@@ -224,6 +227,8 @@ public class Xenorite {
 		ModBlocks.init();
 
 		ModItems.init();
+		
+		UpdateHandler.init();
 
 		// Xenorite Sets
 
