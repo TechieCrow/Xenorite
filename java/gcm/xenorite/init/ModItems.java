@@ -6,9 +6,12 @@ import gcm.xenorite.items.ItemFinoriteIngot;
 import gcm.xenorite.items.ItemFinoriteMeltedIngot;
 import gcm.xenorite.items.ItemHeavenlyGlintIngot;
 import gcm.xenorite.items.ItemShadowBoronIngot;
+import gcm.xenorite.items.ItemUniverseSoulSplit;
+import gcm.xenorite.items.ItemXenBeastSoulFragment;
 import gcm.xenorite.items.ItemXenorite;
 import gcm.xenorite.items.ItemXenoriteIngot;
 import gcm.xenorite.items.ItemXenoriteMeltedIngot;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -22,6 +25,9 @@ public class ModItems
     public static final ItemXenorite finoriteMeltedIngot = new ItemFinoriteMeltedIngot();
     public static final ItemXenorite heavenlyglintIngot = new ItemHeavenlyGlintIngot();
     public static final ItemXenorite shadowboronIngot = new ItemShadowBoronIngot();
+    
+    public static final ItemXenorite xenbeastsoulFragment1 = new ItemXenBeastSoulFragment();
+    public static final ItemXenorite universesoulSplit = new ItemUniverseSoulSplit();
 
     public static void init()
     {
@@ -41,6 +47,9 @@ public class ModItems
         GameRegistry.addSmelting(gcm.xenorite.init.ModBlockOres.HeavenlyGlintOre, new ItemStack(heavenlyglintIngot), 1.0F);
         GameRegistry.registerItem(shadowboronIngot, "shadowboronIngot");
         GameRegistry.addSmelting(gcm.xenorite.init.ModBlockOres.ShadowBoronOre, new ItemStack(shadowboronIngot), 1.0F);
+        
+        GameRegistry.registerItem(xenbeastsoulFragment1, "xenbeastsoulFragment1");
+        GameRegistry.registerItem(universesoulSplit, "universesoulSplit");
         
     }
 }
