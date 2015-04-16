@@ -12,6 +12,17 @@ public class Recipes
 
 		// Shaped Recipes
 
+		// Xenorite Block
+		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.xenoriteBlock), "III", "III", "III", 'I', gcm.xenorite.init.ModItems.xenoriteIngot);
+		// Coreorite Block
+		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.coreoriteBlock), "III", "III", "III", 'I', gcm.xenorite.init.ModItems.coreoriteIngot);
+		// Finorite Block
+		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.finoriteBlock), "III", "III", "III", 'I', gcm.xenorite.init.ModItems.finoriteIngot);
+		// HeavenlyGlint Block
+		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.heavenlyglintBlock), "III", "III", "III", 'I', gcm.xenorite.init.ModItems.heavenlyglintIngot);
+		// ShadowBoron Block
+		GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.shadowboronBlock), "III", "III", "III", 'I', gcm.xenorite.init.ModItems.shadowboronIngot);
+
 		// Xenorite Sword
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xenoriteSword), "I", "I", "S", 'I', ModItems.xenoriteIngot, 'S', "stickWood"));
 
