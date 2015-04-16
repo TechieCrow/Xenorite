@@ -82,11 +82,11 @@ public class ShadowBoronPickaxe extends ItemPickaxe
 		{
 			if (ItemStack.getTagCompound().getBoolean("isActive"))
 			{
-				List.add(String.format("§b§o§lShadow Pickaxe Activated"));
+				List.add(String.format("\u00A7b\u00A7o\u00A7lShadow Pickaxe Activated"));
 			}
 			else
 			{
-				List.add(String.format("§b§o§lShadow Pickaxe Not Activated"));
+				List.add(String.format("\u00A7b\u00A7o\u00A7lShadow Pickaxe Not Activated"));
 			}
 		}
 	}

@@ -89,11 +89,11 @@ public class HeavenlyGlintSword extends ItemSword
 			{
 				if (ItemStack.getTagCompound().getBoolean("isActive"))
 				{
-					List.add(String.format("§b§o§lHeavenly Sword Activated"));
+					List.add(String.format("\u00A7b\u00A7o\u00A7lHeavenly Sword Activated"));
 				}
 				else
 				{
-					List.add(String.format("§b§o§lHeavenly Sword Not Activated"));
+					List.add(String.format("\u00A7b\u00A7o\u00A7lHeavenly Sword Not Activated"));
 				}
 			}
 			List.add("Hold SHIFT for weird description");

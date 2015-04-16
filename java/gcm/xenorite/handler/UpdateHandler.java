@@ -35,21 +35,21 @@ public class UpdateHandler
 			// Compare new version with running version
 			if (newestVersion.equalsIgnoreCase(currentVersion))
 			{
-				updateStatus = "§b[Xenorite] is up to date!";
+				updateStatus = "\u00A7b[Xenorite] is up to date!";
 				// Part of my log helper.
 				LogHelper.info("[Xenorite] is up to date!");
 			}
 			else
 			{
 				show = true;
-				updateStatus = "§b[Xenorite] Current Version: " + currentVersion + " §bNewest Version: " + newestVersion;
+				updateStatus = "\u00A7b[Xenorite] Current Version: " + currentVersion + " Newest Version: \u00A7b" + newestVersion;
 				LogHelper.info("[Xenorite] out of date! Your Version: " + currentVersion + " Latest Version: " + newestVersion);
 			}
 		}
 		else
 		{
 			show = true;
-			updateStatus = "§b[Xenorite] Failed to connect to update server!";
+			updateStatus = "\u00A7b[Xenorite] Failed to connect to update server!";
 			LogHelper.info("[Xenorite] Failed to connect to update server!");
 		}
 	}
