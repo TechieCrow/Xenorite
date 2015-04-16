@@ -10,6 +10,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ConfigurationHandler
 {
+
 	public static Configuration	configuration;
 
 	// TO-DO LIST

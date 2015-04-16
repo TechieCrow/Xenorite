@@ -39,16 +39,16 @@ public class Recipes
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xenoriteHoe), "II ", " S ", " S ", 'I', ModItems.xenoriteIngot, 'S', "stickWood"));
 
 		// Xenorite Helmet
-		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenorite_helmet), "III", "I I", "   ", 'I', ModItems.xenoriteIngot);
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteHelmet), "III", "I I", "   ", 'I', ModItems.xenoriteIngot);
 
 		// Xenorite Chestplate
-		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenorite_chestplate), "I I", "III", "III", 'I', ModItems.xenoriteIngot);
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteChestplate), "I I", "III", "III", 'I', ModItems.xenoriteIngot);
 
 		// Xenorite Leggings
-		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenorite_leggings), "III", "I I", "I I", 'I', ModItems.xenoriteIngot);
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteLeggings), "III", "I I", "I I", 'I', ModItems.xenoriteIngot);
 
 		// Xenorite Boots
-		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenorite_boots), "   ", "I I", "I I", 'I', ModItems.xenoriteIngot);
+		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.xenoriteBoots), "   ", "I I", "I I", 'I', ModItems.xenoriteIngot);
 
 		// coreorite Sword
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.coreoriteSword), "I", "I", "S", 'I', ModItems.coreoriteIngot, 'S', "stickWood"));
@@ -157,5 +157,30 @@ public class Recipes
 
 		// shadowboron Boots
 		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.shadowboronBoots), "   ", "I I", "I I", 'I', ModItems.shadowboronIngot);
+
+		// Smelting
+		// Xenorite Ingot
+		GameRegistry.addSmelting(ModBlockOres.xenoriteOre, new ItemStack(ModItems.xenoriteIngot), 1.0F);
+
+		// Coreorite Ingot
+		GameRegistry.addSmelting(ModBlockOres.coreoriteOre, new ItemStack(ModItems.coreoriteIngot), 1.0F);
+
+		// Finorite Ingot
+		GameRegistry.addSmelting(ModBlockOres.finoriteOre, new ItemStack(ModItems.finoriteIngot), 1.0F);
+
+		// Heavenly Glint Ingot
+		GameRegistry.addSmelting(ModBlockOres.HeavenlyGlintOre, new ItemStack(ModItems.heavenlyglintIngot), 1.0F);
+
+		// Shadow Boron Ingot
+		GameRegistry.addSmelting(ModBlockOres.ShadowBoronOre, new ItemStack(ModItems.shadowboronIngot), 1.0F);
+
+		// Xenorite Melted Ingot
+		GameRegistry.addSmelting(ModItems.xenoriteIngot, new ItemStack(ModItems.xenoriteMeltedIngot), 0.1F);
+
+		// Coreorite Melted Ingot
+		GameRegistry.addSmelting(ModItems.coreoriteIngot, new ItemStack(ModItems.coreoriteMeltedIngot), 0.1F);
+
+		// Finorite Melted Ingot
+		GameRegistry.addSmelting(ModItems.finoriteIngot, new ItemStack(ModItems.finoriteMeltedIngot), 0.1F);
 	}
 }

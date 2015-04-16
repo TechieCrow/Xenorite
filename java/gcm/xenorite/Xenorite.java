@@ -11,6 +11,7 @@ import gcm.xenorite.handler.EventHandler;
 import gcm.xenorite.handler.UpdateHandler;
 import gcm.xenorite.init.ModBlockOres;
 import gcm.xenorite.init.ModBlocks;
+import gcm.xenorite.init.ModChestGenHooks;
 import gcm.xenorite.init.ModItems;
 import gcm.xenorite.init.Recipes;
 import gcm.xenorite.proxy.IProxy;
@@ -114,10 +115,10 @@ public class Xenorite
 	public static ItemSpade						xenoriteShovel;
 	public static ItemAxe						xenoriteAxe;
 	public static ItemHoe						xenoriteHoe;
-	public static Item							xenorite_helmet;
-	public static Item							xenorite_chestplate;
-	public static Item							xenorite_leggings;
-	public static Item							xenorite_boots;
+	public static Item							xenoriteHelmet;
+	public static Item							xenoriteChestplate;
+	public static Item							xenoriteLeggings;
+	public static Item							xenoriteBoots;
 
 	// Coreorite Sets
 	public static ItemSword						coreoriteSword;
@@ -175,8 +176,7 @@ public class Xenorite
 
 		EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
 		EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
-		EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor)); // probablity of space/minimal to
-																																	// spawn/max to spawn
+		EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor)); // probablity of space/minimal to spawn/max to spawn
 		EntityRegistry.addSpawn(XenBeastEntity.class, 10, 1, 5, EnumCreatureType.monster, new BiomeGenBase[]
 		{ BiomeGenBase.ocean, BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.extremeHills, BiomeGenBase.forest, BiomeGenBase.taiga, BiomeGenBase.swampland, BiomeGenBase.river, BiomeGenBase.frozenOcean, BiomeGenBase.frozenRiver, BiomeGenBase.icePlains, BiomeGenBase.iceMountains, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.beach, BiomeGenBase.desertHills, BiomeGenBase.forestHills, BiomeGenBase.taigaHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.jungleEdge, BiomeGenBase.deepOcean, BiomeGenBase.stoneBeach, BiomeGenBase.coldBeach, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills, BiomeGenBase.roofedForest, BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills, BiomeGenBase.megaTaiga, BiomeGenBase.megaTaigaHills, BiomeGenBase.extremeHillsPlus, BiomeGenBase.savanna, BiomeGenBase.savannaPlateau, BiomeGenBase.mesa, BiomeGenBase.mesaPlateau_F, BiomeGenBase.mesaPlateau });
 	}
@@ -226,21 +226,21 @@ public class Xenorite
 		GameRegistry.registerItem(xenoriteHoe, "xenoriteHoe");
 		OreDictionary.registerOre("hoeXenorite", new ItemStack(xenoriteHoe));
 
-		xenorite_helmet = new XenoriteArmor(XenoriteArmorMaterials, 5, 0).setUnlocalizedName("Xenorite Helmet");
-		GameRegistry.registerItem(xenorite_helmet, "xenorite_helmet");
-		OreDictionary.registerOre("xenorite_helmet", new ItemStack(xenorite_helmet));
+		xenoriteHelmet = new XenoriteArmor(XenoriteArmorMaterials, 5, 0).setUnlocalizedName("Xenorite Helmet");
+		GameRegistry.registerItem(xenoriteHelmet, "xenoriteHelmet");
+		OreDictionary.registerOre("xenoriteHelmet", new ItemStack(xenoriteHelmet));
 
-		xenorite_chestplate = new XenoriteArmor(XenoriteArmorMaterials, 5, 1).setUnlocalizedName("Xenorite Chestplate");
-		GameRegistry.registerItem(xenorite_chestplate, "xenorite_chestplate");
-		OreDictionary.registerOre("xenorite_chestplate", new ItemStack(xenorite_chestplate));
+		xenoriteChestplate = new XenoriteArmor(XenoriteArmorMaterials, 5, 1).setUnlocalizedName("Xenorite Chestplate");
+		GameRegistry.registerItem(xenoriteChestplate, "xenoriteChestplate");
+		OreDictionary.registerOre("xenoriteChestplate", new ItemStack(xenoriteChestplate));
 
-		xenorite_leggings = new XenoriteArmor(XenoriteArmorMaterials, 5, 2).setUnlocalizedName("Xenorite Leggings");
-		GameRegistry.registerItem(xenorite_leggings, "xenorite_leggings");
-		OreDictionary.registerOre("xenorite_leggings", new ItemStack(xenorite_leggings));
+		xenoriteLeggings = new XenoriteArmor(XenoriteArmorMaterials, 5, 2).setUnlocalizedName("Xenorite Leggings");
+		GameRegistry.registerItem(xenoriteLeggings, "xenoriteLeggings");
+		OreDictionary.registerOre("xenoriteLeggings", new ItemStack(xenoriteLeggings));
 
-		xenorite_boots = new XenoriteArmor(XenoriteArmorMaterials, 5, 3).setUnlocalizedName("Xenorite Boots");
-		GameRegistry.registerItem(xenorite_boots, "xenorite_boots");
-		OreDictionary.registerOre("xenorite_boots", new ItemStack(xenorite_boots));
+		xenoriteBoots = new XenoriteArmor(XenoriteArmorMaterials, 5, 3).setUnlocalizedName("Xenorite Boots");
+		GameRegistry.registerItem(xenoriteBoots, "xenoriteBoots");
+		OreDictionary.registerOre("xenoriteBoots", new ItemStack(xenoriteBoots));
 
 		// Coreorite Sets
 
@@ -403,6 +403,8 @@ public class Xenorite
 	{
 
 		Recipes.init();
+
+		ModChestGenHooks.addDungeonItems();
 
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 

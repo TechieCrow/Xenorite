@@ -15,7 +15,7 @@ public class CreativeTabArmour
 															@Override
 															public Item getTabIconItem()
 															{
-																return Xenorite.xenorite_chestplate;
+																return Xenorite.xenoriteChestplate;
 															}
 
 															@Override
