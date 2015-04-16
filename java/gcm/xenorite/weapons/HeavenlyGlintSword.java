@@ -85,10 +85,17 @@ public class HeavenlyGlintSword extends ItemSword
 				List.add(String.format("It seems to shine as much as a rock."));
 			}
 		}
-		else
-		{
+		else if (!(ItemStack.getTagCompound() == null))
+			{
+				if (ItemStack.getTagCompound().getBoolean("isActive"))
+				{
+					List.add(String.format("§b§o§lHeavenly Sword Activated"));
+				}
+				else
+				{
+					List.add(String.format("§b§o§lHeavenly Sword Not Activated"));
+				}
+			}
 			List.add("Hold SHIFT for weird description");
 		}
-	}
-
 }

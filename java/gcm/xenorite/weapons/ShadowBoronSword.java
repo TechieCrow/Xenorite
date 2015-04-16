@@ -85,10 +85,17 @@ public class ShadowBoronSword extends ItemSword
 				List.add(String.format("It's almost as dark as a torch."));
 			}
 		}
-		else
+		else if (!(ItemStack.getTagCompound() == null))
 		{
+			if (ItemStack.getTagCompound().getBoolean("isActive"))
+			{
+				List.add(String.format("§b§o§lShadow Sword Activated"));
+			}
+			else
+			{
+				List.add(String.format("§b§o§lShadow Sword Not Activated"));
+			}
+		}
 			List.add("Hold SHIFT for weird description");
 		}
 	}
-
-}

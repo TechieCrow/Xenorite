@@ -2,6 +2,9 @@ package gcm.xenorite.tools;
 
 import gcm.xenorite.crativetab.CreativeTabTools;
 import gcm.xenorite.handler.ConfigurationHandler;
+
+import java.util.List;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemPickaxe;
@@ -71,8 +74,20 @@ public class ShadowBoronPickaxe extends ItemPickaxe
 		return;
 	}
 
-	/*
-	 * public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par1) { if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) { { List.add(String.format("§7Some text.")); } } else { List.add("Hold §l§oSHIFT§r §7for weird description"); } }
-	 */
+	@Override
+	public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par4)
+	{
 
+		if (!(ItemStack.getTagCompound() == null))
+		{
+			if (ItemStack.getTagCompound().getBoolean("isActive"))
+			{
+				List.add(String.format("§b§o§lShadow Pickaxe Activated"));
+			}
+			else
+			{
+				List.add(String.format("§b§o§lShadow Pickaxe Not Activated"));
+			}
+		}
+	}
 }

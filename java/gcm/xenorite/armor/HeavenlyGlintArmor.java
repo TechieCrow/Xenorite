@@ -4,6 +4,9 @@ import gcm.xenorite.Xenorite;
 import gcm.xenorite.crativetab.CreativeTabArmour;
 import gcm.xenorite.handler.ConfigurationHandler;
 import gcm.xenorite.reference.Reference;
+
+import java.util.List;
+
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -75,8 +78,4 @@ public class HeavenlyGlintArmor extends ItemArmor
 			return null;
 		}
 	}
-
-	/*
-	 * public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par1) { if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) { { List.add(String.format("§7Some text.")); } } else { List.add("Hold §l§oSHIFT§r §7for weird description"); } }
-	 */
 }
