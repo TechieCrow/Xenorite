@@ -1,36 +1,26 @@
 package gcm.xenorite.blocks;
 
 import gcm.xenorite.handler.ConfigurationHandler;
-
-import java.util.List;
-
-import org.lwjgl.input.Keyboard;
-
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ChatComponentText;
 import net.minecraft.world.World;
-
 
 public class BlockShadowBoronOre extends BlockOresXenorite
 {
 	public BlockShadowBoronOre()
 	{
-	super();
-	this.setHardness(3.0F);
-	this.setResistance(5.0F);
-	this.setBlockName("ShadowBoronOre");
+		super();
+		this.setHardness(3.0F);
+		this.setResistance(5.0F);
+		this.setBlockName("ShadowBoronOre");
 	}
-	
-	public void onBlockClicked(World world, int i, int j, int k,
-			EntityPlayer entity)
+
+	public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entity)
 	{
 		// Weapon Effects
 		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreShadowBoronEffect1, 300, 0))); // Sword
-		
-		//Tool Effects
+
+		// Tool Effects
 		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreShadowBoronEffect2, 300, 0))); // Pickaxe
 
 		// Armour Effects

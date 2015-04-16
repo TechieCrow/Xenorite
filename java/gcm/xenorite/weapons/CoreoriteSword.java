@@ -4,18 +4,16 @@ import gcm.xenorite.crativetab.CreativeTabWeapons;
 
 import java.util.List;
 
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
 
 import org.lwjgl.input.Keyboard;
 
-public class CoreoriteSword extends ItemSword {
-	public CoreoriteSword(ToolMaterial material) {
+public class CoreoriteSword extends ItemSword
+{
+	public CoreoriteSword(ToolMaterial material)
+	{
 		super(material);
 		this.setCreativeTab(CreativeTabWeapons.Xenoriteweapons);
 		this.setMaxStackSize(1);
@@ -24,16 +22,18 @@ public class CoreoriteSword extends ItemSword {
 
 	}
 
-	public void addInformation(ItemStack par1ItemStack,
-			EntityPlayer par2EntityPlayer, List List, boolean par3) {
-		if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT)
-				|| Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
+	public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List List, boolean par3)
+	{
+		if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT))
+		{
 			{
 				List.add(String.format("Your enemies blood turns blue"));
 				List.add(String.format("When you use this sword."));
 				List.add(String.format("How weird!"));
 			}
-		} else {
+		}
+		else
+		{
 			List.add("Hold SHIFT for weird description");
 		}
 	}

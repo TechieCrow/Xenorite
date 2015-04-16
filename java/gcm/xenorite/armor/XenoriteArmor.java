@@ -5,27 +5,25 @@ import gcm.xenorite.crativetab.CreativeTabArmour;
 import gcm.xenorite.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
 
-public class XenoriteArmor extends ItemArmor {
+public class XenoriteArmor extends ItemArmor
+{
 
-	private String[] armourTypes = new String[] { "helmetXenorite",
-			"chestplateXenorite", "leggingsXenorite", "bootsXenorite" };
+	private String[]	armourTypes	= new String[]
+									{ "helmetXenorite", "chestplateXenorite", "leggingsXenorite", "bootsXenorite" };
 
-	public XenoriteArmor(ArmorMaterial armorMaterial, int renderIndex,
-			int armorType) {
+	public XenoriteArmor(ArmorMaterial armorMaterial, int renderIndex, int armorType)
+	{
 		super(armorMaterial, renderIndex, armorType);
 		this.setCreativeTab(CreativeTabArmour.Xenoritearmour);
 		this.setMaxStackSize(1);
 	}
 
 	@Override
-	public void registerIcons(IIconRegister reg) {
+	public void registerIcons(IIconRegister reg)
+	{
 		if (this == Xenorite.xenorite_helmet)
 			this.itemIcon = reg.registerIcon("xenorite:helmetXenorite");
 		if (this == Xenorite.xenorite_chestplate)
@@ -36,29 +34,24 @@ public class XenoriteArmor extends ItemArmor {
 			this.itemIcon = reg.registerIcon("xenorite:bootsXenorite");
 	}
 
-	public String getArmorTexture(ItemStack stack, Entity entity, int slot,
-			String type) {
-		if (stack.getItem() == Xenorite.xenorite_helmet
-				|| stack.getItem() == Xenorite.xenorite_chestplate
-				|| stack.getItem() == Xenorite.xenorite_boots) {
-			return Reference.MOD_ID
-					+ ":textures/models/armor/xenorite_layer_1.png";
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
+	{
+		if (stack.getItem() == Xenorite.xenorite_helmet || stack.getItem() == Xenorite.xenorite_chestplate || stack.getItem() == Xenorite.xenorite_boots)
+		{
+			return Reference.MOD_ID + ":textures/models/armor/xenorite_layer_1.png";
 		}
-		if (stack.getItem() == Xenorite.xenorite_leggings) {
-			return Reference.MOD_ID
-					+ ":textures/models/armor/xenorite_layer_2.png";
-		} else {
+		if (stack.getItem() == Xenorite.xenorite_leggings)
+		{
+			return Reference.MOD_ID + ":textures/models/armor/xenorite_layer_2.png";
+		}
+		else
+		{
 			return null;
 		}
 	}
 
 	/*
-	 * public void addInformation(ItemStack par1ItemStack, EntityPlayer
-	 * par2EntityPlayer, List List, boolean par3) { if
-	 * (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) ||
-	 * Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) { {
-	 * List.add(String.format("§7Some text.")); } } else {
-	 * List.add("Hold §l§oSHIFT§r §7for weird description"); } }
+	 * public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List List, boolean par3) { if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) { { List.add(String.format("§7Some text.")); } } else { List.add("Hold §l§oSHIFT§r §7for weird description"); } }
 	 */
 
 }

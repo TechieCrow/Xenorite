@@ -10,33 +10,33 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockXenorite extends Block
 {
-    public BlockXenorite()
-    {
-        this(Material.iron);
-    }
+	public BlockXenorite()
+	{
+		this(Material.iron);
+	}
 
-    public BlockXenorite(Material material)
-    {
-        super(material);
-        this.setCreativeTab(CreativeTabBlocks.Xenoriteblocks);
-        this.setStepSound(this.soundTypeStone);
-    }
+	public BlockXenorite(Material material)
+	{
+		super(material);
+		this.setCreativeTab(CreativeTabBlocks.Xenoriteblocks);
+		this.setStepSound(this.soundTypeStone);
+	}
 
-    @Override
-    public String getUnlocalizedName()
-    {
-        return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
-    }
+	@Override
+	public String getUnlocalizedName()
+	{
+		return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+	}
 
-    @Override
-    @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister iconRegister)
-    {
-        blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
-    }
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerBlockIcons(IIconRegister iconRegister)
+	{
+		blockIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(this.getUnlocalizedName().indexOf(".") + 1));
+	}
 
-    protected String getUnwrappedUnlocalizedName(String unlocalizedName)
-    {
-        return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
-    }
+	protected String getUnwrappedUnlocalizedName(String unlocalizedName)
+	{
+		return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
+	}
 }

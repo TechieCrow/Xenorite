@@ -1,0 +1,26 @@
+{
+    "xenbeast.idle":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "xenorite/sounds/entity/xenbeast/xenBeast.Idle"
+        ]
+    },
+    "xenbeast.death":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "xenorite/sounds/entity/xenbeast/xenBeast.Death"
+        ]
+    },
+    "xenbeast.growl":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "xenorite/sounds/entity/xenbeast/xenBeast.Hurt"
+        ]
+    }
+}

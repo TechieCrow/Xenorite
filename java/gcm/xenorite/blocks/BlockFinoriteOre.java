@@ -1,44 +1,40 @@
 package gcm.xenorite.blocks;
 
-import java.util.List;
 import java.util.Random;
 
-import org.lwjgl.input.Keyboard;
-
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 
 public class BlockFinoriteOre extends BlockOresXenorite
 {
-	public BlockFinoriteOre() {
-	super();
-	this.setHardness(3.0F);
-	this.setResistance(5.0F);
-	this.setLightLevel(0.625F);
-	this.setBlockName("finoriteOre");
+	public BlockFinoriteOre()
+	{
+		super();
+		this.setHardness(3.0F);
+		this.setResistance(5.0F);
+		this.setLightLevel(0.625F);
+		this.setBlockName("finoriteOre");
 	}
 
-	public void onBlockClicked(World world, int i, int j, int k,
-			EntityPlayer entity) {
+	public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entity)
+	{
 
 		entity.attackEntityFrom(DamageSource.generic, 2);
 	}
 
-	public void onEntityCollidedWithBlock(World world, int i, int j, int k,
-			EntityPlayer entity) {
+	public void onEntityCollidedWithBlock(World world, int i, int j, int k, EntityPlayer entity)
+	{
 
 		entity.attackEntityFrom(DamageSource.generic, 2);
 
 	}
 
-	public void randomDisplayTick(World par1World, int par2, int par3,
-			int par4, Random par5Random) {
+	public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
+	{
 
-		for (int l = 0; l < 2; ++l) {
+		for (int l = 0; l < 2; ++l)
+		{
 			double d0 = (double) ((float) par2 + par5Random.nextFloat());
 			double d1 = (double) ((float) par3 + par5Random.nextFloat());
 			double d2 = (double) ((float) par4 + par5Random.nextFloat());

@@ -10,11 +10,11 @@ public class BlockXenoriteOre extends BlockOresXenorite
 {
 	public BlockXenoriteOre()
 	{
-	super();
-	this.setHardness(3.0F);
-	this.setResistance(5.0F);
-	this.setLightLevel(0.625F);
-	this.setBlockName("xenoriteOre");
+		super();
+		this.setHardness(3.0F);
+		this.setResistance(5.0F);
+		this.setLightLevel(0.625F);
+		this.setBlockName("xenoriteOre");
 	}
 
 	public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entity)
