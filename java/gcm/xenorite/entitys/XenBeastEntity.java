@@ -86,9 +86,6 @@ public class XenBeastEntity extends EntityMob
 		return "xenorite:xenbeast.hurt";
 	}
 
-	/**
-	 * Returns the sound this mob makes on death.
-	 */
 	protected String getDeathSound()
 	{
 		return "xenorite:xenbeast.death";
@@ -165,9 +162,6 @@ public class XenBeastEntity extends EntityMob
 		}
 	}
 
-	/**
-	 * Params: Armor slot, Item tier
-	 */
 	public static Item getArmorItemForSlot(int p_82161_0_, int p_82161_1_)
 	{
 		switch (p_82161_0_)
@@ -175,7 +169,7 @@ public class XenBeastEntity extends EntityMob
 		case 4:
 			if (p_82161_1_ == 0)
 			{
-				return Xenorite.xenorite_helmet;
+				return Xenorite.xenoriteHelmet;
 			}
 			else if (p_82161_1_ == 1)
 			{
@@ -196,7 +190,7 @@ public class XenBeastEntity extends EntityMob
 		case 3:
 			if (p_82161_1_ == 0)
 			{
-				return Xenorite.xenorite_chestplate;
+				return Xenorite.xenoriteChestplate;
 			}
 			else if (p_82161_1_ == 1)
 			{
@@ -217,7 +211,7 @@ public class XenBeastEntity extends EntityMob
 		case 2:
 			if (p_82161_1_ == 0)
 			{
-				return Xenorite.xenorite_leggings;
+				return Xenorite.xenoriteLeggings;
 			}
 			else if (p_82161_1_ == 1)
 			{
@@ -238,7 +232,7 @@ public class XenBeastEntity extends EntityMob
 		case 1:
 			if (p_82161_1_ == 0)
 			{
-				return Xenorite.xenorite_boots;
+				return Xenorite.xenoriteBoots;
 			}
 			else if (p_82161_1_ == 1)
 			{
