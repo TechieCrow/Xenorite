@@ -42,10 +42,17 @@ public class XenBeastEntity extends EntityMob
 		this.tasks.addTask(1, new EntityAILeapAtTarget(this, 0.8F));
 		this.tasks.addTask(1, new EntityAIOpenDoor(this, false));
 
+		//attacks EVERYTHING "living".
 		this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityLivingBase.class, 2, false));
 
 		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityLivingBase.class, 2, true));
 		this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, false));
+		
+		//Attacks players. (players should have a higher priority.)
+		this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 2, false));
+
+		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 2, true));
+		this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, false));
 	}
 
 	protected void dropRareDrop(int par1)
