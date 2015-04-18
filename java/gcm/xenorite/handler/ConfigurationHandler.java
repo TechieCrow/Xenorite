@@ -13,102 +13,64 @@ public class ConfigurationHandler
 
 	public static Configuration	configuration;
 
-	// TO-DO LIST
-	// Move default values to a separate class for easier readability.
-	// Add things like block hardness, resistance, light levels and tool materials. (how fast tools can break blocks, etc)
+	public static int			oreXenoriteSpawnHeight;
+	public static int			oreCoreoriteSpawnHeight;
+	public static int			oreFinoriteSpawnHeight;
 
-	// Overworld Ore Spawn Height Values.
-	public static int			oreXenoriteSpawnHeight			= 20;
-	public static int			oreCoreoriteSpawnHeight			= 20;
-	public static int			oreFinoriteSpawnHeight			= 20;
+	public static int			oreHeavenlyGlintSpawnHeight;
+	public static int			oreShadowBoronSpawnHeight;
 
-	// Nether Ore Spawn Height Values.
-	public static int			oreHeavenlyGlintSpawnHeight		= 256;
-	public static int			oreShadowBoronSpawnHeight		= 256;
+	public static int			oreXenoriteSpawnsPerVein;
+	public static int			oreCoreoriteSpawnsPerVein;
+	public static int			oreFinoriteSpawnsPerVein;
 
-	// Overworld Ore Spawns Per Vein Values.
-	public static int			oreXenoriteSpawnsPerVein		= 5;
-	public static int			oreCoreoriteSpawnsPerVein		= 5;
-	public static int			oreFinoriteSpawnsPerVein		= 5;
+	public static int			oreHeavenlyGlintSpawnsPerVein;
+	public static int			oreShadowBoronSpawnsPerVein;
 
-	// Nether Ore Spawns Per Vein Values.
-	public static int			oreHeavenlyGlintSpawnsPerVein	= 5;
-	public static int			oreShadowBoronSpawnsPerVein		= 5;
+	public static int			oreHeavenlyGlintEffect1;
+	public static int			oreHeavenlyGlintEffect2;
+	public static int			oreHeavenlyGlintEffect3;
+	public static int			oreHeavenlyGlintEffect4;
+	public static int			oreHeavenlyGlintEffect5;
+	public static int			oreHeavenlyGlintEffect6;
 
-	// Overworld Ore Effect Values.
+	public static int			oreShadowBoronEffect1;
+	public static int			oreShadowBoronEffect2;
+	public static int			oreShadowBoronEffect3;
+	public static int			oreShadowBoronEffect4;
+	public static int			oreShadowBoronEffect5;
+	public static int			oreShadowBoronEffect6;
 
-	// Nether Ore effect Values.
-	public static int			oreHeavenlyGlintEffect1			= 5;
-	public static int			oreHeavenlyGlintEffect2			= 3;
-	public static int			oreHeavenlyGlintEffect3			= 1;
-	public static int			oreHeavenlyGlintEffect4			= 13;
-	public static int			oreHeavenlyGlintEffect5			= 12;
-	public static int			oreHeavenlyGlintEffect6			= 8;
+	public static int			swordHeavenlyGlintEffect1;
+	public static int			swordShadowBoronEffect1;
 
-	public static int			oreShadowBoronEffect1			= 5;
-	public static int			oreShadowBoronEffect2			= 3;
-	public static int			oreShadowBoronEffect3			= 1;
-	public static int			oreShadowBoronEffect4			= 13;
-	public static int			oreShadowBoronEffect5			= 12;
-	public static int			oreShadowBoronEffect6			= 8;
+	public static int			pickaxeHeavenlyGlintEffect1;
+	public static int			pickaxeShadowBoronEffect1;
 
-	// Nether sword effect vaules.
-	public static int			swordHeavenlyGlintEffect1		= 5;
-	public static int			swordShadowBoronEffect1			= 5;
+	public static int			helmetHeavenlyGlintEffect1;
+	public static int			helmetShadowBoronEffect1;
 
-	// Nether pickaxe effect vaules.
-	public static int			pickaxeHeavenlyGlintEffect1		= 3;
-	public static int			pickaxeShadowBoronEffect1		= 3;
+	public static int			chestplateHeavenlyGlintEffect1;
+	public static int			chestplateShadowBoronEffect1;
 
-	// Nether armour effect vaules.
-	public static int			helmetHeavenlyGlintEffect1		= 12;
-	public static int			helmetShadowBoronEffect1		= 12;
+	public static int			leggingsHeavenlyGlintEffect1;
+	public static int			leggingsShadowBoronEffect1;
 
-	public static int			chestplateHeavenlyGlintEffect1	= 13;
-	public static int			chestplateShadowBoronEffect1	= 13;
-
-	public static int			leggingsHeavenlyGlintEffect1	= 8;
-	public static int			leggingsShadowBoronEffect1		= 8;
-
-	public static int			bootsHeavenlyGlintEffect1		= 1;
-	public static int			bootsShadowBoronEffect1			= 1;
+	public static int			bootsHeavenlyGlintEffect1;
+	public static int			bootsShadowBoronEffect1;
 
 	// Mobs
-	public static double		xenbeastHealth					= 40.0D;
-	public static double		xenbeastDamage					= 5.0D;
-	public static double		xenbeastSpeed					= 0.28D;
-	public static double		xenbeastknockbackResistance		= 0.5D;
-	public static double		xenbeastFollowRange				= 50.0D;
-
-	// Custom config category.. I think.
-	// Ore Spawns
-	public static String		overworldorespawns				= "Overworld Ore Spawns";
-	public static String		netherorespawns					= "Nether Ore Spawns";
-
-	// Ore Effects
-	public static String		overworldoreeffects				= "Overworld Ore Effects";
-	public static String		netheroreeffects				= "Nether Ore Effects";
-
-	// Sword Effects
-	public static String		overworldswordeffects			= "Overworld Sword Effects";
-	public static String		netherswordeffects				= "Nether Sword Effects";
-
-	// Pickaxe Effects
-	public static String		overworldpickaxeeffects			= "Overworld Pickaxe Effects";
-	public static String		netherpickaxeeffects			= "Nether Pickaxe Effects";
-
-	// Overworld Armour Effects
-	public static String		overworldarmoureffects			= "Overworld Armour Effects";
-
-	// Nether Armour Effects.
-	public static String		netherarmoureffects				= "Nether Armour Effects";
-
-	// Mob stuff.
-	public static String		xenbeastattributes				= "Xen Beast Attributes";
+	public static double		xenbeastHealth;
+	public static double		xenbeastDamage;
+	public static double		xenbeastSpeed;
+	public static double		xenbeastknockbackResistance;
+	public static double		xenbeastFollowRange;
+	public static int			xenbeastSpawnRate;
+	public static int			xenbeastMinSpawn;
+	public static int			xenbeastMaxSpawn;
 
 	public static void init(File configFile)
 	{
-		// Create the configuration object from the given configuration file
 		if (configuration == null)
 		{
 			configuration = new Configuration(configFile);
@@ -118,76 +80,75 @@ public class ConfigurationHandler
 
 	private static void loadConfiguration()
 	{
-		// Overworld Ore Spawn Height
-		oreXenoriteSpawnHeight = configuration.get("1) Overworld Ores Spawns", "Max Xenorite Ore Spawn Height", 20).getInt();
-		oreCoreoriteSpawnHeight = configuration.get("1) Overworld Ores Spawns", "Max Coreorite Ore Spawn Height", 20).getInt();
-		oreFinoriteSpawnHeight = configuration.get("1) Overworld Ores Spawns", "Max Finorite Ore Spawn Height", 20).getInt();
+		String category;
 
-		// Nether Ore Spawn Height
-		oreHeavenlyGlintSpawnHeight = configuration.get("2) Nether Ores Spawns", "Max Heavenly Glint Ore Spawn Height", 256).getInt();
-		oreShadowBoronSpawnHeight = configuration.get("2) Nether Ores Spawns", "Max Shadow Boron Ore Spawn Height", 256).getInt();
+		category = "Overworld Ore Spawn Height";
+		oreXenoriteSpawnHeight = configuration.get(category, "Max Xenorite Ore Spawn Height", 20).getInt(20);
+		oreCoreoriteSpawnHeight = configuration.get(category, "Max Coreorite Ore Spawn Height", 20).getInt(20);
+		oreFinoriteSpawnHeight = configuration.get(category, "Max Finorite Ore Spawn Height", 20).getInt(20);
 
-		// Overworld Ore Sapwns Per Vein
-		oreXenoriteSpawnsPerVein = configuration.get("1) Overworld Ores Spawns", "Max Xenorite Ore Spawns Per Vein", 5).getInt();
-		oreCoreoriteSpawnsPerVein = configuration.get("1) Overworld Ores Spawns", "Max Coreorite Ore Spawns Per Vein", 5).getInt();
-		oreFinoriteSpawnsPerVein = configuration.get("1) Overworld Ores Spawns", "Max Finorite Ore Spawns Per Vein", 5).getInt();
+		category = "Nether Ore Spawn Height";
+		oreHeavenlyGlintSpawnHeight = configuration.get(category, "Max Heavenly Glint Ore Spawn Height", 256).getInt(256);
+		oreShadowBoronSpawnHeight = configuration.get(category, "Max Shadow Boron Ore Spawn Height", 256).getInt(256);
 
-		// Nether Sapwns Per Vein
-		oreHeavenlyGlintSpawnsPerVein = configuration.get("2) Nether Ores Spawns", "Max Heavenly Glint Ore Spawns Per Vein", 5).getInt();
-		oreShadowBoronSpawnsPerVein = configuration.get("2) Nether Ores Spawns", "Max Shadow Boron Ore Spawns Per Vein", 5).getInt();
+		category = "Overworld Ore Sapwns Per Vein";
+		oreXenoriteSpawnsPerVein = configuration.get(category, "Max Xenorite Ore Spawns Per Vein", 5).getInt(5);
+		oreCoreoriteSpawnsPerVein = configuration.get(category, "Max Coreorite Ore Spawns Per Vein", 5).getInt(5);
+		oreFinoriteSpawnsPerVein = configuration.get(category, "Max Finorite Ore Spawns Per Vein", 5).getInt(5);
 
-		// Overworld Ore Effects
-		// Empty For now
+		category = "Nether Sapwns Per Vein";
+		oreHeavenlyGlintSpawnsPerVein = configuration.get(category, "Max Heavenly Glint Ore Spawns Per Vein", 5).getInt(5);
+		oreShadowBoronSpawnsPerVein = configuration.get(category, "Max Shadow Boron Ore Spawns Per Vein", 5).getInt(5);
 
-		// Nether Ore Effects
-		// Heavenly Glint Ore Effects
-		oreHeavenlyGlintEffect1 = configuration.get("4) Nether Ore Effects", "Heavenly Glint Ore Effect ID 1", 5).getInt();
-		oreHeavenlyGlintEffect2 = configuration.get("4) Nether Ore Effects", "Heavenly Glint Ore Effect ID 2", 3).getInt();
-		oreHeavenlyGlintEffect3 = configuration.get("4) Nether Ore Effects", "Heavenly Glint Ore Effect ID 3", 1).getInt();
-		oreHeavenlyGlintEffect4 = configuration.get("4) Nether Ore Effects", "Heavenly Glint Ore Effect ID 4", 13).getInt();
-		oreHeavenlyGlintEffect5 = configuration.get("4) Nether Ore Effects", "Heavenly Glint Ore Effect ID 5", 12).getInt();
-		oreHeavenlyGlintEffect6 = configuration.get("4) Nether Ore Effects", "Heavenly Glint Ore Effect ID 6", 8).getInt();
+		category = "Heavenly Glint Ore Effects";
+		oreHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Ore Effect ID 1", 5).getInt(5);
+		oreHeavenlyGlintEffect2 = configuration.get(category, "Heavenly Glint Ore Effect ID 1", 3).getInt(3);
+		oreHeavenlyGlintEffect3 = configuration.get(category, "Heavenly Glint Ore Effect ID 2", 1).getInt(1);
+		oreHeavenlyGlintEffect4 = configuration.get(category, "Heavenly Glint Ore Effect ID 3", 13).getInt(13);
+		oreHeavenlyGlintEffect5 = configuration.get(category, "Heavenly Glint Ore Effect ID 5", 12).getInt(12);
+		oreHeavenlyGlintEffect6 = configuration.get(category, "Heavenly Glint Ore Effect ID 6", 8).getInt(8);
 
-		// Shadow Boron Ore Effects
-		oreShadowBoronEffect1 = configuration.get("4) Nether Ore Effects", "Shadow Boron Ore Effect ID 1", 5).getInt();
-		oreShadowBoronEffect2 = configuration.get("4) Nether Ore Effects", "Shadow Boron Ore Effect ID 2", 3).getInt();
-		oreShadowBoronEffect3 = configuration.get("4) Nether Ore Effects", "Shadow Boron Ore Effect ID 3", 1).getInt();
-		oreShadowBoronEffect4 = configuration.get("4) Nether Ore Effects", "Shadow Boron Ore Effect ID 4", 13).getInt();
-		oreShadowBoronEffect5 = configuration.get("4) Nether Ore Effects", "Shadow Boron Ore Effect ID 5", 12).getInt();
-		oreShadowBoronEffect6 = configuration.get("4) Nether Ore Effects", "Shadow Boron Ore Effect ID 6", 8).getInt();
+		category = "Shadow Boron Ore Effects";
+		oreShadowBoronEffect1 = configuration.get(category, "Shadow Boron Ore Effect ID 1", 5).getInt(5);
+		oreShadowBoronEffect2 = configuration.get(category, "Shadow Boron Ore Effect ID 2", 3).getInt(3);
+		oreShadowBoronEffect3 = configuration.get(category, "Shadow Boron Ore Effect ID 3", 1).getInt(1);
+		oreShadowBoronEffect4 = configuration.get(category, "Shadow Boron Ore Effect ID 4", 13).getInt(13);
+		oreShadowBoronEffect5 = configuration.get(category, "Shadow Boron Ore Effect ID 5", 12).getInt(12);
+		oreShadowBoronEffect6 = configuration.get(category, "Shadow Boron Ore Effect ID 6", 8).getInt(8);
 
-		// Heavenly Glint Sword Effects
-		swordHeavenlyGlintEffect1 = configuration.get("6) Nether Sword Effects", "Heavenly Glint Sword Effect ID 6", 5).getInt();
+		category = "Heavenly Glint Sword Effects";
+		swordHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Sword Effect ID", 6).getInt(5);
 
-		// Shadow Boron Sword Effects
-		swordShadowBoronEffect1 = configuration.get("6) Nether Sword Effects", "Shadow Boron Sword Effect ID 6", 5).getInt();
+		category = "Shadow Boron Sword Effects";
+		swordShadowBoronEffect1 = configuration.get(category, "Shadow Boron Sword Effect ID", 5).getInt(5);
 
-		// Heavenly Glint Pickaxe Effects
-		pickaxeHeavenlyGlintEffect1 = configuration.get("8) Nether Pickaxe Effects", "Heavenly Glint Pickaxe Effect ID 6", 3).getInt();
+		category = "Heavenly Glint Pickaxe Effects";
+		pickaxeHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Pickaxe Effect ID", 3).getInt(3);
 
-		// Shadow Boron Pickaxe Effects
-		pickaxeShadowBoronEffect1 = configuration.get("8) Nether Pickaxe Effects", "Shadow Boron Pickaxe Effect ID 6", 3).getInt();
+		category = "Shadow Boron Pickaxe Effects";
+		pickaxeShadowBoronEffect1 = configuration.get(category, "Shadow Boron Pickaxe Effect ID", 3).getInt(3);
 
-		// Overworld Armour Effects
+		category = "Shadow Boron Armour Effects";
+		helmetShadowBoronEffect1 = configuration.get(category, "Heavenly Glint Helmet Effect ID 1", 13).getInt(13);
+		chestplateShadowBoronEffect1 = configuration.get(category, "Heavenly Glint Chestplate Effect ID 1", 12).getInt(12);
+		leggingsShadowBoronEffect1 = configuration.get(category, "Heavenly Glint Leggings Effect ID 1", 8).getInt(8);
+		bootsShadowBoronEffect1 = configuration.get(category, "Heavenly Glint Boots Effect ID 1", 1).getInt(1);
 
-		// Nether Armour Effects
-		helmetShadowBoronEffect1 = configuration.get("10) Nether Armour Effects", "Heavenly Glint Helmet Effect ID 1", 12).getInt();
-		chestplateShadowBoronEffect1 = configuration.get("10) Nether Armour Effects", "Heavenly Glint Chestplate Effect ID 1", 13).getInt();
-		leggingsShadowBoronEffect1 = configuration.get("10) Nether Armour Effects", "Heavenly Glint Leggings Effect ID 1", 8).getInt();
-		bootsShadowBoronEffect1 = configuration.get("10) Nether Armour Effects", "Heavenly Glint Boots Effect ID 1", 1).getInt();
+		category = "Heavenly Glint Armour Effects";
+		helmetHeavenlyGlintEffect1 = configuration.get(category, "Shadow Boron Helmet Effect ID 1", 13).getInt(13);
+		chestplateHeavenlyGlintEffect1 = configuration.get(category, "Shadow Boron Chestplate Effect ID 1", 12).getInt(12);
+		leggingsHeavenlyGlintEffect1 = configuration.get(category, "Shadow Boron Leggings Effect ID 1", 8).getInt(8);
+		bootsHeavenlyGlintEffect1 = configuration.get(category, "Shadow Boron Helmet Boots ID 1", 1).getInt(1);
 
-		helmetHeavenlyGlintEffect1 = configuration.get("10) Nether Armour Effects", "Shadow Boron Helmet Effect ID 1", 12).getInt();
-		chestplateHeavenlyGlintEffect1 = configuration.get("10) Nether Armour Effects", "Shadow Boron Chestplate Effect ID 1", 13).getInt();
-		leggingsHeavenlyGlintEffect1 = configuration.get("10) Nether Armour Effects", "Shadow Boron Leggings Effect ID 1", 8).getInt();
-		bootsHeavenlyGlintEffect1 = configuration.get("10) Nether Armour Effects", "Shadow Boron Boots Effect ID 1", 1).getInt();
-
-		// Mobs
-		// Xen Beast
-		xenbeastHealth = configuration.get("11) Xen Beast Attributes", "Xen Beast Health", 40.0D).getDouble();
-		xenbeastDamage = configuration.get("11) Xen Beast Attributes", "Xen Beast Damage", 5.0D).getDouble();
-		xenbeastSpeed = configuration.get("11) Xen Beast Attributes", "Xen Beast Speed", 0.28D).getDouble();
-		xenbeastknockbackResistance = configuration.get("11) Xen Beast Attributes", "Xen Beast KnockBackResistance", 0.5D).getDouble();
-		xenbeastFollowRange = configuration.get("11) Xen Beast Attributes", "Xen Beast Follow Range", 50.0D).getDouble();
+		category = "Xen Beast Attributes";
+		xenbeastHealth = configuration.get(category, "Xen Beast Health", 40.0).getDouble(40.0);
+		xenbeastDamage = configuration.get(category, "Xen Beast Damage", 5.0).getDouble(5.0);
+		xenbeastSpeed = configuration.get(category, "Xen Beast Speed", 0.28).getDouble(0.28);
+		xenbeastknockbackResistance = configuration.get(category, "Xen Beast Knockback Resistance", 0.5).getDouble(0.5);
+		xenbeastFollowRange = configuration.get(category, "Xen Beast Follow Range", 50.0).getDouble(50.0);
+		xenbeastSpawnRate = configuration.get(category, "Xen Beast Spawn Rate", 10).getInt(10);
+		xenbeastMinSpawn = configuration.get(category, "Xen Beast Minimal To Spawn", 1).getInt(1);
+		xenbeastMaxSpawn = configuration.get(category, "Xen Beast Maximum To Spawn", 5).getInt(5);
 
 		if (configuration.hasChanged())
 		{
