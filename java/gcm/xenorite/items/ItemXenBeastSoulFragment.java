@@ -1,5 +1,7 @@
 package gcm.xenorite.items;
 
+import gcm.xenorite.handler.ConfigurationHandler;
+
 import java.util.List;
 
 import net.minecraft.entity.Entity;
@@ -16,7 +18,7 @@ public class ItemXenBeastSoulFragment extends ItemXenorite
 	public ItemXenBeastSoulFragment()
 	{
 		super();
-		this.setMaxStackSize(64);
+		this.setMaxStackSize(1);
 		this.setUnlocalizedName("xenbeastsoulFragment1");
 	}
 
@@ -46,7 +48,7 @@ public class ItemXenBeastSoulFragment extends ItemXenorite
 		if (tag.getBoolean("isActive"))
 		{
 			ItemStack.setItemDamage(1);
-			EntityPlayer.addPotionEffect(new PotionEffect(1, 0, 0, true));
+			EntityPlayer.addPotionEffect(new PotionEffect(ConfigurationHandler.xenbeastSoulFragmenteffect, 0, 0, true));
 		}
 
 		return ItemStack;
@@ -69,7 +71,7 @@ public class ItemXenBeastSoulFragment extends ItemXenorite
 
 		if ((ItemStack.stackTagCompound.getBoolean("isActive")))
 		{
-			EntityPlayer.addPotionEffect(new PotionEffect(1, 0, 0, true));
+			EntityPlayer.addPotionEffect(new PotionEffect(ConfigurationHandler.xenbeastSoulFragmenteffect, 0, 0, true));
 		}
 
 		return;

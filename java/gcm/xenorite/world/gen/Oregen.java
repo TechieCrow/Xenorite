@@ -68,12 +68,16 @@ public class Oregen implements IWorldGenerator
 	{
 		for (int i = 0; i < 1; i++)
 		{
-			int xcoord = x + random.nextInt(16);
-			int ycoord = random.nextInt(256);
-			int zcoord = y + random.nextInt(16);
+			int x1coord = x + random.nextInt(16);
+			int y1coord = random.nextInt(ConfigurationHandler.oreShadowBoronSpawnHeight);
+			int z1coord = y + random.nextInt(16);
 
-			new NetherGenMinable(gcm.xenorite.init.ModBlockOres.ShadowBoronOre, 5).generate(world, random, xcoord, ycoord, zcoord);
-			new NetherGenMinable(gcm.xenorite.init.ModBlockOres.HeavenlyGlintOre, 5).generate(world, random, xcoord, ycoord, zcoord);
+			new NetherGenMinable(gcm.xenorite.init.ModBlockOres.ShadowBoronOre, ConfigurationHandler.oreShadowBoronSpawnsPerVein).generate(world, random, x1coord, y1coord, z1coord);
+			
+			int x2coord = x + random.nextInt(16);
+			int y2coord = random.nextInt(ConfigurationHandler.oreHeavenlyGlintSpawnHeight);
+			int z2coord = y + random.nextInt(16);
+			new NetherGenMinable(gcm.xenorite.init.ModBlockOres.HeavenlyGlintOre, ConfigurationHandler.oreHeavenlyGlintSpawnsPerVein).generate(world, random, x2coord, y2coord, z2coord);
 			// System.out.println("Spawned at: " + world + " " + xcoord + " " + ycoord + " " + zcoord);
 		}
 	}

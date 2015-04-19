@@ -7,7 +7,7 @@ public class ItemUniverseSoulSplit extends ItemXenorite
 	public ItemUniverseSoulSplit()
 	{
 		super();
-		this.setMaxStackSize(64);
+		this.setMaxStackSize(1);
 		this.setUnlocalizedName("universesoulSplit");
 	}
 
