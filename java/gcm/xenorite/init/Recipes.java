@@ -1,6 +1,7 @@
 package gcm.xenorite.init;
 
 import gcm.xenorite.Xenorite;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -158,29 +159,41 @@ public class Recipes
 		// shadowboron Boots
 		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.shadowboronBoots), "   ", "I I", "I I", 'I', ModItems.shadowboronIngot);
 
+		// Heavenly Glint Apple
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.appleHeavenlyGlint), "IXI", "XAX", "III", 'I', ModItems.heavenlyglintIngot, 'X', ModItems.universesoulSplit, 'A', Items.apple);
+
+		// Shadow Boron Apple
+		GameRegistry.addShapedRecipe(new ItemStack(ModItems.appleShadowBoron), "IXI", "XAX", "III", 'I', ModItems.shadowboronIngot, 'X', ModItems.universesoulSplit, 'A', Items.apple);
+
 		// Smelting
 		// Xenorite Ingot
-		GameRegistry.addSmelting(ModBlockOres.xenoriteOre, new ItemStack(ModItems.xenoriteIngot), 1.0F);
+		GameRegistry.addSmelting(ModBlockOres.xenoriteOre, new ItemStack(ModItems.xenoriteIngot), 2.0F);
 
 		// Coreorite Ingot
-		GameRegistry.addSmelting(ModBlockOres.coreoriteOre, new ItemStack(ModItems.coreoriteIngot), 1.0F);
+		GameRegistry.addSmelting(ModBlockOres.coreoriteOre, new ItemStack(ModItems.coreoriteIngot), 2.0F);
 
 		// Finorite Ingot
-		GameRegistry.addSmelting(ModBlockOres.finoriteOre, new ItemStack(ModItems.finoriteIngot), 1.0F);
+		GameRegistry.addSmelting(ModBlockOres.finoriteOre, new ItemStack(ModItems.finoriteIngot), 2.0F);
 
 		// Heavenly Glint Ingot
-		GameRegistry.addSmelting(ModBlockOres.HeavenlyGlintOre, new ItemStack(ModItems.heavenlyglintIngot), 1.0F);
+		GameRegistry.addSmelting(ModBlockOres.HeavenlyGlintOre, new ItemStack(ModItems.heavenlyglintIngot), 2.0F);
 
 		// Shadow Boron Ingot
-		GameRegistry.addSmelting(ModBlockOres.ShadowBoronOre, new ItemStack(ModItems.shadowboronIngot), 1.0F);
+		GameRegistry.addSmelting(ModBlockOres.ShadowBoronOre, new ItemStack(ModItems.shadowboronIngot), 2.0F);
 
 		// Xenorite Melted Ingot
-		GameRegistry.addSmelting(ModItems.xenoriteIngot, new ItemStack(ModItems.xenoriteMeltedIngot), 0.1F);
+		GameRegistry.addSmelting(ModItems.xenoriteIngot, new ItemStack(ModItems.xenoriteMeltedIngot), 0.5F);
 
 		// Coreorite Melted Ingot
-		GameRegistry.addSmelting(ModItems.coreoriteIngot, new ItemStack(ModItems.coreoriteMeltedIngot), 0.1F);
+		GameRegistry.addSmelting(ModItems.coreoriteIngot, new ItemStack(ModItems.coreoriteMeltedIngot), 0.5F);
 
 		// Finorite Melted Ingot
-		GameRegistry.addSmelting(ModItems.finoriteIngot, new ItemStack(ModItems.finoriteMeltedIngot), 0.1F);
+		GameRegistry.addSmelting(ModItems.finoriteIngot, new ItemStack(ModItems.finoriteMeltedIngot), 0.5F);
+
+		// Universe Soul Split
+		GameRegistry.addSmelting(ModItems.universesoulSplit, new ItemStack(Items.coal, 10), 5.0F);
+
+		// Xen Beast Soul Fragment
+		GameRegistry.addSmelting(ModItems.xenbeastsoulFragment1, new ItemStack(Items.coal, 10), 5.0F);
 	}
 }

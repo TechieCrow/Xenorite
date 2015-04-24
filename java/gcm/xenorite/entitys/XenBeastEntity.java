@@ -83,20 +83,20 @@ public class XenBeastEntity extends EntityMob
 		return true;
 	}
 
-	protected String getLivingSound()
-	{
-		return "xenorite:xenbeast.idle";
-	}
-
-	protected String getHurtSound()
-	{
-		return "xenorite:xenbeast.hurt";
-	}
-
-	protected String getDeathSound()
-	{
-		return "xenorite:xenbeast.death";
-	}
+	// protected String getLivingSound()
+	// {
+	// return "xenorite:xenbeast.idle";
+	// }
+	//
+	// protected String getHurtSound()
+	// {
+	// return "xenorite:xenbeast.hurt";
+	// }
+	//
+	// protected String getDeathSound()
+	// {
+	// return "xenorite:xenbeast.death";
+	// }
 
 	protected void addRandomArmor()
 	{

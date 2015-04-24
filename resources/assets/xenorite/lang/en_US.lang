@@ -99,6 +99,8 @@ item.ShadowBoron Boots.name=§cShadow Boron Boots
 # Random Item Stuff
 item.xenorite:xenbeastsoulFragment1.name=§4Xen Beast Soul Fragment
 item.xenorite:universesoulSplit.name=Universe Soul Split
+item.appleHeavenlyGlint.name=§9Heavenly Glint Apple
+item.appleShadowBoron.name=§cShadow Boron Apple
 
 # Entitys
 entity.XenBeastEntity.name=§4§o§lXen Beast

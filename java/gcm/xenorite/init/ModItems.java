@@ -1,5 +1,7 @@
 package gcm.xenorite.init;
 
+import gcm.xenorite.food.FoodHeavenlyGlintApple;
+import gcm.xenorite.food.FoodShadowBoronApple;
 import gcm.xenorite.items.ItemCoreoriteIngot;
 import gcm.xenorite.items.ItemCoreoriteMeltedIngot;
 import gcm.xenorite.items.ItemFinoriteIngot;
@@ -11,6 +13,7 @@ import gcm.xenorite.items.ItemXenBeastSoulFragment;
 import gcm.xenorite.items.ItemXenorite;
 import gcm.xenorite.items.ItemXenoriteIngot;
 import gcm.xenorite.items.ItemXenoriteMeltedIngot;
+import net.minecraft.item.Item;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModItems
@@ -27,6 +30,9 @@ public class ModItems
 	public static final ItemXenorite	xenbeastsoulFragment1	= new ItemXenBeastSoulFragment();
 	public static final ItemXenorite	universesoulSplit		= new ItemUniverseSoulSplit();
 
+	public static Item					appleHeavenlyGlint;
+	public static Item					appleShadowBoron;
+
 	public static void init()
 	{
 		GameRegistry.registerItem(xenoriteIngot, "xenoriteIngot");
@@ -40,6 +46,9 @@ public class ModItems
 
 		GameRegistry.registerItem(xenbeastsoulFragment1, "xenbeastsoulFragment1");
 		GameRegistry.registerItem(universesoulSplit, "universesoulSplit");
+
+		GameRegistry.registerItem(appleHeavenlyGlint = new FoodHeavenlyGlintApple().setAlwaysEdible(), "appleHeavenlyGlint");
+		GameRegistry.registerItem(appleShadowBoron = new FoodShadowBoronApple().setAlwaysEdible(), "appleShadowBoron");
 
 	}
 }

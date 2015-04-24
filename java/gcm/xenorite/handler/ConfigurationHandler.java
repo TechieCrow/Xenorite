@@ -67,12 +67,30 @@ public class ConfigurationHandler
 	public static int			xenbeastSpawnRate;
 	public static int			xenbeastMinSpawn;
 	public static int			xenbeastMaxSpawn;
-	
+
 	public static int			xenbeastSoulFragmentDrop;
-	public static int xenbeastSoulFragmenteffect;
+	public static int			xenbeastSoulFragmenteffect;
 
 	public static double		universesoulSplitDropChance;
 	public static int			universesoulSplitDrop;
+
+	public static double		appleHeavenlyGlintDropChance;
+	public static int			appleHeavenlyGlintHungerAmount;
+	public static int			appleHeavenlyGlintSaturationAmount;
+	public static boolean		appleHeavenlyGlintWolvesFavoriteFood;
+	public static int			appleHeavenlyGlintEffect1;
+	public static int			appleHeavenlyGlintEffect2;
+	public static int			appleHeavenlyGlintEffectTime1;
+	public static int			appleHeavenlyGlintEffectTime2;
+
+	public static double		appleShadowBoronDropChance;
+	public static int			appleShadowBoronHungerAmount;
+	public static int			appleShadowBoronSaturationAmount;
+	public static boolean		appleShadowBoronWolvesFavoriteFood;
+	public static int			appleShadowBoronEffect1;
+	public static int			appleShadowBoronEffect2;
+	public static int			appleShadowBoronEffectTime1;
+	public static int			appleShadowBoronEffectTime2;
 
 	public static void init(File configFile)
 	{
@@ -154,13 +172,31 @@ public class ConfigurationHandler
 		xenbeastSpawnRate = configuration.get(category, "Xen Beast Spawn Rate", 10, "(Default: 10)").getInt(10);
 		xenbeastMinSpawn = configuration.get(category, "Xen Beast Minimal To Spawn", 1, "(Default: 1)").getInt(1);
 		xenbeastMaxSpawn = configuration.get(category, "Xen Beast Maximum To Spawn", 5, "(Default: 5)").getInt(5);
-		
 		xenbeastSoulFragmentDrop = configuration.get(category, "Xen Beast Soul Fragment Drop", 1, "How many Xen Beast soul fragments it drops. (Default: 1)").getInt(1);
 		xenbeastSoulFragmenteffect = configuration.get(category, "Xen Beast Soul Fragment Effect", 1, "(Default: 1 (Speed Boost))").getInt(1);
 
-		category = "Global Drops. (These drops from everything)";
-		universesoulSplitDropChance = configuration.get(category, "Universe Soul Split Drop Chance", 0.05, "0.01 = 1%, 1.0 = 100%, etc. (Default: 0.05)").getDouble(0.05);
+		category = "Global Mob Drop";
+		universesoulSplitDropChance = configuration.get(category, "Universe Soul Split Drop Chance", 0.01, "0.01 = 1%, 1.0 = 100%, etc. (Default: 0.01)").getDouble(0.01);
 		universesoulSplitDrop = configuration.get(category, "Universe Soul Split Drop", 1, "How many Universe Soul Split drops. (Default: 1)").getInt(1);
+
+		category = "Apple Values";
+		appleHeavenlyGlintDropChance = configuration.get(category, "Heavenly Glint Apple Drop Chance", 0.01, "0.01 = 1%, 1.0 = 100%, etc. (Default: 0.01)").getDouble(0.01);
+		appleHeavenlyGlintSaturationAmount = configuration.get(category, "Heavenly Glint Apple Saturation Amount", 1, "(Default: 1)").getInt(1);
+		appleHeavenlyGlintHungerAmount = configuration.get(category, "Heavenly Glint Apple Hunger Amount", 4, "(Default: 4)").getInt(4);
+		appleHeavenlyGlintWolvesFavoriteFood = configuration.get(category, "Heavenly Glint Apple Wolves Favorite Food", false, "(Default: flase)").getBoolean(false);
+		appleHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Apple Effect 1", 16, "(Default: 16)").getInt(16);
+		appleHeavenlyGlintEffect2 = configuration.get(category, "Heavenly Glint Apple Effect 2", 15, "(Default: 15)").getInt(15);
+		appleHeavenlyGlintEffectTime1 = configuration.get(category, "Heavenly Glint Apple Effect 1 Time", 1800, "200 = 10 Seconds, 1200 = 1 Minute (Default: 1800)").getInt(1800);
+		appleHeavenlyGlintEffectTime2 = configuration.get(category, "Heavenly Glint Apple Effect 2 Time", 1800, "200 = 10 Seconds, 1200 = 1 Minute (Default: 1800)").getInt(1800);
+
+		appleShadowBoronDropChance = configuration.get(category, "Shadow Boron Apple Drop Chance", 0.01, "0.01 = 1%, 1.0 = 100%, etc. (Default: 0.01)").getDouble(0.01);
+		appleShadowBoronSaturationAmount = configuration.get(category, "Shadow Boron Apple Saturation Amount", 1, "(Default: 1)").getInt(1);
+		appleShadowBoronHungerAmount = configuration.get(category, "Shadow Boron Apple Hunger Amount", 4, "(Default: 4)").getInt(4);
+		appleShadowBoronWolvesFavoriteFood = configuration.get(category, "Shadow Boron Apple Wolves Favorite Food", false, "(Default: flase)").getBoolean(false);
+		appleShadowBoronEffect1 = configuration.get(category, "Shadow Boron Apple Effect 1", 16, "(Default: 16)").getInt(16);
+		appleShadowBoronEffect2 = configuration.get(category, "Shadow Boron Apple Effect 2", 15, "(Default: 15)").getInt(15);
+		appleShadowBoronEffectTime1 = configuration.get(category, "Shadow Boron Apple Effect 1 Time", 1800, "200 = 10 Seconds, 1200 = 1 Minute (Default: 1800)").getInt(1800);
+		appleShadowBoronEffectTime2 = configuration.get(category, "Shadow Boron Apple Effect 2 Time", 1800, "200 = 10 Seconds, 1200 = 1 Minute (Default: 1800)").getInt(1800);
 
 		if (configuration.hasChanged())
 		{
