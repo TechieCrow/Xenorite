@@ -6,6 +6,7 @@ import gcm.xenorite.armor.HeavenlyGlintArmor;
 import gcm.xenorite.armor.ShadowBoronArmor;
 import gcm.xenorite.armor.XenoriteArmor;
 import gcm.xenorite.entitys.XenBeastEntity;
+import gcm.xenorite.entitys.XenBeastRegistry;
 import gcm.xenorite.handler.ConfigurationHandler;
 import gcm.xenorite.handler.EventHandler;
 import gcm.xenorite.handler.UpdateHandler;
@@ -44,12 +45,7 @@ import gcm.xenorite.weapons.HeavenlyGlintSword;
 import gcm.xenorite.weapons.ShadowBoronSword;
 import gcm.xenorite.weapons.XenoriteSword;
 import gcm.xenorite.world.gen.Oregen;
-
-import java.util.Random;
-
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityList;
-import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemAxe;
@@ -58,7 +54,6 @@ import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.oredict.OreDictionary;
@@ -68,7 +63,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
@@ -166,20 +160,20 @@ public class Xenorite
 	public static Entity						XenBeastEntity;
 
 	// Mob Stuff
-	public static void registerEntity(Class entityClass, String name)
-	{
-		int entityID = EntityRegistry.findGlobalUniqueEntityId();
-		long seed = name.hashCode();
-		Random rand = new Random(seed);
-		int primaryColor = rand.nextInt() * 16777215;
-		int secondaryColor = rand.nextInt() * 16777215;
-
-		EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
-		EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
-		EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor)); // probablity of space/minimal to spawn/max to spawn
-		EntityRegistry.addSpawn(XenBeastEntity.class, ConfigurationHandler.xenbeastSpawnRate, ConfigurationHandler.xenbeastMinSpawn, ConfigurationHandler.xenbeastMaxSpawn, EnumCreatureType.monster, new BiomeGenBase[]
-		{ BiomeGenBase.ocean, BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.extremeHills, BiomeGenBase.forest, BiomeGenBase.taiga, BiomeGenBase.swampland, BiomeGenBase.river, BiomeGenBase.frozenOcean, BiomeGenBase.frozenRiver, BiomeGenBase.icePlains, BiomeGenBase.iceMountains, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.beach, BiomeGenBase.desertHills, BiomeGenBase.forestHills, BiomeGenBase.taigaHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.jungleEdge, BiomeGenBase.deepOcean, BiomeGenBase.stoneBeach, BiomeGenBase.coldBeach, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills, BiomeGenBase.roofedForest, BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills, BiomeGenBase.megaTaiga, BiomeGenBase.megaTaigaHills, BiomeGenBase.extremeHillsPlus, BiomeGenBase.savanna, BiomeGenBase.savannaPlateau, BiomeGenBase.mesa, BiomeGenBase.mesaPlateau_F, BiomeGenBase.mesaPlateau });
-	}
+	// public static void registerEntity(Class entityClass, String name)
+	// {
+	// int entityID = EntityRegistry.findGlobalUniqueEntityId();
+	// long seed = name.hashCode();
+	// Random rand = new Random(seed);
+	// int primaryColor = rand.nextInt() * 16777215;
+	// int secondaryColor = rand.nextInt() * 16777215;
+	//
+	// EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
+	// EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
+	// EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor)); // probablity of space/minimal to spawn/max to spawn
+	// EntityRegistry.addSpawn(XenBeastEntity.class, ConfigurationHandler.xenbeastSpawnRate, ConfigurationHandler.xenbeastMinSpawn, ConfigurationHandler.xenbeastMaxSpawn, EnumCreatureType.monster, new BiomeGenBase[]
+	// { BiomeGenBase.ocean, BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.extremeHills, BiomeGenBase.forest, BiomeGenBase.taiga, BiomeGenBase.swampland, BiomeGenBase.river, BiomeGenBase.frozenOcean, BiomeGenBase.frozenRiver, BiomeGenBase.icePlains, BiomeGenBase.iceMountains, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.beach, BiomeGenBase.desertHills, BiomeGenBase.forestHills, BiomeGenBase.taigaHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.jungleEdge, BiomeGenBase.deepOcean, BiomeGenBase.stoneBeach, BiomeGenBase.coldBeach, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills, BiomeGenBase.roofedForest, BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills, BiomeGenBase.megaTaiga, BiomeGenBase.megaTaigaHills, BiomeGenBase.extremeHillsPlus, BiomeGenBase.savanna, BiomeGenBase.savannaPlateau, BiomeGenBase.mesa, BiomeGenBase.mesaPlateau_F, BiomeGenBase.mesaPlateau });
+	// }
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -192,7 +186,7 @@ public class Xenorite
 
 		proxy.registerRenderers();
 
-		registerEntity(XenBeastEntity.class, "XenBeastEntity");
+		XenBeastRegistry.registerEntity(XenBeastEntity.class, "XenBeastEntity");
 
 		ModBlockOres.init();
 
