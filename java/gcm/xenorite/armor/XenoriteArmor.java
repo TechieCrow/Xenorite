@@ -11,8 +11,8 @@ import net.minecraft.item.ItemStack;
 public class XenoriteArmor extends ItemArmor
 {
 
-	private String[]	armourTypes	= new String[]
-									{ "helmetXenorite", "chestplateXenorite", "leggingsXenorite", "bootsXenorite" };
+	private String[] armourTypes = new String[]
+	{ "helmetXenorite", "chestplateXenorite", "leggingsXenorite", "bootsXenorite" };
 
 	public XenoriteArmor(ArmorMaterial armorMaterial, int renderIndex, int armorType)
 	{

@@ -5,6 +5,7 @@ import gcm.xenorite.armor.FinoriteArmor;
 import gcm.xenorite.armor.HeavenlyGlintArmor;
 import gcm.xenorite.armor.ShadowBoronArmor;
 import gcm.xenorite.armor.XenoriteArmor;
+import gcm.xenorite.entitys.EnderPigIncEntity;
 import gcm.xenorite.entitys.XenBeastEntity;
 import gcm.xenorite.entitys.XenBeastRegistry;
 import gcm.xenorite.handler.ConfigurationHandler;
@@ -70,110 +71,97 @@ public class Xenorite
 {
 
 	@Mod.Instance(Reference.MOD_ID)
-	public static Xenorite						instance;
+	public static Xenorite instance;
 
-	public static Oregen						Oregen						= new Oregen();
+	public static Oregen Oregen = new Oregen();
 
 	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS, modId = Reference.MOD_ID)
-	public static IProxy						proxy;
+	public static IProxy proxy;
 
 	// Tool And Armor Materials
-	public static final Item.ToolMaterial		XenoriteToolMaterials		= EnumHelper.addToolMaterial("XenoriteToolMaterials", 3, 655, 8.0F, 3.0F, 22);
+	public static final Item.ToolMaterial XenoriteToolMaterials = EnumHelper.addToolMaterial("XenoriteToolMaterials", 3, 655, 8.0F, 3.0F, 22);
 
-	public static final ItemArmor.ArmorMaterial	XenoriteArmorMaterials		= EnumHelper.addArmorMaterial("XenoriteArmorMaterials", 33, new int[]
-																			{ 3, 8, 6, 3 }, 25);
+	public static final ItemArmor.ArmorMaterial XenoriteArmorMaterials = EnumHelper.addArmorMaterial("XenoriteArmorMaterials", 33, new int[]
+	{ 3, 8, 6, 3 }, 25);
 
-	public static final Item.ToolMaterial		CoreoriteToolMaterials		= EnumHelper.addToolMaterial("CoreoriteToolMaterials", 3, 655, 8.0F, 3.0F, 22);
+	public static final Item.ToolMaterial CoreoriteToolMaterials = EnumHelper.addToolMaterial("CoreoriteToolMaterials", 3, 655, 8.0F, 3.0F, 22);
 
-	public static final ItemArmor.ArmorMaterial	CoreoriteArmorMaterials		= EnumHelper.addArmorMaterial("CoreoriteArmorMaterials", 33, new int[]
-																			{ 3, 8, 6, 3 }, 25);
+	public static final ItemArmor.ArmorMaterial CoreoriteArmorMaterials = EnumHelper.addArmorMaterial("CoreoriteArmorMaterials", 33, new int[]
+	{ 3, 8, 6, 3 }, 25);
 
-	public static final Item.ToolMaterial		FinoriteToolMaterials		= EnumHelper.addToolMaterial("FinoriteToolMaterials", 3, 655, 8.0F, 3.0F, 22);
+	public static final Item.ToolMaterial FinoriteToolMaterials = EnumHelper.addToolMaterial("FinoriteToolMaterials", 3, 655, 8.0F, 3.0F, 22);
 
-	public static final ItemArmor.ArmorMaterial	FinoriteArmorMaterials		= EnumHelper.addArmorMaterial("FinoriteArmorMaterials", 33, new int[]
-																			{ 3, 8, 6, 3 }, 25);
+	public static final ItemArmor.ArmorMaterial FinoriteArmorMaterials = EnumHelper.addArmorMaterial("FinoriteArmorMaterials", 33, new int[]
+	{ 3, 8, 6, 3 }, 25);
 
-	public static final Item.ToolMaterial		HeavenlyGlintToolMaterials	= EnumHelper.addToolMaterial("HeavenlyGlintToolMaterials", 3, 655, 8.0F, 3.0F, 22);
+	public static final Item.ToolMaterial HeavenlyGlintToolMaterials = EnumHelper.addToolMaterial("HeavenlyGlintToolMaterials", 3, 655, 8.0F, 3.0F, 22);
 
-	public static final ItemArmor.ArmorMaterial	HeavenlyGlintArmorMaterials	= EnumHelper.addArmorMaterial("HeavenlyGlintArmorMaterials", 33, new int[]
-																			{ 3, 8, 6, 3 }, 25);
+	public static final ItemArmor.ArmorMaterial HeavenlyGlintArmorMaterials = EnumHelper.addArmorMaterial("HeavenlyGlintArmorMaterials", 33, new int[]
+	{ 3, 8, 6, 3 }, 25);
 
-	public static final Item.ToolMaterial		ShadowBoronToolMaterials	= EnumHelper.addToolMaterial("ShadowBoronToolMaterials", 3, 655, 8.0F, 3.0F, 22);
+	public static final Item.ToolMaterial ShadowBoronToolMaterials = EnumHelper.addToolMaterial("ShadowBoronToolMaterials", 3, 655, 8.0F, 3.0F, 22);
 
-	public static final ItemArmor.ArmorMaterial	ShadowBoronArmorMaterials	= EnumHelper.addArmorMaterial("ShadowBoronArmorMaterials", 33, new int[]
-																			{ 3, 8, 6, 3 }, 25);
+	public static final ItemArmor.ArmorMaterial ShadowBoronArmorMaterials = EnumHelper.addArmorMaterial("ShadowBoronArmorMaterials", 33, new int[]
+	{ 3, 8, 6, 3 }, 25);
 
 	// Xenorite Sets
-	public static ItemSword						xenoriteSword;
-	public static ItemPickaxe					xenoritePickaxe;
-	public static ItemSpade						xenoriteShovel;
-	public static ItemAxe						xenoriteAxe;
-	public static ItemHoe						xenoriteHoe;
-	public static Item							xenoriteHelmet;
-	public static Item							xenoriteChestplate;
-	public static Item							xenoriteLeggings;
-	public static Item							xenoriteBoots;
+	public static ItemSword xenoriteSword;
+	public static ItemPickaxe xenoritePickaxe;
+	public static ItemSpade xenoriteShovel;
+	public static ItemAxe xenoriteAxe;
+	public static ItemHoe xenoriteHoe;
+	public static Item xenoriteHelmet;
+	public static Item xenoriteChestplate;
+	public static Item xenoriteLeggings;
+	public static Item xenoriteBoots;
 
 	// Coreorite Sets
-	public static ItemSword						coreoriteSword;
-	public static ItemPickaxe					coreoritePickaxe;
-	public static ItemSpade						coreoriteShovel;
-	public static ItemAxe						coreoriteAxe;
-	public static ItemHoe						coreoriteHoe;
-	public static Item							coreoriteHelmet;
-	public static Item							coreoriteChestplate;
-	public static Item							coreoriteLeggings;
-	public static Item							coreoriteBoots;
+	public static ItemSword coreoriteSword;
+	public static ItemPickaxe coreoritePickaxe;
+	public static ItemSpade coreoriteShovel;
+	public static ItemAxe coreoriteAxe;
+	public static ItemHoe coreoriteHoe;
+	public static Item coreoriteHelmet;
+	public static Item coreoriteChestplate;
+	public static Item coreoriteLeggings;
+	public static Item coreoriteBoots;
 
 	// Finorite Sets
-	public static ItemSword						finoriteSword;
-	public static ItemPickaxe					finoritePickaxe;
-	public static ItemSpade						finoriteShovel;
-	public static ItemAxe						finoriteAxe;
-	public static ItemHoe						finoriteHoe;
-	public static Item							finoriteHelmet;
-	public static Item							finoriteChestplate;
-	public static Item							finoriteLeggings;
-	public static Item							finoriteBoots;
+	public static ItemSword finoriteSword;
+	public static ItemPickaxe finoritePickaxe;
+	public static ItemSpade finoriteShovel;
+	public static ItemAxe finoriteAxe;
+	public static ItemHoe finoriteHoe;
+	public static Item finoriteHelmet;
+	public static Item finoriteChestplate;
+	public static Item finoriteLeggings;
+	public static Item finoriteBoots;
 
 	// Heavenly Glint Sets
-	public static ItemSword						heavenlyglintSword;
-	public static ItemPickaxe					heavenlyglintPickaxe;
-	public static ItemSpade						heavenlyglintShovel;
-	public static ItemAxe						heavenlyglintAxe;
-	public static ItemHoe						heavenlyglintHoe;
-	public static Item							heavenlyglintHelmet;
-	public static Item							heavenlyglintChestplate;
-	public static Item							heavenlyglintLeggings;
-	public static Item							heavenlyglintBoots;
+	public static ItemSword heavenlyglintSword;
+	public static ItemPickaxe heavenlyglintPickaxe;
+	public static ItemSpade heavenlyglintShovel;
+	public static ItemAxe heavenlyglintAxe;
+	public static ItemHoe heavenlyglintHoe;
+	public static Item heavenlyglintHelmet;
+	public static Item heavenlyglintChestplate;
+	public static Item heavenlyglintLeggings;
+	public static Item heavenlyglintBoots;
 
 	// Shadow Boron Sets
-	public static ItemSword						shadowboronSword;
-	public static ItemPickaxe					shadowboronPickaxe;
-	public static ItemSpade						shadowboronShovel;
-	public static ItemAxe						shadowboronAxe;
-	public static ItemHoe						shadowboronHoe;
-	public static Item							shadowboronHelmet;
-	public static Item							shadowboronChestplate;
-	public static Item							shadowboronLeggings;
-	public static Item							shadowboronBoots;
-	public static Entity						XenBeastEntity;
+	public static ItemSword shadowboronSword;
+	public static ItemPickaxe shadowboronPickaxe;
+	public static ItemSpade shadowboronShovel;
+	public static ItemAxe shadowboronAxe;
+	public static ItemHoe shadowboronHoe;
+	public static Item shadowboronHelmet;
+	public static Item shadowboronChestplate;
+	public static Item shadowboronLeggings;
+	public static Item shadowboronBoots;
 
-	// Mob Stuff
-	// public static void registerEntity(Class entityClass, String name)
-	// {
-	// int entityID = EntityRegistry.findGlobalUniqueEntityId();
-	// long seed = name.hashCode();
-	// Random rand = new Random(seed);
-	// int primaryColor = rand.nextInt() * 16777215;
-	// int secondaryColor = rand.nextInt() * 16777215;
-	//
-	// EntityRegistry.registerGlobalEntityID(entityClass, name, entityID);
-	// EntityRegistry.registerModEntity(entityClass, name, entityID, instance, 64, 1, true);
-	// EntityList.entityEggs.put(Integer.valueOf(entityID), new EntityList.EntityEggInfo(entityID, primaryColor, secondaryColor)); // probablity of space/minimal to spawn/max to spawn
-	// EntityRegistry.addSpawn(XenBeastEntity.class, ConfigurationHandler.xenbeastSpawnRate, ConfigurationHandler.xenbeastMinSpawn, ConfigurationHandler.xenbeastMaxSpawn, EnumCreatureType.monster, new BiomeGenBase[]
-	// { BiomeGenBase.ocean, BiomeGenBase.plains, BiomeGenBase.desert, BiomeGenBase.extremeHills, BiomeGenBase.forest, BiomeGenBase.taiga, BiomeGenBase.swampland, BiomeGenBase.river, BiomeGenBase.frozenOcean, BiomeGenBase.frozenRiver, BiomeGenBase.icePlains, BiomeGenBase.iceMountains, BiomeGenBase.mushroomIsland, BiomeGenBase.mushroomIslandShore, BiomeGenBase.beach, BiomeGenBase.desertHills, BiomeGenBase.forestHills, BiomeGenBase.taigaHills, BiomeGenBase.extremeHillsEdge, BiomeGenBase.jungle, BiomeGenBase.jungleHills, BiomeGenBase.jungleEdge, BiomeGenBase.deepOcean, BiomeGenBase.stoneBeach, BiomeGenBase.coldBeach, BiomeGenBase.birchForest, BiomeGenBase.birchForestHills, BiomeGenBase.roofedForest, BiomeGenBase.coldTaiga, BiomeGenBase.coldTaigaHills, BiomeGenBase.megaTaiga, BiomeGenBase.megaTaigaHills, BiomeGenBase.extremeHillsPlus, BiomeGenBase.savanna, BiomeGenBase.savannaPlateau, BiomeGenBase.mesa, BiomeGenBase.mesaPlateau_F, BiomeGenBase.mesaPlateau });
-	// }
+	// Mobs
+	public static Entity XenBeastEntity;
+	public static Entity EnderPigIncEntity;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)
@@ -187,6 +175,7 @@ public class Xenorite
 		proxy.registerRenderers();
 
 		XenBeastRegistry.registerEntity(XenBeastEntity.class, "XenBeastEntity");
+		XenBeastRegistry.registerEntity(EnderPigIncEntity.class, "EnderPigIncEntity");
 
 		ModBlockOres.init();
 

@@ -11,8 +11,8 @@ import net.minecraft.item.ItemStack;
 public class FinoriteArmor extends ItemArmor
 {
 
-	private String[]	armourTypes	= new String[]
-									{ "helmetfinorite", "chestplatefinorite", "leggingsfinorite", "bootsfinorite" };
+	private String[] armourTypes = new String[]
+	{ "helmetfinorite", "chestplatefinorite", "leggingsfinorite", "bootsfinorite" };
 
 	public FinoriteArmor(ArmorMaterial armorMaterial, int renderIndex, int armorType)
 	{

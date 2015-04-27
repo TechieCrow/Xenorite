@@ -11,11 +11,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModBlocks
 {
 
-	public static final BlockXenorite	xenoriteBlock		= new BlockXenoriteBlock();
-	public static final BlockXenorite	coreoriteBlock		= new BlockCoreoriteBlock();
-	public static final BlockXenorite	finoriteBlock		= new BlockFinoriteBlock();
-	public static final BlockXenorite	heavenlyglintBlock	= new BlockHeavenlyGlintBlock();
-	public static final BlockXenorite	shadowboronBlock	= new BlockShadowBoronBlock();
+	public static final BlockXenorite xenoriteBlock = new BlockXenoriteBlock();
+	public static final BlockXenorite coreoriteBlock = new BlockCoreoriteBlock();
+	public static final BlockXenorite finoriteBlock = new BlockFinoriteBlock();
+	public static final BlockXenorite heavenlyglintBlock = new BlockHeavenlyGlintBlock();
+	public static final BlockXenorite shadowboronBlock = new BlockShadowBoronBlock();
 
 	public static void init()
 	{

@@ -11,86 +11,90 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 public class ConfigurationHandler
 {
 
-	public static Configuration	configuration;
+	public static Configuration configuration;
 
-	public static int			oreXenoriteSpawnHeight;
-	public static int			oreCoreoriteSpawnHeight;
-	public static int			oreFinoriteSpawnHeight;
+	public static int oreXenoriteSpawnHeight;
+	public static int oreCoreoriteSpawnHeight;
+	public static int oreFinoriteSpawnHeight;
 
-	public static int			oreHeavenlyGlintSpawnHeight;
-	public static int			oreShadowBoronSpawnHeight;
+	public static int oreHeavenlyGlintSpawnHeight;
+	public static int oreShadowBoronSpawnHeight;
 
-	public static int			oreXenoriteSpawnsPerVein;
-	public static int			oreCoreoriteSpawnsPerVein;
-	public static int			oreFinoriteSpawnsPerVein;
+	public static int oreXenoriteSpawnsPerVein;
+	public static int oreCoreoriteSpawnsPerVein;
+	public static int oreFinoriteSpawnsPerVein;
 
-	public static int			oreHeavenlyGlintSpawnsPerVein;
-	public static int			oreShadowBoronSpawnsPerVein;
+	public static int oreHeavenlyGlintSpawnsPerVein;
+	public static int oreShadowBoronSpawnsPerVein;
 
-	public static int			oreHeavenlyGlintEffect1;
-	public static int			oreHeavenlyGlintEffect2;
-	public static int			oreHeavenlyGlintEffect3;
-	public static int			oreHeavenlyGlintEffect4;
-	public static int			oreHeavenlyGlintEffect5;
-	public static int			oreHeavenlyGlintEffect6;
+	public static int oreHeavenlyGlintEffect1;
+	public static int oreHeavenlyGlintEffect2;
+	public static int oreHeavenlyGlintEffect3;
+	public static int oreHeavenlyGlintEffect4;
+	public static int oreHeavenlyGlintEffect5;
+	public static int oreHeavenlyGlintEffect6;
 
-	public static int			oreShadowBoronEffect1;
-	public static int			oreShadowBoronEffect2;
-	public static int			oreShadowBoronEffect3;
-	public static int			oreShadowBoronEffect4;
-	public static int			oreShadowBoronEffect5;
-	public static int			oreShadowBoronEffect6;
+	public static int oreShadowBoronEffect1;
+	public static int oreShadowBoronEffect2;
+	public static int oreShadowBoronEffect3;
+	public static int oreShadowBoronEffect4;
+	public static int oreShadowBoronEffect5;
+	public static int oreShadowBoronEffect6;
 
-	public static int			swordHeavenlyGlintEffect1;
-	public static int			swordShadowBoronEffect1;
+	public static int swordHeavenlyGlintEffect1;
+	public static int swordShadowBoronEffect1;
 
-	public static int			pickaxeHeavenlyGlintEffect1;
-	public static int			pickaxeShadowBoronEffect1;
+	public static int pickaxeHeavenlyGlintEffect1;
+	public static int pickaxeShadowBoronEffect1;
 
-	public static int			helmetHeavenlyGlintEffect1;
-	public static int			helmetShadowBoronEffect1;
+	public static int helmetHeavenlyGlintEffect1;
+	public static int helmetShadowBoronEffect1;
 
-	public static int			chestplateHeavenlyGlintEffect1;
-	public static int			chestplateShadowBoronEffect1;
+	public static int chestplateHeavenlyGlintEffect1;
+	public static int chestplateShadowBoronEffect1;
 
-	public static int			leggingsHeavenlyGlintEffect1;
-	public static int			leggingsShadowBoronEffect1;
+	public static int leggingsHeavenlyGlintEffect1;
+	public static int leggingsShadowBoronEffect1;
 
-	public static int			bootsHeavenlyGlintEffect1;
-	public static int			bootsShadowBoronEffect1;
+	public static int bootsHeavenlyGlintEffect1;
+	public static int bootsShadowBoronEffect1;
 
-	public static double		xenbeastHealth;
-	public static double		xenbeastDamage;
-	public static double		xenbeastSpeed;
-	public static double		xenbeastknockbackResistance;
-	public static double		xenbeastFollowRange;
-	public static int			xenbeastSpawnRate;
-	public static int			xenbeastMinSpawn;
-	public static int			xenbeastMaxSpawn;
+	public static double xenbeastHealth;
+	public static double xenbeastDamage;
+	public static double xenbeastSpeed;
+	public static double xenbeastknockbackResistance;
+	public static double xenbeastFollowRange;
+	public static int xenbeastSpawnRate;
+	public static int xenbeastMinSpawn;
+	public static int xenbeastMaxSpawn;
 
-	public static int			xenbeastSoulFragmentDrop;
-	public static int			xenbeastSoulFragmenteffect;
+	public static int enderPigIncSpawnRate;
+	public static int enderPigIncMinSpawn;
+	public static int enderPigIncMaxSpawn;
 
-	public static double		universesoulSplitDropChance;
-	public static int			universesoulSplitDrop;
+	public static int xenbeastSoulFragmentDrop;
+	public static int xenbeastSoulFragmenteffect;
 
-	public static double		appleHeavenlyGlintDropChance;
-	public static int			appleHeavenlyGlintHungerAmount;
-	public static int			appleHeavenlyGlintSaturationAmount;
-	public static boolean		appleHeavenlyGlintWolvesFavoriteFood;
-	public static int			appleHeavenlyGlintEffect1;
-	public static int			appleHeavenlyGlintEffect2;
-	public static int			appleHeavenlyGlintEffectTime1;
-	public static int			appleHeavenlyGlintEffectTime2;
+	public static double universesoulSplitDropChance;
+	public static int universesoulSplitDrop;
 
-	public static double		appleShadowBoronDropChance;
-	public static int			appleShadowBoronHungerAmount;
-	public static int			appleShadowBoronSaturationAmount;
-	public static boolean		appleShadowBoronWolvesFavoriteFood;
-	public static int			appleShadowBoronEffect1;
-	public static int			appleShadowBoronEffect2;
-	public static int			appleShadowBoronEffectTime1;
-	public static int			appleShadowBoronEffectTime2;
+	public static double appleHeavenlyGlintDropChance;
+	public static int appleHeavenlyGlintHungerAmount;
+	public static int appleHeavenlyGlintSaturationAmount;
+	public static boolean appleHeavenlyGlintWolvesFavoriteFood;
+	public static int appleHeavenlyGlintEffect1;
+	public static int appleHeavenlyGlintEffect2;
+	public static int appleHeavenlyGlintEffectTime1;
+	public static int appleHeavenlyGlintEffectTime2;
+
+	public static double appleShadowBoronDropChance;
+	public static int appleShadowBoronHungerAmount;
+	public static int appleShadowBoronSaturationAmount;
+	public static boolean appleShadowBoronWolvesFavoriteFood;
+	public static int appleShadowBoronEffect1;
+	public static int appleShadowBoronEffect2;
+	public static int appleShadowBoronEffectTime1;
+	public static int appleShadowBoronEffectTime2;
 
 	public static void init(File configFile)
 	{
@@ -174,6 +178,11 @@ public class ConfigurationHandler
 		xenbeastMaxSpawn = configuration.get(category, "Xen Beast Maximum To Spawn", 5, "(Default: 5)").getInt(5);
 		xenbeastSoulFragmentDrop = configuration.get(category, "Xen Beast Soul Fragment Drop", 1, "How many Xen Beast soul fragments it drops. (Default: 1)").getInt(1);
 		xenbeastSoulFragmenteffect = configuration.get(category, "Xen Beast Soul Fragment Effect", 1, "(Default: 1 (Speed Boost))").getInt(1);
+
+		category = "Ender Pig Inc Attributes";
+		enderPigIncSpawnRate = configuration.get(category, "Ender Pig Inc Spawn Rate", 10, "(Default: 10)").getInt(10);
+		enderPigIncMinSpawn = configuration.get(category, "Ender Pig Inc Minimal To Spawn", 1, "(Default: 1)").getInt(1);
+		enderPigIncMaxSpawn = configuration.get(category, "Ender Pig Inc Maximum To Spawn", 5, "(Default: 5)").getInt(5);
 
 		category = "Global Mob Drop";
 		universesoulSplitDropChance = configuration.get(category, "Universe Soul Split Drop Chance", 0.01, "0.01 = 1%, 1.0 = 100%, etc. (Default: 0.01)").getDouble(0.01);

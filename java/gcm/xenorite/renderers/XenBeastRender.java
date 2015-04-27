@@ -9,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 public class XenBeastRender extends RenderBiped
 {
 
-	private static final ResourceLocation	textureLocation	= new ResourceLocation(Reference.MOD_ID + ":" + "textures/models/entitys/xenBeast.png");
+	private static final ResourceLocation textureLocation = new ResourceLocation(Reference.MOD_ID + ":" + "textures/models/entitys/xenBeast.png");
 
 	public XenBeastRender(ModelBiped model, float shadowSize)
 	{

@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 public class FoodShadowBoronApple extends ItemFood
 {
 
-	public static double	rand;
+	public static double rand;
 
 	public FoodShadowBoronApple()
 	{

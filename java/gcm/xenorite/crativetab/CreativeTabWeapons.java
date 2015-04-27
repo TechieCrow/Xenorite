@@ -10,19 +10,19 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class CreativeTabWeapons
 {
-	public static final CreativeTabs	Xenoriteweapons	= new CreativeTabs(Reference.MOD_ID)
-														{
-															@Override
-															public Item getTabIconItem()
-															{
-																return Xenorite.xenoriteSword;
-															}
+	public static final CreativeTabs Xenoriteweapons = new CreativeTabs(Reference.MOD_ID)
+	{
+		@Override
+		public Item getTabIconItem()
+		{
+			return Xenorite.xenoriteSword;
+		}
 
-															@Override
-															@SideOnly(Side.CLIENT)
-															public String getTranslatedTabLabel()
-															{
-																return StatCollector.translateToLocal("key.categories.xenoriteweapons");
-															}
-														};
+		@Override
+		@SideOnly(Side.CLIENT)
+		public String getTranslatedTabLabel()
+		{
+			return StatCollector.translateToLocal("key.categories.xenoriteweapons");
+		}
+	};
 }

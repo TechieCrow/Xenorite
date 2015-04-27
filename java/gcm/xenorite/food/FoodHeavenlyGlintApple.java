@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 public class FoodHeavenlyGlintApple extends ItemFood
 {
 
-	public static double	rand;
+	public static double rand;
 
 	public FoodHeavenlyGlintApple()
 	{

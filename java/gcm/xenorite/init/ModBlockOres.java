@@ -11,11 +11,11 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModBlockOres
 {
 
-	public static final BlockOresXenorite	xenoriteOre			= new BlockXenoriteOre();
-	public static final BlockOresXenorite	coreoriteOre		= new BlockCoreoriteOre();
-	public static final BlockOresXenorite	finoriteOre			= new BlockFinoriteOre();
-	public static final BlockOresXenorite	HeavenlyGlintOre	= new BlockHeavenlyGlintOre();
-	public static final BlockOresXenorite	ShadowBoronOre		= new BlockShadowBoronOre();
+	public static final BlockOresXenorite xenoriteOre = new BlockXenoriteOre();
+	public static final BlockOresXenorite coreoriteOre = new BlockCoreoriteOre();
+	public static final BlockOresXenorite finoriteOre = new BlockFinoriteOre();
+	public static final BlockOresXenorite HeavenlyGlintOre = new BlockHeavenlyGlintOre();
+	public static final BlockOresXenorite ShadowBoronOre = new BlockShadowBoronOre();
 
 	public static void init()
 	{

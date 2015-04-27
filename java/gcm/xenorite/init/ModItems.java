@@ -18,20 +18,20 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModItems
 {
-	public static final ItemXenorite	xenoriteIngot			= new ItemXenoriteIngot();
-	public static final ItemXenorite	coreoriteIngot			= new ItemCoreoriteIngot();
-	public static final ItemXenorite	finoriteIngot			= new ItemFinoriteIngot();
-	public static final ItemXenorite	xenoriteMeltedIngot		= new ItemXenoriteMeltedIngot();
-	public static final ItemXenorite	coreoriteMeltedIngot	= new ItemCoreoriteMeltedIngot();
-	public static final ItemXenorite	finoriteMeltedIngot		= new ItemFinoriteMeltedIngot();
-	public static final ItemXenorite	heavenlyglintIngot		= new ItemHeavenlyGlintIngot();
-	public static final ItemXenorite	shadowboronIngot		= new ItemShadowBoronIngot();
+	public static final ItemXenorite xenoriteIngot = new ItemXenoriteIngot();
+	public static final ItemXenorite coreoriteIngot = new ItemCoreoriteIngot();
+	public static final ItemXenorite finoriteIngot = new ItemFinoriteIngot();
+	public static final ItemXenorite xenoriteMeltedIngot = new ItemXenoriteMeltedIngot();
+	public static final ItemXenorite coreoriteMeltedIngot = new ItemCoreoriteMeltedIngot();
+	public static final ItemXenorite finoriteMeltedIngot = new ItemFinoriteMeltedIngot();
+	public static final ItemXenorite heavenlyglintIngot = new ItemHeavenlyGlintIngot();
+	public static final ItemXenorite shadowboronIngot = new ItemShadowBoronIngot();
 
-	public static final ItemXenorite	xenbeastsoulFragment1	= new ItemXenBeastSoulFragment();
-	public static final ItemXenorite	universesoulSplit		= new ItemUniverseSoulSplit();
+	public static final ItemXenorite xenbeastsoulFragment1 = new ItemXenBeastSoulFragment();
+	public static final ItemXenorite universesoulSplit = new ItemUniverseSoulSplit();
 
-	public static Item					appleHeavenlyGlint;
-	public static Item					appleShadowBoron;
+	public static Item appleHeavenlyGlint;
+	public static Item appleShadowBoron;
 
 	public static void init()
 	{

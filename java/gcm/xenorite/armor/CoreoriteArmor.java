@@ -11,8 +11,8 @@ import net.minecraft.item.ItemStack;
 public class CoreoriteArmor extends ItemArmor
 {
 
-	private String[]	armourTypes	= new String[]
-									{ "helmetcoreorite", "chestplatecoreorite", "leggingscoreorite", "bootscoreorite" };
+	private String[] armourTypes = new String[]
+	{ "helmetcoreorite", "chestplatecoreorite", "leggingscoreorite", "bootscoreorite" };
 
 	public CoreoriteArmor(ArmorMaterial armorMaterial, int renderIndex, int armorType)
 	{

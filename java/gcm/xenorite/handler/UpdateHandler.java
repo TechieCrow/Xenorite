@@ -12,16 +12,16 @@ public class UpdateHandler
 
 	// I have a variable that is my current version of my mod, which is
 	// "1.7.10 R1"
-	private static String	currentVersion	= Reference.VERSION;
+	private static String currentVersion = Reference.VERSION;
 	// This will be set later once we connect to internet and get the latest
 	// version
-	private static String	newestVersion;
+	private static String newestVersion;
 	// This is just a placeholder for the message that will be sent to the
 	// player
-	public static String	updateStatus	= "NULL";
+	public static String updateStatus = "NULL";
 	// I only out of date message to display once per session, not every time
 	// the player logs in and out.
-	public static boolean	show			= false;
+	public static boolean show = false;
 
 	public static void init()
 	{

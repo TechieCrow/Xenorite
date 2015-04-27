@@ -73,7 +73,7 @@ public class Oregen implements IWorldGenerator
 			int z1coord = y + random.nextInt(16);
 
 			new NetherGenMinable(gcm.xenorite.init.ModBlockOres.ShadowBoronOre, ConfigurationHandler.oreShadowBoronSpawnsPerVein).generate(world, random, x1coord, y1coord, z1coord);
-			
+
 			int x2coord = x + random.nextInt(16);
 			int y2coord = random.nextInt(ConfigurationHandler.oreHeavenlyGlintSpawnHeight);
 			int z2coord = y + random.nextInt(16);

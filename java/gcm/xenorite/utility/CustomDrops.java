@@ -11,7 +11,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class CustomDrops
 {
-	public static double	rand;
+	public static double rand;
 
 	@SubscribeEvent
 	public void onEntityDrop(LivingDropsEvent event)

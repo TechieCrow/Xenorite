@@ -96,6 +96,6 @@ public class ShadowBoronSword extends ItemSword
 				List.add(String.format("\u00A7b\u00A7o\u00A7lShadow Sword Not Activated"));
 			}
 		}
-			List.add("Hold SHIFT for weird description");
-		}
+		List.add("Hold SHIFT for weird description");
 	}
+}

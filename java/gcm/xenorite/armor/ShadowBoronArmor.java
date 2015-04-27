@@ -4,9 +4,6 @@ import gcm.xenorite.Xenorite;
 import gcm.xenorite.crativetab.CreativeTabArmour;
 import gcm.xenorite.handler.ConfigurationHandler;
 import gcm.xenorite.reference.Reference;
-
-import java.util.List;
-
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,8 +15,8 @@ import net.minecraft.world.World;
 public class ShadowBoronArmor extends ItemArmor
 {
 
-	private String[]	armourTypes	= new String[]
-									{ "helmetshadowboron", "chestplateshadowboron", "leggingsshadowboron", "bootsshadowboron" };
+	private String[] armourTypes = new String[]
+	{ "helmetshadowboron", "chestplateshadowboron", "leggingsshadowboron", "bootsshadowboron" };
 
 	public ShadowBoronArmor(ArmorMaterial armorMaterial, int renderIndex, int armorType)
 	{

@@ -4,7 +4,6 @@ import gcm.xenorite.Xenorite;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraftforge.common.ChestGenHooks;
-import net.minecraftforge.event.world.BlockEvent.HarvestDropsEvent;
 
 public class ModChestGenHooks
 {

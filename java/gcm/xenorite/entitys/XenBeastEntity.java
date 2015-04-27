@@ -27,7 +27,7 @@ import net.minecraft.world.World;
 public class XenBeastEntity extends EntityMob
 {
 
-	World	world	= null;
+	World world = null;
 
 	public XenBeastEntity(World World)
 	{
