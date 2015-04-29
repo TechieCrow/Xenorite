@@ -4,7 +4,7 @@
         "category": "neutral",
         "sounds":
         [
-            "entity/xenBeast/xenBeast.Idle"
+            "entity/xenbeast/xenbeast.idle"
         ]
     },
     "xenbeast.hurt":
@@ -12,7 +12,7 @@
         "category": "neutral",
         "sounds":
         [
-            "entity/xenBeast/xenBeast.Hurt"
+            "entity/xenbeast/xenbeast.hurt"
         ]
     },
     "xenbeast.death":
@@ -20,7 +20,7 @@
         "category": "neutral",
         "sounds":
         [
-            "entity/xenBeast/xenBeast.Death"
+            "entity/xenbeast/xenbeast.death"
         ]
     }
 }

@@ -35,24 +35,21 @@ public class XenBeastEntity extends EntityMob
 		world = World;
 		addRandomArmor();
 		this.getNavigator().setEnterDoors(true);
-		this.tasks.addTask(1, new EntityAISwimming(this));
-		this.tasks.addTask(1, new EntityAIWander(this, 1.0D));
-		this.tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
-		this.tasks.addTask(1, new EntityAILookIdle(this));
-		this.tasks.addTask(1, new EntityAILeapAtTarget(this, 0.8F));
+		this.tasks.addTask(6, new EntityAISwimming(this));
+		this.tasks.addTask(5, new EntityAIWander(this, 1.0D));
+		this.tasks.addTask(4, new EntityAIWatchClosest(this, EntityPlayer.class, 8.0F));
+		this.tasks.addTask(3, new EntityAILookIdle(this));
+		this.tasks.addTask(2, new EntityAILeapAtTarget(this, 0.8F));
 		this.tasks.addTask(1, new EntityAIOpenDoor(this, true));
+		this.targetTasks.addTask(1, new EntityAIHurtByTarget(this, false));
 
 		// attacks EVERYTHING "living".
 		this.tasks.addTask(1, new EntityAIAttackOnCollide(this, EntityLivingBase.class, 2, false));
-
 		this.targetTasks.addTask(1, new EntityAINearestAttackableTarget(this, EntityLivingBase.class, 2, true));
-		this.targetTasks.addTask(2, new EntityAIHurtByTarget(this, false));
 
 		// Attacks players. (players should have a higher priority.)
-		this.tasks.addTask(2, new EntityAIAttackOnCollide(this, EntityPlayer.class, 2, false));
-
-		this.targetTasks.addTask(2, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 2, true));
-		this.targetTasks.addTask(3, new EntityAIHurtByTarget(this, false));
+		this.tasks.addTask(100, new EntityAIAttackOnCollide(this, EntityPlayer.class, 2, false));
+		this.targetTasks.addTask(100, new EntityAINearestAttackableTarget(this, EntityPlayer.class, 2, true));
 	}
 
 	protected void dropRareDrop(int par1)
@@ -83,20 +80,20 @@ public class XenBeastEntity extends EntityMob
 		return true;
 	}
 
-	// protected String getLivingSound()
-	// {
-	// return "xenorite:xenbeast.idle";
-	// }
-	//
-	// protected String getHurtSound()
-	// {
-	// return "xenorite:xenbeast.hurt";
-	// }
-	//
-	// protected String getDeathSound()
-	// {
-	// return "xenorite:xenbeast.death";
-	// }
+	protected String getLivingSound()
+	{
+		return "xenorite:xenbeast.idle";
+	}
+
+	protected String getHurtSound()
+	{
+		return "xenorite:xenbeast.hurt";
+	}
+
+	protected String getDeathSound()
+	{
+		return "xenorite:xenbeast.death";
+	}
 
 	protected void addRandomArmor()
 	{

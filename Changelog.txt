@@ -2,3 +2,8 @@
 Added new mob Ender Pig Inc with configs.
 Added Xen Beast to spawn in dungeons.
 Reformatted code again.
+
+[29/04/2015]
+Added Ender Pearl drops to Ender Pig Inc.
+Added Ender Eyes as a rare drop to Ender Pig Inc.
+Added the updated textures made by ChewableBliss.
