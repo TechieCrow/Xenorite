@@ -5,104 +5,99 @@ key.categories.xenoriteitems=§4§o§lXenorite Items
 key.categories.xenoritetools=§4§o§lXenorite Tools
 key.categories.xenoriteweapons=§4§o§lXenorite Weapons
 
-# Block Names - Xenorite
+# Ore Names
 item.xenorite:xenoriteOre.name=§4Xenorite Ore
-item.xenorite:xenoriteBlock.name=§4Xenorite Block
-
-# Block Names - Coreorite
 item.xenorite:coreoriteOre.name=§1Coreorite Ore
-item.xenorite:coreoriteBlock.name=§1Coreorite Block
-
-# Block Names - Finorite
 item.xenorite:finoriteOre.name=§eFinorite Ore
-item.xenorite:finoriteBlock.name=§eFinorite Block
-
-# Block Names - Heavenly Glint
 item.xenorite:HeavenlyGlintOre.name=§9Heavenly Glint Ore
-item.xenorite:heavelyglintBlock.name=§9Heavenly Glint Block
-
-#Block Names - Shadow Boron
 item.xenorite:ShadowBoronOre.name=§cShadow Boron Ore
+
+# Block Names
+item.xenorite:xenoriteBlock.name=§4Xenorite Block
+item.xenorite:coreoriteBlock.name=§1Coreorite Block
+item.xenorite:finoriteBlock.name=§eFinorite Block
+item.xenorite:heavelyglintBlock.name=§9Heavenly Glint Block
 item.xenorite:shadowboronBlock.name=§cShadow Boron Block
 
 
-# Item Names - Xenorite
+# Item Names
 item.xenorite:xenoriteIngot.name=§4Xenorite Ingot
 item.xenorite:xenoriteMeltedIngot.name=§4Melted Xenorite Ingot
-
-item.Xenorite Sword.name=§4Xenorite Sword
-item.Xenorite Pickaxe.name=§4Xenorite Pickaxe
-item.Xenorite Shove.name=§4Xenorite Shovel
-item.Xenorite Axe.name=§4Xenorite Axe
-item.Xenorite Hoe.name=§4Xenorite Hoe
-item.Xenorite Helmet.name=§4Xenorite Helmet
-item.Xenorite Chestplate.name=§4Xenorite Chestplate
-item.Xenorite Leggings.name=§4Xenorite Leggings
-item.Xenorite Boots.name=§4Xenorite Boots
-
-# Item Names - Coreorite
 item.xenorite:coreoriteIngot.name=§1Coreorite Ingot
 item.xenorite:coreoriteMeltedIngot.name=§1Melted Coreorite Ingot
-
-item.Coreorite Sword.name=§1Coreorite Sword
-item.Coreorite Pickaxe.name=§1Coreorite Pickaxe
-item.Coreorite Shove.name=§1Coreorite Shovel
-item.Coreorite Axe.name=§1Coreorite Axe
-item.Coreorite Hoe.name=§1Coreorite Hoe
-item.Coreorite Helmet.name=§1Coreorite Helmet
-item.Coreorite Chestplate.name=§1Coreorite Chestplate
-item.Coreorite Leggings.name=§1Coreorite Leggings
-item.Coreorite Boots.name=§1Coreorite Boots
-
-# Item Names - Finorite
 item.xenorite:finoriteIngot.name=§eFinorite Ingot
 item.xenorite:finoriteMeltedIngot.name=§eMelted Finorite Ingot
-
-item.Finorite Sword.name=§eFinorite Sword
-item.Finorite Pickaxe.name=§eFinorite Pickaxe
-item.Finorite Shove.name=§eFinorite Shovel
-item.Finorite Axe.name=§eFinorite Axe
-item.Finorite Hoe.name=§eFinorite Hoe
-item.Finorite Helmet.name=§eFinorite Helmet
-item.Finorite Chestplate.name=§eFinorite Chestplate
-item.Finorite Leggings.name=§eFinorite Leggings
-item.Finorite Boots.name=§eFinorite Boots
-
-# Item Names - Heavenly Glint
 item.xenorite:heavenlyglintIngot.name=§9Heavenly Glint Ingot
-
-item.Finorite Sword.name=§eFinorite Sword
-
-item.HeavenlyGlint Sword.name=§9Heavenly Glint Sword
-item.HeavenlyGlint Pickaxe.name=§9Heavenly Glint Pickaxe
-item.HeavenlyGlint Shovel.name=§9Heavenly Glint Shovel
-item.HeavenlyGlint Axe.name=§9Heavenly Glint Axe
-item.HeavenlyGlint Hoe.name=§9Heavenly Glint Hoe
-item.HeavenlyGlint Helmet.name=§9Heavenly Glint Helmet
-item.HeavenlyGlint Chestplate.name=§9Heavenly Glint Chestplate
-item.HeavenlyGlint Leggings.name=§9Heavenly Glint Leggings
-item.HeavenlyGlint Boots.name=§9Heavenly Glint Boots
-
-# Item Names - Shadow Boron
 item.xenorite:shadowboronIngot.name=§cShadow Boron Ingot
 
-item.ShadowBoron Sword.name=§cShadow Boron Sword
-item.ShadowBoron Pickaxe.name=§cShadow Boron Pickaxe
-item.ShadowBoron Shovel.name=§cShadow Boron Shovel
-item.ShadowBoron Axe.name=§cShadow Boron Axe
-item.ShadowBoron Hoe.name=§cShadow Boron Hoe
-item.ShadowBoron Helmet.name=§cShadow Boron Helmet
-item.ShadowBoron Chestplate.name=§cShadow Boron Chestplate
-item.ShadowBoron Leggings.name=§cShadow Boron Leggings
-item.ShadowBoron Boots.name=§cShadow Boron Boots
-
-# Random Item Stuff
 item.xenorite:xenbeastsoulFragment1.name=§4Xen Beast Soul Fragment
 item.xenorite:universesoulSplit.name=Universe Soul Split
 item.appleHeavenlyGlint.name=§9Heavenly Glint Apple
 item.appleShadowBoron.name=§cShadow Boron Apple
 
+# Sword Names
+item.xenorite:xenoriteSword.name=§4Xenorite Sword
+item.xenorite:coreoriteSword.name=§1Coreorite Sword
+item.xenorite:finoriteSword.name=§eFinorite Sword
+item.xenorite:heavenlyglintSword.name=§9Heavenly Glint Sword
+item.xenorite:shadowboronSword.name=§cShadow Boron Sword
+
+# Pickaxe Names
+item.xenorite:xenoritePickaxe.name=§4Xenorite Pickaxe
+item.xenorite:coreoritePickaxe.name=§1Coreorite Pickaxe
+item.xenorite:finoritePickaxe.name=§eFinorite Pickaxe
+item.xenorite:heavenlyglintPickaxe.name=§9Heavenly Glint Pickaxe
+item.xenorite:shadowboronPickaxe.name=§cShadow Boron Pickaxe
+
+#Shovel Names
+item.xenorite:xenoriteShovel.name=§4Xenorite Shovel
+item.xenorite:coreoriteShovel.name=§1Coreorite Shovel
+item.xenorite:finoriteShovel.name=§eFinorite Shovel
+item.xenorite:heavenlyglintShovel.name=§9Heavenly Glint Shovel
+item.xenorite:shadowboronShovel.name=§cShadow Boron Shovel
+
+#Axe Names
+item.xenorite:xenoriteAxe.name=§4Xenorite Axe
+item.xenorite:coreoriteAxe.name=§1Coreorite Axe
+item.xenorite:finoriteAxe.name=§eFinorite Axe
+item.xenorite:heavenlyglintAxe.name=§9Heavenly Glint Axe
+item.xenorite:shadowboronAxe.name=§cShadow Boron Axe
+
+#Hoe Names
+item.xenorite:xenoriteHoe.name=§4Xenorite Hoe
+item.xenorite:coreoriteHoe.name=§1Coreorite Hoe
+item.xenorite:finoriteHoe.name=§eFinorite Hoe
+item.xenorite:heavenlyglintHoe.name=§9Heavenly Glint Hoe
+item.xenorite:shadowboronHoe.name=§cShadow Boron Hoe
+
+#Helmet Names
+item.xenorite:xenoriteHelmet.name=§4Xenorite Helmet
+item.xenorite:coreoriteHelmet.name=§1Coreorite Helmet
+item.xenorite:finoriteHelmet.name=§eFinorite Helmet
+item.xenorite:heavenlyglintHelmet.name=§9Heavenly Glint Helmet
+item.xenorite:shadowboronHelmet.name=§cShadow Boron Helmet
+
+#Chestplate Names
+item.xenorite:xenoriteChestplate.name=§4Xenorite Chestplate
+item.xenorite:coreoriteChestplate.name=§1Coreorite Chestplate
+item.xenorite:finoriteChestplate.name=§eFinorite Chestplate
+item.xenorite:heavenlyglintChestplate.name=§9Heavenly Glint Chestplate
+item.xenorite:shadowboronChestplate.name=§cShadow Boron Chestplate
+
+#Leggings Name
+item.xenorite:xenoriteLeggings.name=§4Xenorite Leggings
+item.xenorite:coreoriteLeggings.name=§1Coreorite Leggings
+item.xenorite:finoriteLeggings.name=§eFinorite Leggings
+item.xenorite:heavenlyglintLeggings.name=§9Heavenly Glint Leggings
+item.xenorite:shadowboronLeggings.name=§cShadow Boron Leggings
+
+#Boots Names
+item.xenorite:xenoriteBoots.name=§4Xenorite Boots
+item.xenorite:coreoriteBoots.name=§1Coreorite Boots
+item.xenorite:finoriteBoots.name=§eFinorite Boots
+item.xenorite:heavenlyglintBoots.name=§9Heavenly Glint Boots
+item.xenorite:shadowboronBoots.name=§cShadow Boron Boots
+
 # Entitys
 entity.XenBeastEntity.name=§4§o§lXen Beast
 entity.EnderPigIncEntity.name=§b§o§lEnder Pig Inc
-entity.XenBeast1Entity.name=§4§o§lXeno Beast

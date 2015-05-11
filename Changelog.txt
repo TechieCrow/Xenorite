@@ -1,3 +1,16 @@
+[08/05/2015]
+Made all tool classes and packages follow items the same.
+Removed all the tool values from config file until I can figure out why it wasn't working.
+
+[05/05/2015]
+Changed Xenorite, Coreorite, Finorite, Heavenly Glint and Shadow Boron tools HarvestLevel to 4, this makes them better then diamond (does not effect mining speed) but I do not know if it can mine Tinkers Construct Cobalt and Ardite.
+Changed Xenorite, Coreorite, Finorite, Heavenly Glint and Shadow Boron tools Durability to 780 which makes it half the durability of diamond, this is because they are easier to get then diamond.
+Changed Xenorite, Coreorite, Finorite, Heavenly Glint and Shadow Boron tools Damage to half of what diamond tools do.
+Changed Xenorite, Coreorite, Finorite, Heavenly Glint and Shadow Boron tools Enchantability to 22 which is better then diamond but the same as gold.
+Changed Heavenly Glint and Shadow Boron ores Harvest Level to 4, this means you need Xenorite, Coreorite ore Finorite to mine Heavenly Glint or Shadow Boron ores.
+Added Heavenly Glint and Shadow Boron ores Light Level to 0.625F. (the same as Xenorite, Coreorite and Finorite)
+Changed Heavenly Glint Apple drop chance to 0.001 also added Shadow Boron Apples to the drops.
+
 [27/04/2015]
 Added new mob Ender Pig Inc with configs.
 Added Xen Beast to spawn in dungeons.
