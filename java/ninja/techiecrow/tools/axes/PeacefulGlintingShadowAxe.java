@@ -1,11 +1,11 @@
-package ninja.techiecrow.tools.pickaxes;
+package ninja.techiecrow.tools.axes;
 
-public class CoreoritePickaxe extends PickaxeXenorite
+public class PeacefulGlintingShadowAxe extends AxeXenorite
 {
-	public CoreoritePickaxe(ToolMaterial material)
+	public PeacefulGlintingShadowAxe(ToolMaterial material)
 	{
 		super(material);
-		this.setUnlocalizedName("coreoritePickaxe");
+		this.setUnlocalizedName("peacefulGlintingShadowAxe");
 
 	}
 

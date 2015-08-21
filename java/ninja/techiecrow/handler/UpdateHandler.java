@@ -60,7 +60,7 @@ public class UpdateHandler
 		// no internet connection
 		try
 		{
-			URL url = new URL("http://techiecrow.ddns.net/minecraft/mods/xenorite/version.txt");
+			URL url = new URL("http://xenorite.kissr.com/minecraft/xenorite/version.txt");
 			Scanner s = new Scanner(url.openStream());
 			// The way I did this, well I have a space in my version so that why
 			// I add a space in and get the next

@@ -1,3 +1,7 @@
+[21/08/2015]
+Updated the update checker URL to point to a URL what is always oonline even when my PC is turned off.
+Updated Xen Beast with a custom model and texture made by BeerCav.
+
 [08/05/2015]
 Made all tool classes and packages follow items the same.
 Removed all the tool values from config file until I can figure out why it wasn't working.

@@ -4,12 +4,10 @@ import java.util.List;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import ninja.techiecrow.crativetab.CreativeTabTools;
 import ninja.techiecrow.handler.ConfigurationHandler;
 
 public class HeavenlyGlintPickaxe extends PickaxeXenorite

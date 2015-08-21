@@ -159,6 +159,63 @@ public class Recipes
 		// shadowboron Boots
 		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.shadowboronBoots), "   ", "I I", "I I", 'I', ModItems.shadowboronIngot);
 
+		// XCF Master Sword
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.xcfMasterSword), "X", "C", "S", 'X', ModItems.moltenXCFMasterBlade, 'C', ModItems.moltenXCFMasterBlade, 'S', ModItems.universesoulSplit));
+
+		// XCF Master Pickaxe
+
+		// XCF Master Shovel
+		
+		// XCF Master Axe
+
+		// XCF Master Hoe
+
+		// XCF Master Helmet
+
+		// XCF Master Chestplate
+
+		// XCF Master Leggings
+
+		// XCF Master Boots
+
+		// Peaceful Glinting Shadow Sword
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.peacefulGlintingShadowSword), "X", "C", "S", 'X', ModWeapons.heavenlyglintSword, 'C', ModWeapons.shadowboronSword, 'S', ModItems.universesoulSplit));
+
+		// Peaceful Glinting Shadow Pickaxe
+
+		// Peaceful Glinting Shadow Shovel
+
+		// Peaceful Glinting Shadow Axe
+
+		// Peaceful Glinting Shadow Hoe
+
+		// Peaceful Glinting Shadow Helmet
+
+		// Peaceful Glinting Shadow Chestplate
+
+		// Peaceful Glinting Shadow Leggings
+
+		// Peaceful Glinting Shadow Boots
+
+		// Worldly Sword
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.worldlySword), "X", "C", "S", 'X', ModWeapons.xcfMasterSword, 'C', ModWeapons.peacefulGlintingShadowSword, 'S', ModItems.universesoulSplit));
+
+		// Worldly Pickaxe
+
+		// Worldly Shovel
+
+		// Worldly Axe
+
+		// Worldly Hoe
+
+		// Worldly Helmet
+
+		// Worldly Chestplate
+
+		// Worldly Leggings
+
+		// Worldly Boots
+
 		// Heavenly Glint Apple
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.appleHeavenlyGlint), "IXI", "XAX", "III", 'I', ModItems.heavenlyglintIngot, 'X', ModItems.universesoulSplit, 'A', Items.apple);
 
@@ -181,14 +238,17 @@ public class Recipes
 		// Shadow Boron Ingot
 		GameRegistry.addSmelting(ModBlockOres.ShadowBoronOre, new ItemStack(ModItems.shadowboronIngot), 2.0F);
 
-		// Xenorite Melted Ingot
-		GameRegistry.addSmelting(ModItems.xenoriteIngot, new ItemStack(ModItems.xenoriteMeltedIngot), 0.5F);
+		// Molten Xenorite Blade
+		GameRegistry.addSmelting(ModWeapons.xenoriteSword, new ItemStack(ModItems.moltenXenoriteBlade), 0.5F);
 
-		// Coreorite Melted Ingot
-		GameRegistry.addSmelting(ModItems.coreoriteIngot, new ItemStack(ModItems.coreoriteMeltedIngot), 0.5F);
+		// Molten Coreorite Blade
+		GameRegistry.addSmelting(ModWeapons.coreoriteSword, new ItemStack(ModItems.moltenCoreoriteBlade), 0.5F);
 
-		// Finorite Melted Ingot
-		GameRegistry.addSmelting(ModItems.finoriteIngot, new ItemStack(ModItems.finoriteMeltedIngot), 0.5F);
+		// Molten Finorite Blade
+		GameRegistry.addSmelting(ModWeapons.finoriteSword, new ItemStack(ModItems.moltenFinoriteBlade), 0.5F);
+
+		// Molten XCF Master Blade
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.moltenXCFMasterBlade, 2), "X", "C", "F", 'X', ModItems.moltenXenoriteBlade, 'C', ModItems.moltenCoreoriteBlade, 'F', ModItems.moltenFinoriteBlade));
 
 		// Universe Soul Split
 		GameRegistry.addSmelting(ModItems.universesoulSplit, new ItemStack(Items.coal, 10), 5.0F);

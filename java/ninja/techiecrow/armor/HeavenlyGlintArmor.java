@@ -43,7 +43,7 @@ public class HeavenlyGlintArmor extends ItemArmor
 		else if (world.isDaytime() && (itemstack.getItem() == Xenorite.heavenlyglintBoots))
 		{
 			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.bootsHeavenlyGlintEffect1, 0, 0)));
-//			entity.stepHeight = 10F;
+			// entity.stepHeight = 10F;
 		}
 	}
 

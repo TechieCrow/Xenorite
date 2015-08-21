@@ -5,7 +5,6 @@ import java.util.Random;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
-import ninja.techiecrow.Xenorite;
 
 public class BlockXenoriteOre extends BlockOresXenorite
 {

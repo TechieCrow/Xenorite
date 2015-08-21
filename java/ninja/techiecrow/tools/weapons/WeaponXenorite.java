@@ -1,10 +1,8 @@
 package ninja.techiecrow.tools.weapons;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import ninja.techiecrow.crativetab.CreativeTabItems;
 import ninja.techiecrow.crativetab.CreativeTabWeapons;
 import ninja.techiecrow.reference.Reference;
 import cpw.mods.fml.relauncher.Side;

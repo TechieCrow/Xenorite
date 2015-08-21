@@ -2,7 +2,6 @@ package ninja.techiecrow.tools.axes;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemAxe;
-import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import ninja.techiecrow.crativetab.CreativeTabTools;
 import ninja.techiecrow.reference.Reference;

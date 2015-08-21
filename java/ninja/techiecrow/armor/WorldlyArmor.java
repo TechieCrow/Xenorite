@@ -8,13 +8,13 @@ import ninja.techiecrow.Xenorite;
 import ninja.techiecrow.crativetab.CreativeTabArmour;
 import ninja.techiecrow.reference.Reference;
 
-public class PlaceholderArmor extends ItemArmor
+public class WorldlyArmor extends ItemArmor
 {
 
 	private String[] armourTypes = new String[]
-	{ "helmetPlaceholder", "chestplatePlaceholder", "leggingsPlaceholder", "bootsPlaceholder" };
+	{ "helmetWorldly", "chestplateWorldly", "leggingsWorldly", "bootsWorldly" };
 
-	public PlaceholderArmor(ArmorMaterial armorMaterial, int renderIndex, int armorType)
+	public WorldlyArmor(ArmorMaterial armorMaterial, int renderIndex, int armorType)
 	{
 		super(armorMaterial, renderIndex, armorType);
 		this.setCreativeTab(CreativeTabArmour.Xenoritearmour);
@@ -24,25 +24,25 @@ public class PlaceholderArmor extends ItemArmor
 	@Override
 	public void registerIcons(IIconRegister reg)
 	{
-		if (this == Xenorite.placeholderHelmet)
-			this.itemIcon = reg.registerIcon("xenorite:helmetPlaceholder");
-		if (this == Xenorite.placeholderChestplate)
-			this.itemIcon = reg.registerIcon("xenorite:chestplatePlaceholder");
-		if (this == Xenorite.placeholderLeggings)
-			this.itemIcon = reg.registerIcon("xenorite:leggingsPlaceholder");
-		if (this == Xenorite.placeholderBoots)
-			this.itemIcon = reg.registerIcon("xenorite:bootsPlaceholder");
+		if (this == Xenorite.worldlyHelmet)
+			this.itemIcon = reg.registerIcon("xenorite:helmetWorldly");
+		if (this == Xenorite.worldlyChestplate)
+			this.itemIcon = reg.registerIcon("xenorite:chestplateWorldly");
+		if (this == Xenorite.worldlyLeggings)
+			this.itemIcon = reg.registerIcon("xenorite:leggingsWorldly");
+		if (this == Xenorite.worldlyBoots)
+			this.itemIcon = reg.registerIcon("xenorite:bootsWorldly");
 	}
 
 	public String getArmorTexture(ItemStack stack, Entity entity, int slot, String type)
 	{
-		if (stack.getItem() == Xenorite.placeholderHelmet || stack.getItem() == Xenorite.placeholderChestplate || stack.getItem() == Xenorite.placeholderBoots)
+		if (stack.getItem() == Xenorite.worldlyHelmet || stack.getItem() == Xenorite.worldlyChestplate || stack.getItem() == Xenorite.worldlyBoots)
 		{
-			return Reference.MOD_ID + ":textures/models/armor/placeholder_layer_1.png";
+			return Reference.MOD_ID + ":textures/models/armor/worldly_layer_1.png";
 		}
-		if (stack.getItem() == Xenorite.placeholderLeggings)
+		if (stack.getItem() == Xenorite.worldlyLeggings)
 		{
-			return Reference.MOD_ID + ":textures/models/armor/placeholder_layer_2.png";
+			return Reference.MOD_ID + ":textures/models/armor/worldly_layer_2.png";
 		}
 		else
 		{

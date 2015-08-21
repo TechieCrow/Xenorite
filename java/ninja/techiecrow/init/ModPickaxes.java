@@ -7,8 +7,11 @@ import net.minecraftforge.oredict.OreDictionary;
 import ninja.techiecrow.tools.pickaxes.CoreoritePickaxe;
 import ninja.techiecrow.tools.pickaxes.FinoritePickaxe;
 import ninja.techiecrow.tools.pickaxes.HeavenlyGlintPickaxe;
+import ninja.techiecrow.tools.pickaxes.PeacefulGlintingShadowPickaxe;
 import ninja.techiecrow.tools.pickaxes.PickaxeXenorite;
 import ninja.techiecrow.tools.pickaxes.ShadowBoronPickaxe;
+import ninja.techiecrow.tools.pickaxes.WorldlyPickaxe;
+import ninja.techiecrow.tools.pickaxes.XCFMasterPickaxe;
 import ninja.techiecrow.tools.pickaxes.XenoritePickaxe;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -27,11 +30,20 @@ public class ModPickaxes
 
 	public static final Item.ToolMaterial ShadowBoronToolMaterials = EnumHelper.addToolMaterial("ShadowBoronToolMaterials", 4, 780, 8.0F, 1.5F, 22);
 
+	public static final Item.ToolMaterial XCFMasterToolMaterials = EnumHelper.addToolMaterial("XCFMasterToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+
+	public static final Item.ToolMaterial PeacefulGlintingShadowToolMaterials = EnumHelper.addToolMaterial("PeacefulGlintingShadowToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+
+	public static final Item.ToolMaterial WorldlyToolMaterials = EnumHelper.addToolMaterial("WorldlyToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+
 	public static final PickaxeXenorite xenoritePickaxe = new XenoritePickaxe(XenoriteToolMaterials);
 	public static final PickaxeXenorite coreoritePickaxe = new CoreoritePickaxe(CoreoriteToolMaterials);
 	public static final PickaxeXenorite finoritePickaxe = new FinoritePickaxe(FinoriteToolMaterials);
 	public static final PickaxeXenorite heavenlyglintPickaxe = new HeavenlyGlintPickaxe(HeavenlyGlintToolMaterials);
 	public static final PickaxeXenorite shadowboronPickaxe = new ShadowBoronPickaxe(ShadowBoronToolMaterials);
+	public static final PickaxeXenorite xcfMasterPickaxe = new XCFMasterPickaxe(XCFMasterToolMaterials);
+	public static final PickaxeXenorite peacefulGlintingShadowPickaxe = new PeacefulGlintingShadowPickaxe(PeacefulGlintingShadowToolMaterials);
+	public static final PickaxeXenorite worldlyPickaxe = new WorldlyPickaxe(WorldlyToolMaterials);
 
 	public static void init()
 	{
@@ -49,6 +61,15 @@ public class ModPickaxes
 
 		GameRegistry.registerItem(shadowboronPickaxe, "shadowboronPickaxe");
 		OreDictionary.registerOre("pickaxeShadowBoron", new ItemStack(shadowboronPickaxe));
+
+		GameRegistry.registerItem(xcfMasterPickaxe, "xcfMasterPickaxe");
+		OreDictionary.registerOre("pickaxeXCFMaster", new ItemStack(xcfMasterPickaxe));
+
+		GameRegistry.registerItem(peacefulGlintingShadowPickaxe, "peacefulGlintingShadowPickaxe");
+		OreDictionary.registerOre("pickaxePeacefulGlintingShadow", new ItemStack(peacefulGlintingShadowPickaxe));
+
+		GameRegistry.registerItem(worldlyPickaxe, "worldlyPickaxe");
+		OreDictionary.registerOre("pickaxeWorldly", new ItemStack(worldlyPickaxe));
 
 	}
 }

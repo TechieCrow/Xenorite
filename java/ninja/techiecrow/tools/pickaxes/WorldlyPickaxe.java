@@ -1,11 +1,11 @@
 package ninja.techiecrow.tools.pickaxes;
 
-public class CoreoritePickaxe extends PickaxeXenorite
+public class WorldlyPickaxe extends PickaxeXenorite
 {
-	public CoreoritePickaxe(ToolMaterial material)
+	public WorldlyPickaxe(ToolMaterial material)
 	{
 		super(material);
-		this.setUnlocalizedName("coreoritePickaxe");
+		this.setUnlocalizedName("worldlyPickaxe");
 
 	}
 

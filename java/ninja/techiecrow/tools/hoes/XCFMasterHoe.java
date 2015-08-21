@@ -1,11 +1,11 @@
-package ninja.techiecrow.tools.pickaxes;
+package ninja.techiecrow.tools.hoes;
 
-public class CoreoritePickaxe extends PickaxeXenorite
+public class XCFMasterHoe extends HoeXenorite
 {
-	public CoreoritePickaxe(ToolMaterial material)
+	public XCFMasterHoe(ToolMaterial material)
 	{
 		super(material);
-		this.setUnlocalizedName("coreoritePickaxe");
+		this.setUnlocalizedName("xcfMasterHoe");
 
 	}
 

@@ -1,9 +1,6 @@
 package ninja.techiecrow.handler;
 
 import net.minecraft.util.ChatComponentText;
-import net.minecraftforge.event.world.BlockEvent;
-import ninja.techiecrow.blocks.BlockXenoriteOre;
-import ninja.techiecrow.tools.pickaxes.XenoritePickaxe;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent;
 
@@ -17,12 +14,12 @@ public class EventHandler
 			event.player.addChatMessage(new ChatComponentText(UpdateHandler.updateStatus));
 	}
 
-//	@SubscribeEvent
-//	public void onBlockBroken(BlockEvent.BreakEvent event)
-//	{
-//		if (event.block instanceof BlockXenoriteOre && !(event.getPlayer().inventory.getCurrentItem().getItem() instanceof XenoritePickaxe))
-//		{
-//			event.setCanceled(true);
-//		}
-//	}
+	// @SubscribeEvent
+	// public void onBlockBroken(BlockEvent.BreakEvent event)
+	// {
+	// if (event.block instanceof BlockXenoriteOre && !(event.getPlayer().inventory.getCurrentItem().getItem() instanceof XenoritePickaxe))
+	// {
+	// event.setCanceled(true);
+	// }
+	// }
 }

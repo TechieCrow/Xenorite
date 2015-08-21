@@ -1,8 +1,5 @@
 package ninja.techiecrow.tools.pickaxes;
 
-import net.minecraft.item.ItemPickaxe;
-import ninja.techiecrow.crativetab.CreativeTabTools;
-
 public class XenoritePickaxe extends PickaxeXenorite
 {
 	public XenoritePickaxe(ToolMaterial material)

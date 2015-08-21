@@ -1,7 +1,6 @@
 package ninja.techiecrow.tools.pickaxes;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import ninja.techiecrow.crativetab.CreativeTabTools;

@@ -8,7 +8,10 @@ import ninja.techiecrow.tools.axes.AxeXenorite;
 import ninja.techiecrow.tools.axes.CoreoriteAxe;
 import ninja.techiecrow.tools.axes.FinoriteAxe;
 import ninja.techiecrow.tools.axes.HeavenlyGlintAxe;
+import ninja.techiecrow.tools.axes.PeacefulGlintingShadowAxe;
 import ninja.techiecrow.tools.axes.ShadowBoronAxe;
+import ninja.techiecrow.tools.axes.WorldlyAxe;
+import ninja.techiecrow.tools.axes.XCFMasterAxe;
 import ninja.techiecrow.tools.axes.XenoriteAxe;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -27,11 +30,20 @@ public class ModAxes
 
 	public static final Item.ToolMaterial ShadowBoronToolMaterials = EnumHelper.addToolMaterial("ShadowBoronToolMaterials", 4, 780, 8.0F, 1.5F, 22);
 
+	public static final Item.ToolMaterial XCFMasterToolMaterials = EnumHelper.addToolMaterial("XCFMasterToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+
+	public static final Item.ToolMaterial PeacefulGlintingShadowToolMaterials = EnumHelper.addToolMaterial("PeacefulGlintingShadowToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+
+	public static final Item.ToolMaterial WorldlyToolMaterials = EnumHelper.addToolMaterial("WorldlyToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+
 	public static final AxeXenorite xenoriteAxe = new XenoriteAxe(XenoriteToolMaterials);
 	public static final AxeXenorite coreoriteAxe = new CoreoriteAxe(CoreoriteToolMaterials);
 	public static final AxeXenorite finoriteAxe = new FinoriteAxe(FinoriteToolMaterials);
 	public static final AxeXenorite heavenlyglintAxe = new HeavenlyGlintAxe(HeavenlyGlintToolMaterials);
 	public static final AxeXenorite shadowboronAxe = new ShadowBoronAxe(ShadowBoronToolMaterials);
+	public static final AxeXenorite xcfMasterAxe = new XCFMasterAxe(XCFMasterToolMaterials);
+	public static final AxeXenorite peacefulGlintingShadowAxe = new PeacefulGlintingShadowAxe(PeacefulGlintingShadowToolMaterials);
+	public static final AxeXenorite worldlyAxe = new WorldlyAxe(WorldlyToolMaterials);
 
 	public static void init()
 	{
@@ -49,6 +61,15 @@ public class ModAxes
 
 		GameRegistry.registerItem(shadowboronAxe, "shadowboronAxe");
 		OreDictionary.registerOre("axeShadowBoron", new ItemStack(shadowboronAxe));
+
+		GameRegistry.registerItem(xcfMasterAxe, "xcfMasterAxe");
+		OreDictionary.registerOre("axeXCFMaster", new ItemStack(xcfMasterAxe));
+
+		GameRegistry.registerItem(peacefulGlintingShadowAxe, "peacefulGlintingShadowAxe");
+		OreDictionary.registerOre("axePeacefulGlintingShadow", new ItemStack(peacefulGlintingShadowAxe));
+
+		GameRegistry.registerItem(worldlyAxe, "worldlyAxe");
+		OreDictionary.registerOre("axeWorldly", new ItemStack(worldlyAxe));
 
 	}
 }

@@ -10,8 +10,10 @@ import net.minecraftforge.oredict.OreDictionary;
 import ninja.techiecrow.armor.CoreoriteArmor;
 import ninja.techiecrow.armor.FinoriteArmor;
 import ninja.techiecrow.armor.HeavenlyGlintArmor;
-import ninja.techiecrow.armor.PlaceholderArmor;
+import ninja.techiecrow.armor.PeacefulGlintingShadowArmor;
 import ninja.techiecrow.armor.ShadowBoronArmor;
+import ninja.techiecrow.armor.WorldlyArmor;
+import ninja.techiecrow.armor.XCFMasterArmor;
 import ninja.techiecrow.armor.XenoriteArmor;
 import ninja.techiecrow.entitys.EnderPigIncEntity;
 import ninja.techiecrow.entitys.XenBeastEntity;
@@ -72,9 +74,15 @@ public class Xenorite
 
 	public static final ItemArmor.ArmorMaterial ShadowBoronArmorMaterials = EnumHelper.addArmorMaterial("ShadowBoronArmorMaterials", 33, new int[]
 	{ 3, 8, 6, 3 }, 25);
-	
-	public static final ItemArmor.ArmorMaterial PlaceholderArmorMaterials = EnumHelper.addArmorMaterial("PlaceholderArmorMaterials", 33, new int[]
-			{ 3, 8, 6, 3 }, 25);
+
+	public static final ItemArmor.ArmorMaterial XCFMasterArmorMaterials = EnumHelper.addArmorMaterial("XCFMasterArmorMaterials", 66, new int[]
+	{ 6, 16, 12, 6 }, 50);
+
+	public static final ItemArmor.ArmorMaterial PeacefulGlintingShadowArmorMaterials = EnumHelper.addArmorMaterial("PeacefulGlintingShadowArmorMaterials", 66, new int[]
+	{ 6, 16, 12, 6 }, 50);
+
+	public static final ItemArmor.ArmorMaterial WorldlyArmorMaterials = EnumHelper.addArmorMaterial("WorldlyArmorMaterials", 132, new int[]
+	{ 12, 32, 24, 12 }, 100);
 
 	// Xenorite Sets
 	public static Item xenoriteHelmet;
@@ -105,12 +113,24 @@ public class Xenorite
 	public static Item shadowboronChestplate;
 	public static Item shadowboronLeggings;
 	public static Item shadowboronBoots;
-	
-	// Placeholder Sets
-	public static Item placeholderHelmet;
-	public static Item placeholderChestplate;
-	public static Item placeholderLeggings;
-	public static Item placeholderBoots;
+
+	// XCF Master Sets
+	public static Item xcfMasterHelmet;
+	public static Item xcfMasterChestplate;
+	public static Item xcfMasterLeggings;
+	public static Item xcfMasterBoots;
+
+	// Peaceful Glinting Shadow Sets
+	public static Item peacefulGlintingShadowHelmet;
+	public static Item peacefulGlintingShadowChestplate;
+	public static Item peacefulGlintingShadowLeggings;
+	public static Item peacefulGlintingShadowBoots;
+
+	// Worldly Sets
+	public static Item worldlyHelmet;
+	public static Item worldlyChestplate;
+	public static Item worldlyLeggings;
+	public static Item worldlyBoots;
 
 	// Mobs
 	public static Entity XenBeastEntity;
@@ -232,39 +252,78 @@ public class Xenorite
 		shadowboronBoots = new ShadowBoronArmor(ShadowBoronArmorMaterials, 5, 3).setUnlocalizedName("ShadowBoron Boots");
 		GameRegistry.registerItem(shadowboronBoots, "shadowboronBoots");
 		OreDictionary.registerOre("bootsShadowBoron", new ItemStack(shadowboronBoots));
-		
-		// Placeholder Sets
-		
-		placeholderHelmet = new PlaceholderArmor(PlaceholderArmorMaterials, 5, 0).setUnlocalizedName("Placeholder Helmet");
-		GameRegistry.registerItem(placeholderHelmet, "placeholderHelmet");
-		OreDictionary.registerOre("placeholderHelmet", new ItemStack(placeholderHelmet));
 
-		placeholderChestplate = new PlaceholderArmor(PlaceholderArmorMaterials, 5, 1).setUnlocalizedName("Placeholder Chestplate");
-		GameRegistry.registerItem(placeholderChestplate, "placeholderChestplate");
-		OreDictionary.registerOre("placeholderChestplate", new ItemStack(placeholderChestplate));
+		// XCF MAster Sets
 
-		placeholderLeggings = new PlaceholderArmor(PlaceholderArmorMaterials, 5, 2).setUnlocalizedName("Placeholder Leggings");
-		GameRegistry.registerItem(placeholderLeggings, "placeholderLeggings");
-		OreDictionary.registerOre("placeholderLeggings", new ItemStack(placeholderLeggings));
+		xcfMasterHelmet = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 0).setUnlocalizedName("XCF Master Helmet");
+		GameRegistry.registerItem(xcfMasterHelmet, "xcfMasterHelmet");
+		OreDictionary.registerOre("xcfMasterHelmet", new ItemStack(xcfMasterHelmet));
 
-		placeholderBoots = new PlaceholderArmor(PlaceholderArmorMaterials, 5, 3).setUnlocalizedName("Placeholder Boots");
-		GameRegistry.registerItem(placeholderBoots, "placeholderBoots");
-		OreDictionary.registerOre("placeholderBoots", new ItemStack(placeholderBoots));
+		xcfMasterChestplate = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 1).setUnlocalizedName("XCF Master Chestplate");
+		GameRegistry.registerItem(xcfMasterChestplate, "xcfMasterChestplate");
+		OreDictionary.registerOre("xcfMasterChestplate", new ItemStack(xcfMasterChestplate));
 
-		LogHelper.info("Pre-Initialization Completed - Ready!");
+		xcfMasterLeggings = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 2).setUnlocalizedName("XCF Master Leggings");
+		GameRegistry.registerItem(xcfMasterLeggings, "xcfMasterLeggings");
+		OreDictionary.registerOre("xcfMasterLeggings", new ItemStack(xcfMasterLeggings));
+
+		xcfMasterBoots = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 3).setUnlocalizedName("XCF Master Boots");
+		GameRegistry.registerItem(xcfMasterBoots, "xcfMasterBoots");
+		OreDictionary.registerOre("xcfMasterBoots", new ItemStack(xcfMasterBoots));
+
+		// Peaceful Glinting Shadow Sets
+
+		peacefulGlintingShadowHelmet = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 0).setUnlocalizedName("Peaceful Glinting Shadow Helmet");
+		GameRegistry.registerItem(peacefulGlintingShadowHelmet, "peacefulGlintingShadowHelmet");
+		OreDictionary.registerOre("peacefulGlintingShadowHelmet", new ItemStack(peacefulGlintingShadowHelmet));
+
+		peacefulGlintingShadowChestplate = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 1).setUnlocalizedName("Peaceful Glinting Shadow Chestplate");
+		GameRegistry.registerItem(peacefulGlintingShadowChestplate, "peacefulGlintingShadowChestplate");
+		OreDictionary.registerOre("peacefulGlintingShadowChestplate", new ItemStack(peacefulGlintingShadowChestplate));
+
+		peacefulGlintingShadowLeggings = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 2).setUnlocalizedName("Peaceful Glinting Shadow Leggings");
+		GameRegistry.registerItem(peacefulGlintingShadowLeggings, "peacefulGlintingShadowLeggings");
+		OreDictionary.registerOre("peacefulGlintingShadowLeggings", new ItemStack(peacefulGlintingShadowLeggings));
+
+		peacefulGlintingShadowBoots = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 3).setUnlocalizedName("Peaceful Glinting Shadow Boots");
+		GameRegistry.registerItem(peacefulGlintingShadowBoots, "peacefulGlintingShadowBoots");
+		OreDictionary.registerOre("peacefulGlintingShadowBoots", new ItemStack(peacefulGlintingShadowBoots));
+
+		// Worldly Sets
+
+		worldlyHelmet = new WorldlyArmor(WorldlyArmorMaterials, 5, 0).setUnlocalizedName("Worldly Helmet");
+		GameRegistry.registerItem(worldlyHelmet, "worldlyHelmet");
+		OreDictionary.registerOre("worldlyHelmet", new ItemStack(worldlyHelmet));
+
+		worldlyChestplate = new WorldlyArmor(WorldlyArmorMaterials, 5, 1).setUnlocalizedName("Worldly Chestplate");
+		GameRegistry.registerItem(worldlyChestplate, "worldlyChestplate");
+		OreDictionary.registerOre("worldlyChestplate", new ItemStack(worldlyChestplate));
+
+		worldlyLeggings = new WorldlyArmor(WorldlyArmorMaterials, 5, 2).setUnlocalizedName("Worldly Leggings");
+		GameRegistry.registerItem(worldlyLeggings, "worldlyLeggings");
+		OreDictionary.registerOre("worldlyLeggings", new ItemStack(worldlyLeggings));
+
+		worldlyBoots = new WorldlyArmor(WorldlyArmorMaterials, 5, 3).setUnlocalizedName("Worldly Boots");
+		GameRegistry.registerItem(worldlyBoots, "worldlyBoots");
+		OreDictionary.registerOre("worldlyBoots", new ItemStack(worldlyBoots));
+
+		LogHelper.info("Pre-Initialization Completed!");
 
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event)
 	{
+
+		proxy.registerRenderers();
+
 		Recipes.init();
 
 		ModChestGenHooks.addDungeonItems();
 
 		GameRegistry.registerWorldGenerator(new Oregen(), 0);
 
-		LogHelper.info("Initialization Completed - Set!");
+		LogHelper.info("Initialization Completed!");
 
 	}
 
@@ -272,6 +331,6 @@ public class Xenorite
 	public void postInit(FMLPostInitializationEvent event)
 	{
 
-		LogHelper.info("Post Initialization Completed - Mine!");
+		LogHelper.info("Post Initialization Completed!");
 	}
 }

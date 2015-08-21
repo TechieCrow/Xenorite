@@ -1,12 +1,12 @@
 package ninja.techiecrow.items;
 
-public class ItemXenoriteMeltedIngot extends ItemXenorite
+public class ItemMoltenXCFMasterBlade extends ItemXenorite
 {
-	public ItemXenoriteMeltedIngot()
+	public ItemMoltenXCFMasterBlade()
 	{
 		super();
 		this.setMaxStackSize(64);
-		this.setUnlocalizedName("xenoriteMeltedIngot");
+		this.setUnlocalizedName("moltenXCFMasterBlade");
 	}
 
 	/*

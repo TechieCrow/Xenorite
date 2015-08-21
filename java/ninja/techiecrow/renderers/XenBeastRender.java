@@ -1,19 +1,18 @@
 package ninja.techiecrow.renderers;
 
-import net.minecraft.client.model.ModelBiped;
-import net.minecraft.client.renderer.entity.RenderBiped;
+import net.minecraft.client.renderer.entity.RenderLiving;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import ninja.techiecrow.reference.Reference;
 
-public class XenBeastRender extends RenderBiped
+public class XenBeastRender extends RenderLiving
 {
 
-	private static final ResourceLocation textureLocation = new ResourceLocation(Reference.MOD_ID + ":" + "textures/models/entitys/xenBeast.png");
+	private static final ResourceLocation textureLocation = new ResourceLocation(Reference.MOD_ID + ":" + "textures/models/entitys/xenbeast.png");
 
-	public XenBeastRender(ModelBiped model, float shadowSize)
+	public XenBeastRender(XenBeastModel model, float shadowSize)
 	{
-		super(model, shadowSize);
+		super(new XenBeastModel(), shadowSize);
 	}
 
 	@Override
