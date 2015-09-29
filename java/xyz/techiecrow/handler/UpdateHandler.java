@@ -42,7 +42,7 @@ public class UpdateHandler
 			else
 			{
 				show = true;
-				updateStatus = "\u00A7b[Xenorite] Current Version: " + currentVersion + " Newest Version: \u00A7b" + newestVersion;
+				updateStatus = "\u00A7b[Xenorite] Currently: " + currentVersion + " Newest: \u00A7b" + newestVersion;
 				LogHelper.info("[Xenorite] out of date! Your Version: " + currentVersion + " Latest Version: " + newestVersion);
 			}
 		}

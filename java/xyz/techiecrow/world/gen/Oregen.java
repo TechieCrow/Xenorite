@@ -2,12 +2,12 @@ package xyz.techiecrow.world.gen;
 
 import java.util.Random;
 
-import xyz.techiecrow.handler.ConfigurationHandler;
-import xyz.techiecrow.world.gen.feature.NetherGenMinable;
+import cpw.mods.fml.common.IWorldGenerator;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
-import cpw.mods.fml.common.IWorldGenerator;
+import xyz.techiecrow.handler.ConfigurationHandler;
+import xyz.techiecrow.world.gen.feature.NetherGenMinable;
 
 public class Oregen implements IWorldGenerator
 {

@@ -2,8 +2,8 @@ package xyz.techiecrow.utility;
 
 import org.apache.logging.log4j.Level;
 
-import xyz.techiecrow.reference.Reference;
 import cpw.mods.fml.common.FMLLog;
+import xyz.techiecrow.reference.Reference;
 
 public class LogHelper
 {

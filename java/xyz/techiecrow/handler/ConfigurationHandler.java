@@ -2,10 +2,10 @@ package xyz.techiecrow.handler;
 
 import java.io.File;
 
-import xyz.techiecrow.reference.Reference;
-import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.common.config.Configuration;
+import xyz.techiecrow.reference.Reference;
 
 public class ConfigurationHandler
 {
@@ -141,30 +141,30 @@ public class ConfigurationHandler
 		oreShadowBoronEffect4 = configuration.get(category, "Shadow Boron Ore Effect 4#", 13, "(Default: 13 (Water Breathing))").getInt(13);
 		oreShadowBoronEffect5 = configuration.get(category, "Shadow Boron Ore Effect 5#", 12, "(Default: 12 (Fire Resistance))").getInt(12);
 		oreShadowBoronEffect6 = configuration.get(category, "Shadow Boron Ore Effect 6#", 8, "(Default: 8 (Jump Boost))").getInt(8);
-
-		category = "Heavenly Glint Sword Effects";
-		swordHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Sword Effect", 5, "(Default: 5)").getInt(5);
-
-		category = "Shadow Boron Sword Effects";
-		swordShadowBoronEffect1 = configuration.get(category, "Shadow Boron Sword Effect", 5, "(Default: 5)").getInt(5);
-
-		category = "Heavenly Glint Pickaxe Effects";
-		pickaxeHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Pickaxe Effect", 3, "(Default: 3)").getInt(3);
-
-		category = "Shadow Boron Pickaxe Effects";
-		pickaxeShadowBoronEffect1 = configuration.get(category, "Shadow Boron Pickaxe Effect", 3, "(Default: 3)").getInt(3);
-
-		category = "Heavenly Glint Armour Effects";
-		helmetHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Helmet Effect", 13, "(Default: 13)").getInt(13);
-		chestplateHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Chestplate Effect", 12, "(Default: 12)").getInt(12);
-		leggingsHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Leggings Effect", 8, "(Default: 8)").getInt(8);
-		bootsHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Boots Effect", 1, "(Default: 1)").getInt(1);
-
-		category = "Shadow Boron Armour Effects";
-		helmetShadowBoronEffect1 = configuration.get(category, "Shadow Boron Helmet Effect", 13, "(Default: 13)").getInt(13);
-		chestplateShadowBoronEffect1 = configuration.get(category, "Shadow Boron Chestplate Effect", 12, "(Default: 12)").getInt(12);
-		leggingsShadowBoronEffect1 = configuration.get(category, "Shadow Boron Leggings Effect", 8, "(Default: 8)").getInt(8);
-		bootsShadowBoronEffect1 = configuration.get(category, "Shadow Boron Boots Effect", 1, "(Default: 1)").getInt(1);
+		//
+		// category = "Heavenly Glint Sword Effects";
+		// swordHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Sword Effect", 5, "(Default: 5)").getInt(5);
+		//
+		// category = "Shadow Boron Sword Effects";
+		// swordShadowBoronEffect1 = configuration.get(category, "Shadow Boron Sword Effect", 5, "(Default: 5)").getInt(5);
+		//
+		// category = "Heavenly Glint Pickaxe Effects";
+		// pickaxeHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Pickaxe Effect", 3, "(Default: 3)").getInt(3);
+		//
+		// category = "Shadow Boron Pickaxe Effects";
+		// pickaxeShadowBoronEffect1 = configuration.get(category, "Shadow Boron Pickaxe Effect", 3, "(Default: 3)").getInt(3);
+		//
+		// category = "Heavenly Glint Armour Effects";
+		// helmetHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Helmet Effect", 13, "(Default: 13)").getInt(13);
+		// chestplateHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Chestplate Effect", 12, "(Default: 12)").getInt(12);
+		// leggingsHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Leggings Effect", 8, "(Default: 8)").getInt(8);
+		// bootsHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Boots Effect", 1, "(Default: 1)").getInt(1);
+		//
+		// category = "Shadow Boron Armour Effects";
+		// helmetShadowBoronEffect1 = configuration.get(category, "Shadow Boron Helmet Effect", 13, "(Default: 13)").getInt(13);
+		// chestplateShadowBoronEffect1 = configuration.get(category, "Shadow Boron Chestplate Effect", 12, "(Default: 12)").getInt(12);
+		// leggingsShadowBoronEffect1 = configuration.get(category, "Shadow Boron Leggings Effect", 8, "(Default: 8)").getInt(8);
+		// bootsShadowBoronEffect1 = configuration.get(category, "Shadow Boron Boots Effect", 1, "(Default: 1)").getInt(1);
 
 		category = "Xen Beast Attributes";
 		xenbeastHealth = configuration.get(category, "Xen Beast Health", 40.0, "(Default: 40.0)").getDouble(40.0);
@@ -172,7 +172,7 @@ public class ConfigurationHandler
 		xenbeastSpeed = configuration.get(category, "Xen Beast Speed", 0.28, "(Default: 0.28)").getDouble(0.28);
 		xenbeastknockbackResistance = configuration.get(category, "Xen Beast Knockback Resistance", 0.5, "(Default: 0.5)").getDouble(0.5);
 		xenbeastFollowRange = configuration.get(category, "Xen Beast Follow Range", 50.0, "(Default: 50.0)").getDouble(50.0);
-		xenbeastSpawnRate = configuration.get(category, "Xen Beast Spawn Rate", 10, "(Default: 10)").getInt(10);
+		xenbeastSpawnRate = configuration.get(category, "Xen Beast Spawn Rate", 5, "(Default: 5)").getInt(5);
 		xenbeastMinSpawn = configuration.get(category, "Xen Beast Minimal To Spawn", 1, "(Default: 1)").getInt(1);
 		xenbeastMaxSpawn = configuration.get(category, "Xen Beast Maximum To Spawn", 5, "(Default: 5)").getInt(5);
 		xenbeastSoulFragmentDrop = configuration.get(category, "Xen Beast Soul Fragment Drop", 1, "How many Xen Beast soul fragments it drops. (Default: 1)").getInt(1);
@@ -197,7 +197,7 @@ public class ConfigurationHandler
 		appleHeavenlyGlintEffectTime1 = configuration.get(category, "Heavenly Glint Apple Effect 1 Time", 1800, "200 = 10 Seconds, 1200 = 1 Minute (Default: 1800)").getInt(1800);
 		appleHeavenlyGlintEffectTime2 = configuration.get(category, "Heavenly Glint Apple Effect 2 Time", 1800, "200 = 10 Seconds, 1200 = 1 Minute (Default: 1800)").getInt(1800);
 
-		appleShadowBoronDropChance = configuration.get(category, "Shadow Boron Apple Drop Chance", 0.001, "0.01 = 1%, 1.0 = 100%, etc. (Default: 0.001)").getDouble(0.001);
+		appleShadowBoronDropChance = configuration.get(category, "Shadow Boron Apple Drop Chance", 0.00001, "(Default: 0.00001)").getDouble(0.00001);
 		appleShadowBoronSaturationAmount = configuration.get(category, "Shadow Boron Apple Saturation Amount", 1, "(Default: 1)").getInt(1);
 		appleShadowBoronHungerAmount = configuration.get(category, "Shadow Boron Apple Hunger Amount", 4, "(Default: 4)").getInt(4);
 		appleShadowBoronWolvesFavoriteFood = configuration.get(category, "Shadow Boron Apple Wolves Favorite Food", false, "(Default: flase)").getBoolean(false);

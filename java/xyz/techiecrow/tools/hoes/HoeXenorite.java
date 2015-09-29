@@ -1,12 +1,12 @@
 package xyz.techiecrow.tools.hoes;
 
-import xyz.techiecrow.crativetab.CreativeTabTools;
-import xyz.techiecrow.reference.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import xyz.techiecrow.crativetab.CreativeTabTools;
+import xyz.techiecrow.reference.Reference;
 
 public class HoeXenorite extends ItemHoe
 {

@@ -2,13 +2,13 @@ package xyz.techiecrow.tools.pickaxes;
 
 import java.util.List;
 
-import xyz.techiecrow.handler.ConfigurationHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class ShadowBoronPickaxe extends PickaxeXenorite
 {

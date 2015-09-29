@@ -1,9 +1,26 @@
 package xyz.techiecrow;
 
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.entity.Entity;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.oredict.OreDictionary;
 import xyz.techiecrow.armor.CoreoriteArmor;
 import xyz.techiecrow.armor.FinoriteArmor;
 import xyz.techiecrow.armor.HeavenlyGlintArmor;
+import xyz.techiecrow.armor.PeacefulGlintingShadowArmor;
 import xyz.techiecrow.armor.ShadowBoronArmor;
+import xyz.techiecrow.armor.WorldlyArmor;
+import xyz.techiecrow.armor.XCFMasterArmor;
 import xyz.techiecrow.armor.XenoriteArmor;
 import xyz.techiecrow.entitys.EnderPigIncEntity;
 import xyz.techiecrow.entitys.XenBeastEntity;
@@ -26,20 +43,6 @@ import xyz.techiecrow.reference.Reference;
 import xyz.techiecrow.utility.CustomDrops;
 import xyz.techiecrow.utility.LogHelper;
 import xyz.techiecrow.world.gen.Oregen;
-import net.minecraft.entity.Entity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemArmor;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.oredict.OreDictionary;
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
-import cpw.mods.fml.common.event.FMLInitializationEvent;
-import cpw.mods.fml.common.event.FMLPostInitializationEvent;
-import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class Xenorite
@@ -111,23 +114,23 @@ public class Xenorite
 	public static Item shadowboronLeggings;
 	public static Item shadowboronBoots;
 
-	// // XCF Master Sets
-	// public static Item xcfMasterHelmet;
-	// public static Item xcfMasterChestplate;
-	// public static Item xcfMasterLeggings;
-	// public static Item xcfMasterBoots;
-	//
-	// // Peaceful Glinting Shadow Sets
-	// public static Item peacefulGlintingShadowHelmet;
-	// public static Item peacefulGlintingShadowChestplate;
-	// public static Item peacefulGlintingShadowLeggings;
-	// public static Item peacefulGlintingShadowBoots;
-	//
-	// // Worldly Sets
-	// public static Item worldlyHelmet;
-	// public static Item worldlyChestplate;
-	// public static Item worldlyLeggings;
-	// public static Item worldlyBoots;
+	// XCF Master Sets
+	public static Item xcfMasterHelmet;
+	public static Item xcfMasterChestplate;
+	public static Item xcfMasterLeggings;
+	public static Item xcfMasterBoots;
+
+	// Peaceful Glinting Shadow Sets
+	public static Item peacefulGlintingShadowHelmet;
+	public static Item peacefulGlintingShadowChestplate;
+	public static Item peacefulGlintingShadowLeggings;
+	public static Item peacefulGlintingShadowBoots;
+
+	// Worldly Sets
+	public static Item worldlyHelmet;
+	public static Item worldlyChestplate;
+	public static Item worldlyLeggings;
+	public static Item worldlyBoots;
 
 	// Mobs
 	public static Entity XenBeastEntity;
@@ -250,59 +253,59 @@ public class Xenorite
 		GameRegistry.registerItem(shadowboronBoots, "shadowboronBoots");
 		OreDictionary.registerOre("bootsShadowBoron", new ItemStack(shadowboronBoots));
 
-		// // XCF MAster Sets
-		//
-		// xcfMasterHelmet = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 0).setUnlocalizedName("XCF Master Helmet");
-		// GameRegistry.registerItem(xcfMasterHelmet, "xcfMasterHelmet");
-		// OreDictionary.registerOre("xcfMasterHelmet", new ItemStack(xcfMasterHelmet));
-		//
-		// xcfMasterChestplate = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 1).setUnlocalizedName("XCF Master Chestplate");
-		// GameRegistry.registerItem(xcfMasterChestplate, "xcfMasterChestplate");
-		// OreDictionary.registerOre("xcfMasterChestplate", new ItemStack(xcfMasterChestplate));
-		//
-		// xcfMasterLeggings = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 2).setUnlocalizedName("XCF Master Leggings");
-		// GameRegistry.registerItem(xcfMasterLeggings, "xcfMasterLeggings");
-		// OreDictionary.registerOre("xcfMasterLeggings", new ItemStack(xcfMasterLeggings));
-		//
-		// xcfMasterBoots = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 3).setUnlocalizedName("XCF Master Boots");
-		// GameRegistry.registerItem(xcfMasterBoots, "xcfMasterBoots");
-		// OreDictionary.registerOre("xcfMasterBoots", new ItemStack(xcfMasterBoots));
-		//
-		// // Peaceful Glinting Shadow Sets
-		//
-		// peacefulGlintingShadowHelmet = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 0).setUnlocalizedName("Peaceful Glinting Shadow Helmet");
-		// GameRegistry.registerItem(peacefulGlintingShadowHelmet, "peacefulGlintingShadowHelmet");
-		// OreDictionary.registerOre("peacefulGlintingShadowHelmet", new ItemStack(peacefulGlintingShadowHelmet));
-		//
-		// peacefulGlintingShadowChestplate = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 1).setUnlocalizedName("Peaceful Glinting Shadow Chestplate");
-		// GameRegistry.registerItem(peacefulGlintingShadowChestplate, "peacefulGlintingShadowChestplate");
-		// OreDictionary.registerOre("peacefulGlintingShadowChestplate", new ItemStack(peacefulGlintingShadowChestplate));
-		//
-		// peacefulGlintingShadowLeggings = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 2).setUnlocalizedName("Peaceful Glinting Shadow Leggings");
-		// GameRegistry.registerItem(peacefulGlintingShadowLeggings, "peacefulGlintingShadowLeggings");
-		// OreDictionary.registerOre("peacefulGlintingShadowLeggings", new ItemStack(peacefulGlintingShadowLeggings));
-		//
-		// peacefulGlintingShadowBoots = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 3).setUnlocalizedName("Peaceful Glinting Shadow Boots");
-		// GameRegistry.registerItem(peacefulGlintingShadowBoots, "peacefulGlintingShadowBoots");
-		// OreDictionary.registerOre("peacefulGlintingShadowBoots", new ItemStack(peacefulGlintingShadowBoots));
-		//
-		// // Worldly Sets
-		//
-		// worldlyHelmet = new WorldlyArmor(WorldlyArmorMaterials, 5, 0).setUnlocalizedName("Worldly Helmet");
-		// GameRegistry.registerItem(worldlyHelmet, "worldlyHelmet");
-		// OreDictionary.registerOre("worldlyHelmet", new ItemStack(worldlyHelmet));
-		//
-		// worldlyChestplate = new WorldlyArmor(WorldlyArmorMaterials, 5, 1).setUnlocalizedName("Worldly Chestplate");
-		// GameRegistry.registerItem(worldlyChestplate, "worldlyChestplate");
-		// OreDictionary.registerOre("worldlyChestplate", new ItemStack(worldlyChestplate));
-		//
-		// worldlyLeggings = new WorldlyArmor(WorldlyArmorMaterials, 5, 2).setUnlocalizedName("Worldly Leggings");
-		// GameRegistry.registerItem(worldlyLeggings, "worldlyLeggings");
-		// OreDictionary.registerOre("worldlyLeggings", new ItemStack(worldlyLeggings));
-		//
-		// worldlyBoots = new WorldlyArmor(WorldlyArmorMaterials, 5, 3).setUnlocalizedName("Worldly Boots");
-		// GameRegistry.registerItem(worldlyBoots, "worldlyBoots");
-		// OreDictionary.registerOre("worldlyBoots", new ItemStack(worldlyBoots));
+		// XCF MAster Sets
+
+		xcfMasterHelmet = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 0).setUnlocalizedName("XCF Master Helmet");
+		GameRegistry.registerItem(xcfMasterHelmet, "xcfMasterHelmet");
+		OreDictionary.registerOre("xcfMasterHelmet", new ItemStack(xcfMasterHelmet));
+
+		xcfMasterChestplate = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 1).setUnlocalizedName("XCF Master Chestplate");
+		GameRegistry.registerItem(xcfMasterChestplate, "xcfMasterChestplate");
+		OreDictionary.registerOre("xcfMasterChestplate", new ItemStack(xcfMasterChestplate));
+
+		xcfMasterLeggings = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 2).setUnlocalizedName("XCF Master Leggings");
+		GameRegistry.registerItem(xcfMasterLeggings, "xcfMasterLeggings");
+		OreDictionary.registerOre("xcfMasterLeggings", new ItemStack(xcfMasterLeggings));
+
+		xcfMasterBoots = new XCFMasterArmor(XCFMasterArmorMaterials, 5, 3).setUnlocalizedName("XCF Master Boots");
+		GameRegistry.registerItem(xcfMasterBoots, "xcfMasterBoots");
+		OreDictionary.registerOre("xcfMasterBoots", new ItemStack(xcfMasterBoots));
+
+		// Peaceful Glinting Shadow Sets
+
+		peacefulGlintingShadowHelmet = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 0).setUnlocalizedName("Peaceful Glinting Shadow Helmet");
+		GameRegistry.registerItem(peacefulGlintingShadowHelmet, "peacefulGlintingShadowHelmet");
+		OreDictionary.registerOre("peacefulGlintingShadowHelmet", new ItemStack(peacefulGlintingShadowHelmet));
+
+		peacefulGlintingShadowChestplate = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 1).setUnlocalizedName("Peaceful Glinting Shadow Chestplate");
+		GameRegistry.registerItem(peacefulGlintingShadowChestplate, "peacefulGlintingShadowChestplate");
+		OreDictionary.registerOre("peacefulGlintingShadowChestplate", new ItemStack(peacefulGlintingShadowChestplate));
+
+		peacefulGlintingShadowLeggings = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 2).setUnlocalizedName("Peaceful Glinting Shadow Leggings");
+		GameRegistry.registerItem(peacefulGlintingShadowLeggings, "peacefulGlintingShadowLeggings");
+		OreDictionary.registerOre("peacefulGlintingShadowLeggings", new ItemStack(peacefulGlintingShadowLeggings));
+
+		peacefulGlintingShadowBoots = new PeacefulGlintingShadowArmor(PeacefulGlintingShadowArmorMaterials, 5, 3).setUnlocalizedName("Peaceful Glinting Shadow Boots");
+		GameRegistry.registerItem(peacefulGlintingShadowBoots, "peacefulGlintingShadowBoots");
+		OreDictionary.registerOre("peacefulGlintingShadowBoots", new ItemStack(peacefulGlintingShadowBoots));
+
+		// Worldly Sets
+
+		worldlyHelmet = new WorldlyArmor(WorldlyArmorMaterials, 5, 0).setUnlocalizedName("Worldly Helmet");
+		GameRegistry.registerItem(worldlyHelmet, "worldlyHelmet");
+		OreDictionary.registerOre("worldlyHelmet", new ItemStack(worldlyHelmet));
+
+		worldlyChestplate = new WorldlyArmor(WorldlyArmorMaterials, 5, 1).setUnlocalizedName("Worldly Chestplate");
+		GameRegistry.registerItem(worldlyChestplate, "worldlyChestplate");
+		OreDictionary.registerOre("worldlyChestplate", new ItemStack(worldlyChestplate));
+
+		worldlyLeggings = new WorldlyArmor(WorldlyArmorMaterials, 5, 2).setUnlocalizedName("Worldly Leggings");
+		GameRegistry.registerItem(worldlyLeggings, "worldlyLeggings");
+		OreDictionary.registerOre("worldlyLeggings", new ItemStack(worldlyLeggings));
+
+		worldlyBoots = new WorldlyArmor(WorldlyArmorMaterials, 5, 3).setUnlocalizedName("Worldly Boots");
+		GameRegistry.registerItem(worldlyBoots, "worldlyBoots");
+		OreDictionary.registerOre("worldlyBoots", new ItemStack(worldlyBoots));
 
 		LogHelper.info("Pre-Initialization Completed!");
 

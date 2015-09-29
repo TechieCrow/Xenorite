@@ -1,9 +1,5 @@
 package xyz.techiecrow.armor;
 
-import xyz.techiecrow.Xenorite;
-import xyz.techiecrow.crativetab.CreativeTabArmour;
-import xyz.techiecrow.handler.ConfigurationHandler;
-import xyz.techiecrow.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,6 +7,9 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import xyz.techiecrow.Xenorite;
+import xyz.techiecrow.crativetab.CreativeTabArmour;
+import xyz.techiecrow.reference.Reference;
 
 public class HeavenlyGlintArmor extends ItemArmor
 {
@@ -26,24 +25,11 @@ public class HeavenlyGlintArmor extends ItemArmor
 	}
 
 	@Override
-	public void onArmorTick(World world, EntityPlayer entity, ItemStack itemstack)
+	public void onArmorTick(World world, EntityPlayer player, ItemStack itemstack)
 	{
-		if (world.isDaytime() && (itemstack.getItem() == Xenorite.heavenlyglintHelmet))
+		if (player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(Xenorite.heavenlyglintHelmet) && player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(Xenorite.heavenlyglintChestplate) && player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(Xenorite.heavenlyglintLeggings) && player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(Xenorite.heavenlyglintBoots))
 		{
-			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.helmetHeavenlyGlintEffect1, 0, 0)));
-		}
-		else if (world.isDaytime() && (itemstack.getItem() == Xenorite.heavenlyglintChestplate))
-		{
-			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.chestplateHeavenlyGlintEffect1, 0, 0)));
-		}
-		else if (world.isDaytime() && (itemstack.getItem() == Xenorite.heavenlyglintLeggings))
-		{
-			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.leggingsHeavenlyGlintEffect1, 0, 0)));
-		}
-		else if (world.isDaytime() && (itemstack.getItem() == Xenorite.heavenlyglintBoots))
-		{
-			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.bootsHeavenlyGlintEffect1, 0, 0)));
-			// entity.stepHeight = 10F;
+			player.addPotionEffect(new PotionEffect(10, 0, 0));
 		}
 	}
 

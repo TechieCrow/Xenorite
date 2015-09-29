@@ -2,15 +2,14 @@ package xyz.techiecrow.tools.weapons;
 
 import java.util.List;
 
+import org.lwjgl.input.Keyboard;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-
-import org.lwjgl.input.Keyboard;
-
 import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class ShadowBoronSword extends WeaponXenorite
@@ -65,7 +64,7 @@ public class ShadowBoronSword extends WeaponXenorite
 
 		if (!World.isDaytime() && ItemStack.stackTagCompound.getBoolean("isActive"))
 		{
-			par3EntityPlayer.addPotionEffect((new PotionEffect(ConfigurationHandler.swordShadowBoronEffect1, 0, 0)));
+			par3EntityPlayer.addPotionEffect((new PotionEffect(5, 0, 0)));
 		}
 
 		return;

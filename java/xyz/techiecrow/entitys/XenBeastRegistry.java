@@ -2,13 +2,13 @@ package xyz.techiecrow.entitys;
 
 import java.util.Random;
 
-import xyz.techiecrow.Xenorite;
-import xyz.techiecrow.handler.ConfigurationHandler;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DungeonHooks;
-import cpw.mods.fml.common.registry.EntityRegistry;
+import xyz.techiecrow.Xenorite;
+import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class XenBeastRegistry
 {

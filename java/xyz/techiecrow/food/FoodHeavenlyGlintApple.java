@@ -1,12 +1,12 @@
 package xyz.techiecrow.food;
 
-import xyz.techiecrow.crativetab.CreativeTabItems;
-import xyz.techiecrow.handler.ConfigurationHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import xyz.techiecrow.crativetab.CreativeTabItems;
+import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class FoodHeavenlyGlintApple extends ItemFood
 {
@@ -16,7 +16,7 @@ public class FoodHeavenlyGlintApple extends ItemFood
 	public FoodHeavenlyGlintApple()
 	{
 		super(ConfigurationHandler.appleHeavenlyGlintHungerAmount, ConfigurationHandler.appleHeavenlyGlintSaturationAmount, ConfigurationHandler.appleHeavenlyGlintWolvesFavoriteFood);
-		this.setMaxStackSize(1);
+		this.setMaxStackSize(100);
 		this.setTextureName("xenorite:appleHeavenlyGlint");
 		this.setUnlocalizedName("appleHeavenlyGlint");
 		this.setCreativeTab(CreativeTabItems.Xenoriteitems);

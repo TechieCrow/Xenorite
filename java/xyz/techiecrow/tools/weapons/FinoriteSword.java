@@ -2,10 +2,10 @@ package xyz.techiecrow.tools.weapons;
 
 import java.util.List;
 
+import org.lwjgl.input.Keyboard;
+
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-
-import org.lwjgl.input.Keyboard;
 
 public class FinoriteSword extends WeaponXenorite
 {

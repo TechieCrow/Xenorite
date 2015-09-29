@@ -1,12 +1,12 @@
 package xyz.techiecrow.food;
 
-import xyz.techiecrow.crativetab.CreativeTabItems;
-import xyz.techiecrow.handler.ConfigurationHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import xyz.techiecrow.crativetab.CreativeTabItems;
+import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class FoodShadowBoronApple extends ItemFood
 {
@@ -16,7 +16,7 @@ public class FoodShadowBoronApple extends ItemFood
 	public FoodShadowBoronApple()
 	{
 		super(ConfigurationHandler.appleShadowBoronHungerAmount, ConfigurationHandler.appleShadowBoronSaturationAmount, ConfigurationHandler.appleShadowBoronWolvesFavoriteFood);
-		this.setMaxStackSize(1);
+		this.setMaxStackSize(100);
 		this.setTextureName("xenorite:appleShadowBoron");
 		this.setUnlocalizedName("appleShadowBoron");
 		this.setCreativeTab(CreativeTabItems.Xenoriteitems);

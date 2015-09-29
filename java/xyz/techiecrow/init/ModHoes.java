@@ -1,5 +1,10 @@
 package xyz.techiecrow.init;
 
+import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.oredict.OreDictionary;
 import xyz.techiecrow.tools.hoes.CoreoriteHoe;
 import xyz.techiecrow.tools.hoes.FinoriteHoe;
 import xyz.techiecrow.tools.hoes.HeavenlyGlintHoe;
@@ -9,11 +14,6 @@ import xyz.techiecrow.tools.hoes.ShadowBoronHoe;
 import xyz.techiecrow.tools.hoes.WorldlyHoe;
 import xyz.techiecrow.tools.hoes.XCFMasterHoe;
 import xyz.techiecrow.tools.hoes.XenoriteHoe;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.common.util.EnumHelper;
-import net.minecraftforge.oredict.OreDictionary;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModHoes
 {
@@ -30,20 +30,20 @@ public class ModHoes
 
 	public static final Item.ToolMaterial ShadowBoronToolMaterials = EnumHelper.addToolMaterial("ShadowBoronToolMaterials", 4, 780, 8.0F, 1.5F, 22);
 
-//	public static final Item.ToolMaterial XCFMasterToolMaterials = EnumHelper.addToolMaterial("XCFMasterToolMaterials", 4, 780, 8.0F, 1.5F, 22);
-//
-//	public static final Item.ToolMaterial PeacefulGlintingShadowToolMaterials = EnumHelper.addToolMaterial("PeacefulGlintingShadowToolMaterials", 4, 780, 8.0F, 1.5F, 22);
-//
-//	public static final Item.ToolMaterial WorldlyToolMaterials = EnumHelper.addToolMaterial("WorldlyToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+	public static final Item.ToolMaterial XCFMasterToolMaterials = EnumHelper.addToolMaterial("XCFMasterToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+
+	public static final Item.ToolMaterial PeacefulGlintingShadowToolMaterials = EnumHelper.addToolMaterial("PeacefulGlintingShadowToolMaterials", 4, 780, 8.0F, 1.5F, 22);
+
+	public static final Item.ToolMaterial WorldlyToolMaterials = EnumHelper.addToolMaterial("WorldlyToolMaterials", 4, 780, 8.0F, 1.5F, 22);
 
 	public static final HoeXenorite xenoriteHoe = new XenoriteHoe(XenoriteToolMaterials);
 	public static final HoeXenorite coreoriteHoe = new CoreoriteHoe(CoreoriteToolMaterials);
 	public static final HoeXenorite finoriteHoe = new FinoriteHoe(FinoriteToolMaterials);
 	public static final HoeXenorite heavenlyglintHoe = new HeavenlyGlintHoe(HeavenlyGlintToolMaterials);
 	public static final HoeXenorite shadowboronHoe = new ShadowBoronHoe(ShadowBoronToolMaterials);
-//	public static final HoeXenorite xcfMasterHoe = new XCFMasterHoe(XCFMasterToolMaterials);
-//	public static final HoeXenorite peacefulGlintingShadowHoe = new PeacefulGlintingShadowHoe(PeacefulGlintingShadowToolMaterials);
-//	public static final HoeXenorite worldlyHoe = new WorldlyHoe(WorldlyToolMaterials);
+	public static final HoeXenorite xcfMasterHoe = new XCFMasterHoe(XCFMasterToolMaterials);
+	public static final HoeXenorite peacefulGlintingShadowHoe = new PeacefulGlintingShadowHoe(PeacefulGlintingShadowToolMaterials);
+	public static final HoeXenorite worldlyHoe = new WorldlyHoe(WorldlyToolMaterials);
 
 	public static void init()
 	{
@@ -62,14 +62,14 @@ public class ModHoes
 		GameRegistry.registerItem(shadowboronHoe, "shadowboronHoe");
 		OreDictionary.registerOre("hoeShadowBoron", new ItemStack(shadowboronHoe));
 
-//		GameRegistry.registerItem(xcfMasterHoe, "xcfMasterHoe");
-//		OreDictionary.registerOre("hoeXCFMaster", new ItemStack(xcfMasterHoe));
-//
-//		GameRegistry.registerItem(peacefulGlintingShadowHoe, "peacefulGlintingShadowHoe");
-//		OreDictionary.registerOre("hoePeacefulGlintingShadow", new ItemStack(peacefulGlintingShadowHoe));
-//
-//		GameRegistry.registerItem(worldlyHoe, "worldlyHoe");
-//		OreDictionary.registerOre("hoeWorldly", new ItemStack(worldlyHoe));
+		GameRegistry.registerItem(xcfMasterHoe, "xcfMasterHoe");
+		OreDictionary.registerOre("hoeXCFMaster", new ItemStack(xcfMasterHoe));
+
+		GameRegistry.registerItem(peacefulGlintingShadowHoe, "peacefulGlintingShadowHoe");
+		OreDictionary.registerOre("hoePeacefulGlintingShadow", new ItemStack(peacefulGlintingShadowHoe));
+
+		GameRegistry.registerItem(worldlyHoe, "worldlyHoe");
+		OreDictionary.registerOre("hoeWorldly", new ItemStack(worldlyHoe));
 
 	}
 }

@@ -1,12 +1,12 @@
 package xyz.techiecrow.tools.weapons;
 
-import xyz.techiecrow.crativetab.CreativeTabWeapons;
-import xyz.techiecrow.reference.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import xyz.techiecrow.crativetab.CreativeTabWeapons;
+import xyz.techiecrow.reference.Reference;
 
 public class WeaponXenorite extends ItemSword
 {

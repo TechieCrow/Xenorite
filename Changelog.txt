@@ -1,3 +1,15 @@
+[28/09/2015]
+Fixed Heavenly Glint & Shadow Boron ores... I forgot to readd them to the config before the last release.
+
+[26/09/2015]
+Updated apples to have a stack of 64...
+Added books to tell a story of the mod, more books will come with more updates.
+Updated Xen Beast's model
+Added 2 more tiers of tools and armour.
+Updated the update checker URL to my Dropbox account.
+Removed ALL ore, tool and armour effects from config, this will come back later.
+Sooo much code clean up... AGAIN.
+
 [21/08/2015]
 Updated the update checker URL to point to a URL what is always oonline even when my PC is turned off.
 Updated Xen Beast with a custom model and texture made by BeerCav.

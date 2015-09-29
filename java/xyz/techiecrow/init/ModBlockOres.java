@@ -1,12 +1,12 @@
 package xyz.techiecrow.init;
 
+import cpw.mods.fml.common.registry.GameRegistry;
 import xyz.techiecrow.blocks.BlockCoreoriteOre;
 import xyz.techiecrow.blocks.BlockFinoriteOre;
 import xyz.techiecrow.blocks.BlockHeavenlyGlintOre;
 import xyz.techiecrow.blocks.BlockOresXenorite;
 import xyz.techiecrow.blocks.BlockShadowBoronOre;
 import xyz.techiecrow.blocks.BlockXenoriteOre;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlockOres
 {

@@ -1,9 +1,5 @@
 package xyz.techiecrow.armor;
 
-import xyz.techiecrow.Xenorite;
-import xyz.techiecrow.crativetab.CreativeTabArmour;
-import xyz.techiecrow.handler.ConfigurationHandler;
-import xyz.techiecrow.reference.Reference;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,6 +7,9 @@ import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import xyz.techiecrow.Xenorite;
+import xyz.techiecrow.crativetab.CreativeTabArmour;
+import xyz.techiecrow.reference.Reference;
 
 public class ShadowBoronArmor extends ItemArmor
 {
@@ -26,24 +25,11 @@ public class ShadowBoronArmor extends ItemArmor
 	}
 
 	@Override
-	public void onArmorTick(World world, EntityPlayer entity, ItemStack itemstack)
+	public void onArmorTick(World world, EntityPlayer player, ItemStack itemstack)
 	{
-		if (!world.isDaytime() && (itemstack.getItem() == Xenorite.shadowboronHelmet))
+		if (player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(Xenorite.heavenlyglintHelmet) && player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(Xenorite.heavenlyglintChestplate) && player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(Xenorite.heavenlyglintLeggings) && player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(Xenorite.heavenlyglintBoots))
 		{
-			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.helmetShadowBoronEffect1, 0, 0)));
-		}
-		else if (!world.isDaytime() && (itemstack.getItem() == Xenorite.shadowboronChestplate))
-		{
-			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.chestplateShadowBoronEffect1, 0, 0)));
-		}
-		else if (!world.isDaytime() && (itemstack.getItem() == Xenorite.shadowboronLeggings))
-		{
-			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.leggingsShadowBoronEffect1, 0, 0)));
-		}
-		else if (!world.isDaytime() && (itemstack.getItem() == Xenorite.shadowboronBoots))
-		{
-			entity.addPotionEffect((new PotionEffect(ConfigurationHandler.bootsShadowBoronEffect1, 0, 0)));
-
+			player.addPotionEffect(new PotionEffect(1, 0, 0));
 		}
 	}
 

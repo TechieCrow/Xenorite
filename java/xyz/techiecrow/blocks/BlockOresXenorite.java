@@ -1,12 +1,12 @@
 package xyz.techiecrow.blocks;
 
-import xyz.techiecrow.crativetab.CreativeTabBlocks;
-import xyz.techiecrow.reference.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import xyz.techiecrow.crativetab.CreativeTabBlocks;
+import xyz.techiecrow.reference.Reference;
 
 public class BlockOresXenorite extends BlockFalling
 {

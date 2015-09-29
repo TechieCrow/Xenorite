@@ -1,12 +1,12 @@
 package xyz.techiecrow.crativetab;
 
-import xyz.techiecrow.init.ModBlocks;
-import xyz.techiecrow.reference.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.util.StatCollector;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import xyz.techiecrow.init.ModBlocks;
+import xyz.techiecrow.reference.Reference;
 
 public class CreativeTabBlocks
 {

@@ -1,13 +1,13 @@
 package xyz.techiecrow.utility;
 
-import xyz.techiecrow.handler.ConfigurationHandler;
-import xyz.techiecrow.init.ModItems;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.world.BlockEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import xyz.techiecrow.handler.ConfigurationHandler;
+import xyz.techiecrow.init.ModItems;
 
 public class CustomDrops
 {

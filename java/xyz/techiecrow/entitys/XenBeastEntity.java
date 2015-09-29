@@ -1,7 +1,5 @@
 package xyz.techiecrow.entitys;
 
-import xyz.techiecrow.handler.ConfigurationHandler;
-import xyz.techiecrow.init.ModItems;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.EntityAIAttackOnCollide;
@@ -16,6 +14,8 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
+import xyz.techiecrow.handler.ConfigurationHandler;
+import xyz.techiecrow.init.ModItems;
 
 public class XenBeastEntity extends EntityMob
 {

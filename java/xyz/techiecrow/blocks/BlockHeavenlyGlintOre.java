@@ -1,9 +1,9 @@
 package xyz.techiecrow.blocks;
 
-import xyz.techiecrow.handler.ConfigurationHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class BlockHeavenlyGlintOre extends BlockOresXenorite
 {
@@ -19,17 +19,14 @@ public class BlockHeavenlyGlintOre extends BlockOresXenorite
 
 	public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entity)
 	{
-		// Weapon Effects
-		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect1, 300, 0))); // Sword
+		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect1, 300, 0)));
 
-		// Tool Effects
-		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect2, 300, 0))); // Pickaxe
+		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect2, 300, 0)));
 
-		// Armour Effects
-		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect3, 300, 0))); // Boots
-		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect4, 300, 0))); // Chestplate
-		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect5, 300, 0))); // Helmet
-		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect6, 300, 0))); // Leggings
+		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect3, 300, 0)));
+		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect4, 300, 0)));
+		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect5, 300, 0)));
+		entity.addPotionEffect((new PotionEffect(ConfigurationHandler.oreHeavenlyGlintEffect6, 300, 0)));
 	}
 
 }

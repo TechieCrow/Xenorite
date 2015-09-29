@@ -1,12 +1,12 @@
 package xyz.techiecrow.proxy;
 
+import cpw.mods.fml.client.registry.RenderingRegistry;
+import net.minecraft.client.model.ModelPig;
 import xyz.techiecrow.entitys.EnderPigIncEntity;
 import xyz.techiecrow.entitys.XenBeastEntity;
 import xyz.techiecrow.renderers.EnderPigIncRender;
 import xyz.techiecrow.renderers.XenBeastModel;
 import xyz.techiecrow.renderers.XenBeastRender;
-import net.minecraft.client.model.ModelPig;
-import cpw.mods.fml.client.registry.RenderingRegistry;
 
 public class ClientProxy extends CommonProxy
 {
@@ -23,5 +23,4 @@ public class ClientProxy extends CommonProxy
 	{
 		return RenderingRegistry.addNewArmourRendererPrefix(xenorite);
 	}
-
 }

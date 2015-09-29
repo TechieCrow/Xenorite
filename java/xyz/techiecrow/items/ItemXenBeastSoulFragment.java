@@ -2,15 +2,14 @@ package xyz.techiecrow.items;
 
 import java.util.List;
 
+import org.lwjgl.input.Keyboard;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-
-import org.lwjgl.input.Keyboard;
-
 import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class ItemXenBeastSoulFragment extends ItemXenorite
@@ -102,8 +101,4 @@ public class ItemXenBeastSoulFragment extends ItemXenorite
 		}
 		List.add(String.format("Hold SHIFT for weird description"));
 	}
-
-	/*
-	 * public void addInformation(ItemStack par1ItemStack, EntityPlayer par2EntityPlayer, List List, boolean par3) { if (Keyboard.isKeyDown(Keyboard.KEY_RSHIFT) || Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) { { List.add(String.format("§7A small fragment of a Xen Beasts soul.")); List.add(String.format("§7Activating & carrying this with you will grant the ablilty to run faster!")); } } else { List.add("Hold §l§oSHIFT§r §7for weird description"); } }
-	 */
 }

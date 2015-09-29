@@ -1,12 +1,12 @@
 package xyz.techiecrow.items;
 
-import xyz.techiecrow.crativetab.CreativeTabItems;
-import xyz.techiecrow.reference.Reference;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import xyz.techiecrow.crativetab.CreativeTabItems;
+import xyz.techiecrow.reference.Reference;
 
 public class ItemXenorite extends Item
 {
