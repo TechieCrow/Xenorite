@@ -141,19 +141,19 @@ public class ConfigurationHandler
 		oreShadowBoronEffect4 = configuration.get(category, "Shadow Boron Ore Effect 4#", 13, "(Default: 13 (Water Breathing))").getInt(13);
 		oreShadowBoronEffect5 = configuration.get(category, "Shadow Boron Ore Effect 5#", 12, "(Default: 12 (Fire Resistance))").getInt(12);
 		oreShadowBoronEffect6 = configuration.get(category, "Shadow Boron Ore Effect 6#", 8, "(Default: 8 (Jump Boost))").getInt(8);
-		//
-		// category = "Heavenly Glint Sword Effects";
-		// swordHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Sword Effect", 5, "(Default: 5)").getInt(5);
-		//
-		// category = "Shadow Boron Sword Effects";
-		// swordShadowBoronEffect1 = configuration.get(category, "Shadow Boron Sword Effect", 5, "(Default: 5)").getInt(5);
-		//
-		// category = "Heavenly Glint Pickaxe Effects";
-		// pickaxeHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Pickaxe Effect", 3, "(Default: 3)").getInt(3);
-		//
-		// category = "Shadow Boron Pickaxe Effects";
-		// pickaxeShadowBoronEffect1 = configuration.get(category, "Shadow Boron Pickaxe Effect", 3, "(Default: 3)").getInt(3);
-		//
+
+		category = "Heavenly Glint Sword Effects";
+		swordHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Sword Effect", 5, "(Default: 5)").getInt(5);
+
+		category = "Shadow Boron Sword Effects";
+		swordShadowBoronEffect1 = configuration.get(category, "Shadow Boron Sword Effect", 5, "(Default: 5)").getInt(5);
+
+		category = "Heavenly Glint Pickaxe Effects";
+		pickaxeHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Pickaxe Effect", 3, "(Default: 3)").getInt(3);
+
+		category = "Shadow Boron Pickaxe Effects";
+		pickaxeShadowBoronEffect1 = configuration.get(category, "Shadow Boron Pickaxe Effect", 3, "(Default: 3)").getInt(3);
+
 		// category = "Heavenly Glint Armour Effects";
 		// helmetHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Helmet Effect", 13, "(Default: 13)").getInt(13);
 		// chestplateHeavenlyGlintEffect1 = configuration.get(category, "Heavenly Glint Chestplate Effect", 12, "(Default: 12)").getInt(12);

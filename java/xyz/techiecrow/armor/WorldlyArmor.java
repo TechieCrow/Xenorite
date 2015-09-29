@@ -29,12 +29,12 @@ public class WorldlyArmor extends ItemArmor
 	{
 		if (player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(Xenorite.heavenlyglintHelmet) && player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(Xenorite.heavenlyglintChestplate) && player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(Xenorite.heavenlyglintLeggings) && player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(Xenorite.heavenlyglintBoots))
 		{
-			player.addPotionEffect(new PotionEffect(8, 2, 0));
-			player.addPotionEffect(new PotionEffect(13, 2, 0));
-			player.addPotionEffect(new PotionEffect(23, 2, 0));
-			player.addPotionEffect(new PotionEffect(21, 1, 0));
-			player.addPotionEffect(new PotionEffect(10, 2, 0));
-			player.addPotionEffect(new PotionEffect(11, 1, 0));
+			player.addPotionEffect(new PotionEffect(8, 0, 2));
+			player.addPotionEffect(new PotionEffect(13, 0, 2));
+			player.addPotionEffect(new PotionEffect(23, 0, 2));
+			player.addPotionEffect(new PotionEffect(21, 0, 1));
+			player.addPotionEffect(new PotionEffect(10, 0, 2));
+			player.addPotionEffect(new PotionEffect(11, 0, 1));
 			player.addPotionEffect(new PotionEffect(16, 0, 0));
 		}
 	}

@@ -1,12 +1,13 @@
 package xyz.techiecrow.tools.weapons;
 
+import java.util.List;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class XCFMasterSword extends WeaponXenorite
 {
@@ -42,9 +43,7 @@ public class XCFMasterSword extends WeaponXenorite
 			rand = Math.random();
 			{
 				if (rand < 0.5)
-					EntityPlayer.addPotionEffect(new PotionEffect(5, 600, 1));
-				else
-					EntityPlayer.addPotionEffect(new PotionEffect(4, 600, 1));
+					EntityPlayer.addPotionEffect(new PotionEffect(5, 0, 1));
 			}
 		}
 
@@ -66,11 +65,28 @@ public class XCFMasterSword extends WeaponXenorite
 			ItemStack.setTagCompound(new NBTTagCompound());
 		}
 
-		if (!World.isDaytime() && ItemStack.stackTagCompound.getBoolean("isActive"))
+		if (World.isDaytime() && ItemStack.stackTagCompound.getBoolean("isActive"))
 		{
-			par3EntityPlayer.addPotionEffect((new PotionEffect(ConfigurationHandler.swordShadowBoronEffect1, 0, 0)));
+			par3EntityPlayer.addPotionEffect((new PotionEffect(5, 0, 1)));
 		}
 
 		return;
+	}
+
+	@Override
+	public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par4)
+	{
+
+		if (!(ItemStack.getTagCompound() == null))
+		{
+			if (ItemStack.getTagCompound().getBoolean("isActive"))
+			{
+				List.add(String.format("\u00A7b\u00A7o\u00A7lXCF Master Sword Activated"));
+			}
+			else
+			{
+				List.add(String.format("\u00A7b\u00A7o\u00A7lXCF Master Sword Not Activated"));
+			}
+		}
 	}
 }

@@ -41,7 +41,7 @@ public class HeavenlyGlintSword extends WeaponXenorite
 		if (tag.getBoolean("isActive"))
 		{
 			ItemStack.setItemDamage(1);
-			EntityPlayer.addPotionEffect((new PotionEffect(5, 0, 0)));
+			EntityPlayer.addPotionEffect((new PotionEffect(ConfigurationHandler.swordHeavenlyGlintEffect1, 0, 0)));
 		}
 
 		return ItemStack;

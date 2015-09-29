@@ -29,7 +29,7 @@ public class PeacefulGlintingShadowArmor extends ItemArmor
 	{
 		if (player.getCurrentArmor(3) != null && player.getCurrentArmor(3).getItem().equals(Xenorite.heavenlyglintHelmet) && player.getCurrentArmor(2) != null && player.getCurrentArmor(2).getItem().equals(Xenorite.heavenlyglintChestplate) && player.getCurrentArmor(1) != null && player.getCurrentArmor(1).getItem().equals(Xenorite.heavenlyglintLeggings) && player.getCurrentArmor(0) != null && player.getCurrentArmor(0).getItem().equals(Xenorite.heavenlyglintBoots))
 		{
-			player.addPotionEffect(new PotionEffect(10, 1, 0));
+			player.addPotionEffect(new PotionEffect(10, 0, 1));
 			player.addPotionEffect(new PotionEffect(11, 0, 0));
 		}
 	}

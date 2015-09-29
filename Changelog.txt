@@ -1,3 +1,6 @@
+[29/09/2015]
+Fixed stuff again... Why do I keep forgetting this stuff? >_<
+
 [28/09/2015]
 Fixed Heavenly Glint & Shadow Boron ores... I forgot to readd them to the config before the last release.
 

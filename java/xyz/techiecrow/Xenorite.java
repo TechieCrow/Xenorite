@@ -1,5 +1,7 @@
 package xyz.techiecrow;
 
+import java.io.File;
+
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -135,6 +137,8 @@ public class Xenorite
 	// Mobs
 	public static Entity XenBeastEntity;
 	public static Entity EnderPigIncEntity;
+
+	public static File configDirectory;
 
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event)

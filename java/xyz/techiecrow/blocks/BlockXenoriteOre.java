@@ -18,6 +18,18 @@ public class BlockXenoriteOre extends BlockOresXenorite
 		this.setHarvestLevel("pickaxe", 2);
 	}
 
+	// public void onNeighborBlockChange(World world, int i, int j, int k, Block l)
+	// {
+	// EntityPlayer entity = Minecraft.getMinecraft().thePlayer;
+	//
+	// if (true)
+	// {
+	// if (entity instanceof EntityPlayer)
+	// ((EntityPlayer) entity).setPositionAndUpdate(i + (int) (Math.random() * 10), j + (int) (Math.random() * 10), k + (int) (Math.random() * 10));
+	// }
+	//
+	// }
+
 	public void onBlockClicked(World world, int i, int j, int k, EntityPlayer entity)
 	{
 

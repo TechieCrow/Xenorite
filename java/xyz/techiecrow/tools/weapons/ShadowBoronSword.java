@@ -64,7 +64,7 @@ public class ShadowBoronSword extends WeaponXenorite
 
 		if (!World.isDaytime() && ItemStack.stackTagCompound.getBoolean("isActive"))
 		{
-			par3EntityPlayer.addPotionEffect((new PotionEffect(5, 0, 0)));
+			par3EntityPlayer.addPotionEffect((new PotionEffect(ConfigurationHandler.swordShadowBoronEffect1, 0, 0)));
 		}
 
 		return;
