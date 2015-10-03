@@ -23,14 +23,14 @@ public class ItemXenBookVol1 extends ItemXenorite
 
 	@SideOnly(Side.CLIENT)
 	@Override
-	public ItemStack onItemRightClick(ItemStack par1ItemStack, World par2World, EntityPlayer par3EntityPlayer)
+	public ItemStack onItemRightClick(ItemStack ItemStack, World world, EntityPlayer player)
 	{
-		if (par2World.isRemote)
+		if (world.isRemote)
 		{
 			Minecraft.getMinecraft().displayGuiScreen(new XenBookVol1GUI());
 		}
 
-		return par1ItemStack;
+		return ItemStack;
 	}
 
 	@Override
