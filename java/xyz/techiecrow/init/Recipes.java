@@ -159,86 +159,86 @@ public class Recipes
 		// shadowboron Boots
 		GameRegistry.addShapedRecipe(new ItemStack(Xenorite.shadowboronBoots), "   ", "I I", "I I", 'I', ModItems.shadowboronIngot);
 
-		// XCF Master Sword
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.xcfMasterSword), " X ", " C ", "SFS", 'X', ModWeapons.xenoriteSword, 'C', ModWeapons.coreoriteSword, 'F', ModWeapons.finoriteSword, 'S', ModItems.universesoulSplit));
-
-		// XCF Master Pickaxe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModPickaxes.xcfMasterPickaxe), "XCF", " S ", " S ", 'X', ModPickaxes.xenoritePickaxe, 'C', ModPickaxes.coreoritePickaxe, 'F', ModPickaxes.finoritePickaxe, 'S', ModItems.universesoulSplit));
-
-		// XCF Master Shovel
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModShovels.xcfMasterShovel), "SXS", " C ", " F ", 'X', ModShovels.xenoriteShovel, 'C', ModShovels.coreoriteShovel, 'F', ModShovels.finoriteShovel, 'S', ModItems.universesoulSplit));
-
-		// XCF Master Axe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModAxes.xcfMasterAxe), "XC ", "FS ", " S ", 'X', ModAxes.xenoriteAxe, 'C', ModAxes.coreoriteAxe, 'F', ModAxes.finoriteAxe, 'S', ModItems.universesoulSplit));
-
-		// XCF Master Hoe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModHoes.xcfMasterHoe), " X ", "CS ", "FS ", 'X', ModHoes.xenoriteHoe, 'C', ModHoes.coreoriteHoe, 'F', ModHoes.finoriteHoe, 'S', ModItems.universesoulSplit));
-
-		// XCF Master Helmet
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xcfMasterHelmet), "SXS", "C F", "   ", 'X', Xenorite.xenoriteHelmet, 'C', Xenorite.coreoriteHelmet, 'F', Xenorite.finoriteHelmet, 'S', ModItems.universesoulSplit));
-
-		// XCF Master Chestplate
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xcfMasterChestplate), "S S", "XCF", "FCX", 'X', Xenorite.xenoriteChestplate, 'C', Xenorite.coreoriteChestplate, 'F', Xenorite.finoriteChestplate, 'S', ModItems.universesoulSplit));
-
-		// XCF Master Leggings
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xcfMasterLeggings), "XCF", "FCX", "S S", 'X', Xenorite.xenoriteLeggings, 'C', Xenorite.coreoriteLeggings, 'F', Xenorite.finoriteLeggings, 'S', ModItems.universesoulSplit));
-
-		// XCF Master Boots
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xcfMasterBoots), "XCF", "FCX", " S ", 'X', Xenorite.xenoriteBoots, 'C', Xenorite.coreoriteBoots, 'F', Xenorite.finoriteBoots, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Sword
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.peacefulGlintingShadowSword), " X ", " C ", "SDS", 'X', ModWeapons.heavenlyglintSword, 'C', ModWeapons.shadowboronSword, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Pickaxe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModPickaxes.peacefulGlintingShadowPickaxe), "XCD", " S ", " S ", 'X', ModPickaxes.heavenlyglintPickaxe, 'C', ModPickaxes.shadowboronPickaxe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Shovel
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModShovels.peacefulGlintingShadowShovel), "SXS", " C ", " D ", 'X', ModShovels.heavenlyglintShovel, 'C', ModShovels.shadowboronShovel, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Axe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModAxes.peacefulGlintingShadowAxe), "XC ", "DS ", " S ", 'X', ModAxes.heavenlyglintAxe, 'C', ModAxes.shadowboronAxe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Hoe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModHoes.peacefulGlintingShadowHoe), " X ", "CS ", "DS ", 'X', ModHoes.heavenlyglintHoe, 'C', ModHoes.shadowboronHoe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Helmet
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.peacefulGlintingShadowHelmet), "SXS", "C D", "   ", 'X', Xenorite.heavenlyglintHelmet, 'C', Xenorite.shadowboronHelmet, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Chestplate
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.peacefulGlintingShadowChestplate), "S S", "XCD", "DCX", 'X', Xenorite.heavenlyglintChestplate, 'C', Xenorite.shadowboronChestplate, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Leggings
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.peacefulGlintingShadowLeggings), "XCD", "DCX", "S S", 'X', Xenorite.heavenlyglintLeggings, 'C', Xenorite.shadowboronLeggings, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Peaceful Glinting Shadow Boots
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.peacefulGlintingShadowBoots), "XCD", "DCX", " S ", 'X', Xenorite.heavenlyglintBoots, 'C', Xenorite.shadowboronBoots, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Sword
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.worldlySword), " X ", " C ", "SDS", 'X', ModWeapons.xcfMasterSword, 'C', ModWeapons.peacefulGlintingShadowSword, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Pickaxe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModPickaxes.worldlyPickaxe), "XCD", " S ", " S ", 'X', ModPickaxes.xcfMasterPickaxe, 'C', ModPickaxes.peacefulGlintingShadowPickaxe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Shovel
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModShovels.worldlyShovel), "SXS", " C ", " D ", 'X', ModShovels.xcfMasterShovel, 'C', ModShovels.peacefulGlintingShadowShovel, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Axe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModAxes.worldlyAxe), "XC ", "DS ", " S ", 'X', ModAxes.xcfMasterAxe, 'C', ModAxes.peacefulGlintingShadowAxe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Hoe
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModHoes.worldlyHoe), " X ", "CS ", "DS ", 'X', ModHoes.xcfMasterHoe, 'C', ModHoes.peacefulGlintingShadowHoe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Helmet
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.worldlyHelmet), "SXS", "C D", "   ", 'X', Xenorite.xcfMasterHelmet, 'C', Xenorite.peacefulGlintingShadowHelmet, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Chestplate
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.worldlyChestplate), "S S", "XCD", "DCX", 'X', Xenorite.xcfMasterChestplate, 'C', Xenorite.peacefulGlintingShadowChestplate, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Leggings
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.worldlyLeggings), "XCD", "DCX", "S S", 'X', Xenorite.xcfMasterLeggings, 'C', Xenorite.peacefulGlintingShadowLeggings, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
-
-		// Worldly Boots
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.worldlyBoots), "XCD", "DCX", " S ", 'X', Xenorite.xcfMasterBoots, 'C', Xenorite.peacefulGlintingShadowBoots, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		// // XCF Master Sword
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.xcfMasterSword), " X ", " C ", "SFS", 'X', ModWeapons.xenoriteSword, 'C', ModWeapons.coreoriteSword, 'F', ModWeapons.finoriteSword, 'S', ModItems.universesoulSplit));
+		//
+		// // XCF Master Pickaxe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModPickaxes.xcfMasterPickaxe), "XCF", " S ", " S ", 'X', ModPickaxes.xenoritePickaxe, 'C', ModPickaxes.coreoritePickaxe, 'F', ModPickaxes.finoritePickaxe, 'S', ModItems.universesoulSplit));
+		//
+		// // XCF Master Shovel
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModShovels.xcfMasterShovel), "SXS", " C ", " F ", 'X', ModShovels.xenoriteShovel, 'C', ModShovels.coreoriteShovel, 'F', ModShovels.finoriteShovel, 'S', ModItems.universesoulSplit));
+		//
+		// // XCF Master Axe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModAxes.xcfMasterAxe), "XC ", "FS ", " S ", 'X', ModAxes.xenoriteAxe, 'C', ModAxes.coreoriteAxe, 'F', ModAxes.finoriteAxe, 'S', ModItems.universesoulSplit));
+		//
+		// // XCF Master Hoe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModHoes.xcfMasterHoe), " X ", "CS ", "FS ", 'X', ModHoes.xenoriteHoe, 'C', ModHoes.coreoriteHoe, 'F', ModHoes.finoriteHoe, 'S', ModItems.universesoulSplit));
+		//
+		// // XCF Master Helmet
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xcfMasterHelmet), "SXS", "C F", " ", 'X', Xenorite.xenoriteHelmet, 'C', Xenorite.coreoriteHelmet, 'F', Xenorite.finoriteHelmet, 'S', ModItems.universesoulSplit));
+		//
+		// // XCF Master Chestplate
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xcfMasterChestplate), "S S", "XCF", "FCX", 'X', Xenorite.xenoriteChestplate, 'C', Xenorite.coreoriteChestplate, 'F', Xenorite.finoriteChestplate, 'S', ModItems.universesoulSplit));
+		//
+		// // XCF Master Leggings
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xcfMasterLeggings), "XCF", "FCX", "S S", 'X', Xenorite.xenoriteLeggings, 'C', Xenorite.coreoriteLeggings, 'F', Xenorite.finoriteLeggings, 'S', ModItems.universesoulSplit));
+		//
+		// // XCF Master Boots
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.xcfMasterBoots), "XCF", "FCX", " S ", 'X', Xenorite.xenoriteBoots, 'C', Xenorite.coreoriteBoots, 'F', Xenorite.finoriteBoots, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Sword
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.peacefulGlintingShadowSword), " X ", " C ", "SDS", 'X', ModWeapons.heavenlyglintSword, 'C', ModWeapons.shadowboronSword, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Pickaxe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModPickaxes.peacefulGlintingShadowPickaxe), "XCD", " S ", " S ", 'X', ModPickaxes.heavenlyglintPickaxe, 'C', ModPickaxes.shadowboronPickaxe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Shovel
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModShovels.peacefulGlintingShadowShovel), "SXS", " C ", " D ", 'X', ModShovels.heavenlyglintShovel, 'C', ModShovels.shadowboronShovel, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Axe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModAxes.peacefulGlintingShadowAxe), "XC ", "DS ", " S ", 'X', ModAxes.heavenlyglintAxe, 'C', ModAxes.shadowboronAxe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Hoe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModHoes.peacefulGlintingShadowHoe), " X ", "CS ", "DS ", 'X', ModHoes.heavenlyglintHoe, 'C', ModHoes.shadowboronHoe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Helmet
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.peacefulGlintingShadowHelmet), "SXS", "C D", " ", 'X', Xenorite.heavenlyglintHelmet, 'C', Xenorite.shadowboronHelmet, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Chestplate
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.peacefulGlintingShadowChestplate), "S S", "XCD", "DCX", 'X', Xenorite.heavenlyglintChestplate, 'C', Xenorite.shadowboronChestplate, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Leggings
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.peacefulGlintingShadowLeggings), "XCD", "DCX", "S S", 'X', Xenorite.heavenlyglintLeggings, 'C', Xenorite.shadowboronLeggings, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Peaceful Glinting Shadow Boots
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.peacefulGlintingShadowBoots), "XCD", "DCX", " S ", 'X', Xenorite.heavenlyglintBoots, 'C', Xenorite.shadowboronBoots, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Sword
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModWeapons.worldlySword), " X ", " C ", "SDS", 'X', ModWeapons.xcfMasterSword, 'C', ModWeapons.peacefulGlintingShadowSword, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Pickaxe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModPickaxes.worldlyPickaxe), "XCD", " S ", " S ", 'X', ModPickaxes.xcfMasterPickaxe, 'C', ModPickaxes.peacefulGlintingShadowPickaxe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Shovel
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModShovels.worldlyShovel), "SXS", " C ", " D ", 'X', ModShovels.xcfMasterShovel, 'C', ModShovels.peacefulGlintingShadowShovel, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Axe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModAxes.worldlyAxe), "XC ", "DS ", " S ", 'X', ModAxes.xcfMasterAxe, 'C', ModAxes.peacefulGlintingShadowAxe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Hoe
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModHoes.worldlyHoe), " X ", "CS ", "DS ", 'X', ModHoes.xcfMasterHoe, 'C', ModHoes.peacefulGlintingShadowHoe, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Helmet
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.worldlyHelmet), "SXS", "C D", " ", 'X', Xenorite.xcfMasterHelmet, 'C', Xenorite.peacefulGlintingShadowHelmet, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Chestplate
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.worldlyChestplate), "S S", "XCD", "DCX", 'X', Xenorite.xcfMasterChestplate, 'C', Xenorite.peacefulGlintingShadowChestplate, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Leggings
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.worldlyLeggings), "XCD", "DCX", "S S", 'X', Xenorite.xcfMasterLeggings, 'C', Xenorite.peacefulGlintingShadowLeggings, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
+		//
+		// // Worldly Boots
+		// GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(Xenorite.worldlyBoots), "XCD", "DCX", " S ", 'X', Xenorite.xcfMasterBoots, 'C', Xenorite.peacefulGlintingShadowBoots, 'D', Items.diamond, 'S', ModItems.universesoulSplit));
 
 		// Heavenly Glint Apple
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.appleHeavenlyGlint), "IXI", "XAX", "III", 'I', ModItems.heavenlyglintIngot, 'X', ModItems.universesoulSplit, 'A', Items.apple);
