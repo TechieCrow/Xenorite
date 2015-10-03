@@ -1,11 +1,8 @@
 package xyz.techiecrow.tools.weapons;
 
-import java.util.List;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
@@ -21,71 +18,15 @@ public class XCFMasterSword extends WeaponXenorite
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack ItemStack, World World, EntityPlayer EntityPlayer)
+	public void onUpdate(ItemStack stack, World world, Entity entity, int par4, boolean par5)
 	{
-
-		if (EntityPlayer.isSneaking())
+		super.onUpdate(stack, world, entity, par4, par5);
 		{
-			return ItemStack;
-		}
-
-		if (ItemStack.stackTagCompound == null)
-		{
-			ItemStack.setTagCompound(new NBTTagCompound());
-		}
-
-		NBTTagCompound tag = ItemStack.stackTagCompound;
-		tag.setBoolean("isActive", !(tag.getBoolean("isActive")));
-
-		if (tag.getBoolean("isActive"))
-		{
-			ItemStack.setItemDamage(1);
-			rand = Math.random();
+			EntityPlayer player = (EntityPlayer) entity;
+			ItemStack equipped = player.getCurrentEquippedItem();
+			if (world.isDaytime() && equipped == stack)
 			{
-				if (rand < 0.5)
-					EntityPlayer.addPotionEffect(new PotionEffect(5, 0, 1));
-			}
-		}
-
-		return ItemStack;
-	}
-
-	@Override
-	public void onUpdate(ItemStack ItemStack, World World, Entity Entity, int par1, boolean par2)
-	{
-		if (!(Entity instanceof EntityPlayer))
-		{
-			return;
-		}
-
-		EntityPlayer par3EntityPlayer = (EntityPlayer) Entity;
-
-		if (ItemStack.stackTagCompound == null)
-		{
-			ItemStack.setTagCompound(new NBTTagCompound());
-		}
-
-		if (World.isDaytime() && ItemStack.stackTagCompound.getBoolean("isActive"))
-		{
-			par3EntityPlayer.addPotionEffect((new PotionEffect(5, 0, 1)));
-		}
-
-		return;
-	}
-
-	@Override
-	public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par4)
-	{
-
-		if (!(ItemStack.getTagCompound() == null))
-		{
-			if (ItemStack.getTagCompound().getBoolean("isActive"))
-			{
-				List.add(String.format("\u00A7b\u00A7o\u00A7lXCF Master Sword Activated"));
-			}
-			else
-			{
-				List.add(String.format("\u00A7b\u00A7o\u00A7lXCF Master Sword Not Activated"));
+				player.addPotionEffect((new PotionEffect(5, 10, 1)));
 			}
 		}
 	}

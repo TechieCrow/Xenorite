@@ -7,10 +7,8 @@ import org.lwjgl.input.Keyboard;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
-import xyz.techiecrow.handler.ConfigurationHandler;
 
 public class ShadowBoronSword extends WeaponXenorite
 {
@@ -22,52 +20,17 @@ public class ShadowBoronSword extends WeaponXenorite
 	}
 
 	@Override
-	public ItemStack onItemRightClick(ItemStack ItemStack, World World, EntityPlayer EntityPlayer)
+	public void onUpdate(ItemStack stack, World world, Entity entity, int par4, boolean par5)
 	{
-
-		if (EntityPlayer.isSneaking())
+		super.onUpdate(stack, world, entity, par4, par5);
 		{
-			return ItemStack;
+			EntityPlayer player = (EntityPlayer) entity;
+			ItemStack equipped = player.getCurrentEquippedItem();
+			if (!world.isDaytime() && equipped == stack)
+			{
+				player.addPotionEffect((new PotionEffect(5, 10, 0)));
+			}
 		}
-
-		if (ItemStack.stackTagCompound == null)
-		{
-			ItemStack.setTagCompound(new NBTTagCompound());
-		}
-
-		NBTTagCompound tag = ItemStack.stackTagCompound;
-		tag.setBoolean("isActive", !(tag.getBoolean("isActive")));
-
-		if (tag.getBoolean("isActive"))
-		{
-			ItemStack.setItemDamage(1);
-			EntityPlayer.addPotionEffect((new PotionEffect(ConfigurationHandler.swordShadowBoronEffect1, 0, 0)));
-		}
-
-		return ItemStack;
-	}
-
-	@Override
-	public void onUpdate(ItemStack ItemStack, World World, Entity Entity, int par1, boolean par2)
-	{
-		if (!(Entity instanceof EntityPlayer))
-		{
-			return;
-		}
-
-		EntityPlayer par3EntityPlayer = (EntityPlayer) Entity;
-
-		if (ItemStack.stackTagCompound == null)
-		{
-			ItemStack.setTagCompound(new NBTTagCompound());
-		}
-
-		if (!World.isDaytime() && ItemStack.stackTagCompound.getBoolean("isActive"))
-		{
-			par3EntityPlayer.addPotionEffect((new PotionEffect(ConfigurationHandler.swordShadowBoronEffect1, 0, 0)));
-		}
-
-		return;
 	}
 
 	public void addInformation(ItemStack ItemStack, EntityPlayer EntityPlayer, List List, boolean par1)
@@ -79,17 +42,9 @@ public class ShadowBoronSword extends WeaponXenorite
 				List.add(String.format("It's almost as dark as a torch."));
 			}
 		}
-		else if (!(ItemStack.getTagCompound() == null))
+		else
 		{
-			if (ItemStack.getTagCompound().getBoolean("isActive"))
-			{
-				List.add(String.format("\u00A7b\u00A7o\u00A7lShadow Sword Activated"));
-			}
-			else
-			{
-				List.add(String.format("\u00A7b\u00A7o\u00A7lShadow Sword Not Activated"));
-			}
+			List.add("Hold SHIFT for weird description");
 		}
-		List.add("Hold SHIFT for weird description");
 	}
 }
