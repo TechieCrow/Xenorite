@@ -1,3 +1,9 @@
+[03/10/2015]
+With Shinoow's help you can now use the Universal Soul Splits to combine items together into higher tiers.
+Item effects are now always active as long as you are holding the item in your hand, no need to right click them anymore.
+Armour effects should now properly work in the day/night depending on which armour set you are wearing.
+Soul Splits are now stackable.
+
 [29/09/2015]
 Fixed stuff again... Why do I keep forgetting this stuff? >_<
 
