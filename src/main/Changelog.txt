@@ -1,0 +1,57 @@
+[27/04/2019]
+Whoa would you look at that... An update after 4 YEARS!
+Updated the license to MIT.
+Updated the README file.
+Max number of Xen Beats to spawn per chunk is now 2 instead of 5.
+Xen Beasts speed has been halved (they are now slower then the player).
+Ender Pigs now spawn correctly!
+Renamed Ender Pig Inc to just Ender Pig.
+Updated package naming.
+
+[03/10/2015]
+With Shinoow's help you can now use the Universal Soul Splits to combine items together into higher tiers.
+Item effects are now always active as long as you are holding the item in your hand, no need to right click them anymore.
+Armour effects should now properly work in the day/night depending on which armour set you are wearing.
+Soul Splits are now stackable.
+
+[29/09/2015]
+Fixed stuff again... Why do I keep forgetting this stuff? >_<
+
+[28/09/2015]
+Fixed Heavenly Glint & Shadow Boron ores... I forgot to readd them to the config before the last release.
+
+[26/09/2015]
+Updated apples to have a stack of 64...
+Added books to tell a story of the mod, more books will come with more updates.
+Updated Xen Beast's model
+Added 2 more tiers of tools and armour.
+Updated the update checker URL to my Dropbox account.
+Removed ALL ore, tool and armour effects from config, this will come back later.
+Sooo much code clean up... AGAIN.
+
+[21/08/2015]
+Updated the update checker URL to point to a URL what is always oonline even when my PC is turned off.
+Updated Xen Beast with a custom model and texture made by BeerCav.
+
+[08/05/2015]
+Made all tool classes and packages follow items the same.
+Removed all the tool values from config file until I can figure out why it wasn't working.
+
+[05/05/2015]
+Changed Xenorite, Coreorite, Finorite, Heavenly Glint and Shadow Boron tools HarvestLevel to 4, this makes them better then diamond (does not effect mining speed) but I do not know if it can mine Tinkers Construct Cobalt and Ardite.
+Changed Xenorite, Coreorite, Finorite, Heavenly Glint and Shadow Boron tools Durability to 780 which makes it half the durability of diamond, this is because they are easier to get then diamond.
+Changed Xenorite, Coreorite, Finorite, Heavenly Glint and Shadow Boron tools Damage to half of what diamond tools do.
+Changed Xenorite, Coreorite, Finorite, Heavenly Glint and Shadow Boron tools Enchantability to 22 which is better then diamond but the same as gold.
+Changed Heavenly Glint and Shadow Boron ores Harvest Level to 4, this means you need Xenorite, Coreorite ore Finorite to mine Heavenly Glint or Shadow Boron ores.
+Added Heavenly Glint and Shadow Boron ores Light Level to 0.625F. (the same as Xenorite, Coreorite and Finorite)
+Changed Heavenly Glint Apple drop chance to 0.001 also added Shadow Boron Apples to the drops.
+
+[27/04/2015]
+Added new mob Ender Pig Inc with configs.
+Added Xen Beast to spawn in dungeons.
+Reformatted code again.
+
+[29/04/2015]
+Added Ender Pearl drops to Ender Pig Inc.
+Added Ender Eyes as a rare drop to Ender Pig Inc.
+Added the updated textures made by ChewableBliss.

@@ -1,0 +1,26 @@
+{
+    "xenbeast.idle":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "entity/xenbeast/xenbeast.idle"
+        ]
+    },
+    "xenbeast.hurt":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "entity/xenbeast/xenbeast.hurt"
+        ]
+    },
+    "xenbeast.death":
+    {
+        "category": "neutral",
+        "sounds":
+        [
+            "entity/xenbeast/xenbeast.death"
+        ]
+    }
+}
